@@ -78,7 +78,7 @@ export default function ContactForm() {
             >
               City
               <input
-                className="font-bold text-base"
+                className="font-bold"
                 type="text"
                 id="city"
                 name="city"
@@ -91,7 +91,7 @@ export default function ContactForm() {
             >
               State / Province / Region
               <input
-                className="font-bold text-base"
+                className="font-bold"
                 type="text"
                 id="state"
                 name="state"
@@ -104,7 +104,7 @@ export default function ContactForm() {
             >
               ZIP / Postal Code
               <input
-                className="font-bold text-base"
+                className="font-bold"
                 type="text"
                 id="zip"
                 name="zip"
@@ -117,7 +117,7 @@ export default function ContactForm() {
             >
               Country
               <select
-                className="text-base cursor-pointer"
+                className="cursor-pointer"
                 id="country"
                 name="country"
                 placeholder="REQUIRED"
@@ -143,7 +143,7 @@ export default function ContactForm() {
           >
             How Can We Help You *
             <select
-              className="font-normal text-base cursor-pointer"
+              className="font-normal cursor-pointer"
               id="serviceType"
               name="serviceType"
               placeholder="REQUIRED"
@@ -168,7 +168,7 @@ export default function ContactForm() {
           >
             Please Provide Any Additional Details
             <textarea
-              className="font-bold text-base h-48 resize-none"
+              className="font-bold h-48 resize-none"
               id="details"
               name="details"
               placeholder="Write your message"

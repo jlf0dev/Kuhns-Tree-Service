@@ -51,7 +51,7 @@
     @apply border;
     @apply border-kuhn-green;
     @apply p-3;
-    @apply text-base;
+    @apply text-sm;
     @apply my-1;
     @apply focus:outline-none;
   }
