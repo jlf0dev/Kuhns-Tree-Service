@@ -1,0 +1,7 @@
+[
+  { "code": "treeTrimming", "name": "Tree Trimming" },
+  { "code": "treeRemoval", "name": "Tree Removal" },
+  { "code": "stumpGrinding", "name": "Stump Grinding" },
+  { "code": "firewood", "name": "Firewood For Sale" },
+  { "code": "other", "name": "Other" }
+]

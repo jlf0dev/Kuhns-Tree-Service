@@ -6,6 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fontsource/abeezee": "^4.5.8",
+    "@fontsource/kameron": "^4.5.6",
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0"
