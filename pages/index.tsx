@@ -29,7 +29,7 @@ const Home: NextPage = () => {
 
       {/* Navbar */}
       <div className="max-w-6xl m-auto h-fit py-5 flex flex-wrap justify-between items-center">
-        <div className="w-72">
+        <div className="w-64">
           <Link href="/">
             <a className="flex items-center">
               <Image src={logo} alt="Kuhns Tree Service" />
