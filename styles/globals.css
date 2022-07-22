@@ -11,29 +11,40 @@
     font-display: swap;
   } */
 
+  /* Screen medium and above */
   @media only screen and (min-width: 768px) {
     html {
       font-size: 16px;
     }
   }
-  @media only screen and (min-width: 768px) {
-    h1 {
-      @apply font-heading;
-      @apply text-8xl;
-      @apply font-bold;
-      @apply text-kuhn-green;
+  /* Screen mobile and above */
+  @media only screen and (max-width: 768px) {
+    html {
+      font-size: 14px;
     }
+  }
+  h1 {
+    @apply font-heading;
+    @apply text-3xl;
+    @apply md:text-5xl;
+    @apply lg:text-8xl;
+    @apply font-bold;
+    @apply text-kuhn-green;
   }
   h2 {
     @apply font-heading;
-    @apply text-6xl;
+    @apply text-3xl;
+    @apply md:text-4xl;
+    @apply lg:text-6xl;
     @apply font-bold;
     @apply text-kuhn-green;
-    line-height: 80px;
+    @apply lg:leading-[80px];
   }
   h3 {
     @apply font-heading;
-    @apply text-4xl;
+    @apply text-2xl;
+    @apply md:text-3xl;
+    @apply lg:text-4xl;
     @apply font-bold;
     @apply text-kuhn-green;
   }
@@ -70,5 +81,8 @@
     @apply text-base;
     @apply my-1;
     @apply bg-white;
+  }
+  a {
+    @apply font-semibold;
   }
 }

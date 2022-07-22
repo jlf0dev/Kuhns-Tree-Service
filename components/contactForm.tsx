@@ -40,11 +40,11 @@ export default function ContactForm() {
 
   return (
     <div className="bg-white w-full h-full py-10">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-[90%] lg:max-w-4xl mx-auto">
         <h3 className="pb-10">Request An Estimate</h3>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="grid grid-cols-2 gap-x-7 gap-y-5"
+          className="grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-5"
         >
           <label
             htmlFor="firstName"
@@ -73,7 +73,7 @@ export default function ContactForm() {
           <label htmlFor="phone" className="font-bold flex flex-col text-left">
             Phone *
             <input
-              type="number"
+              type="text"
               id="phone"
               placeholder="Phone"
               {...(register("phone"), { required: true })}
@@ -88,10 +88,10 @@ export default function ContactForm() {
               {...(register("email"), { required: true })}
             />
           </label>
-          <div className="grid grid-cols-2 gap-x-7 gap-y-2 col-span-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-2 md:col-span-2">
             <label
               htmlFor="address"
-              className="font-bold flex flex-col text-left col-span-2"
+              className="font-bold flex flex-col text-left md:col-span-2"
             >
               Service Address *
               <input
@@ -181,7 +181,7 @@ export default function ContactForm() {
           </div>
           <label
             htmlFor="serviceType"
-            className="font-bold flex flex-col text-left col-span-2"
+            className="font-bold flex flex-col text-left md:col-span-2"
           >
             How Can We Help You *
             <select
@@ -206,7 +206,7 @@ export default function ContactForm() {
           </label>
           <label
             htmlFor="details"
-            className="font-bold flex flex-col text-left col-span-2"
+            className="font-bold flex flex-col text-left md:col-span-2"
           >
             Please Provide Any Additional Details
             <textarea
@@ -216,7 +216,7 @@ export default function ContactForm() {
               {...register("details")}
             />
           </label>
-          <div className="col-span-2 py-10">
+          <div className="md:col-span-2 py-10">
             <a
               type="submit"
               className="bg-[#639c4d] text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl"

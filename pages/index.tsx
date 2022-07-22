@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../public/KuhnsTreeService_logo.png";
 import hero from "../public/kuhns-hero.jpg";
 import leavesBg from "../public/kuhn-leaves-bg.jpg";
 import woodBg from "../public/kuhn-wood-bg.jpg";
@@ -15,71 +14,16 @@ import gallery2 from "../public/kuhn-gallery-2.jpg";
 import gallery3 from "../public/kuhn-gallery-3.jpg";
 import gallery4 from "../public/kuhn-gallery-4.jpg";
 import ContactForm from "../components/contactForm";
+import Navbar from "../components/navbar";
 
 const Home: NextPage = () => {
   return (
     <>
-      {/* Top Bar with Phone Number */}
-      <div className="w-full bg-kuhn-green">
-        <div className="max-w-6xl m-auto grid grid-cols-2 text-white py-1">
-          <p className="pl-7 text-sm">Operating for Over 35 Years</p>
-          <p className="text-right text-sm">301-384-4724</p>
-        </div>
-      </div>
-
-      {/* Navbar */}
-      <div className="max-w-6xl m-auto h-fit py-5 flex flex-wrap justify-between items-center">
-        <div className="w-64">
-          <Link href="/">
-            <a className="flex items-center">
-              <Image src={logo} alt="Kuhns Tree Service" />
-            </a>
-          </Link>
-        </div>
-        <ul className="flex flex-col md:flex-row justify-between items-center uppercase font-bold text-sm gap-6">
-          <li className="">
-            <Link href="/" className="">
-              <a className="">About Us</a>
-            </Link>
-          </li>
-          <li className="h-11">
-            <Link href="/about">
-              <a className="h-full grid place-items-center">Services</a>
-            </Link>
-          </li>
-          <li className="h-11">
-            <Link href="/about">
-              <a className="h-full grid place-items-center">Discounts</a>
-            </Link>
-          </li>
-          <li className="h-11">
-            <Link href="/menu">
-              <a className="h-full grid place-items-center">Gallery</a>
-            </Link>
-          </li>
-          <li className="h-11">
-            <Link href="/menu">
-              <a className="h-full grid place-items-center">Testimonials</a>
-            </Link>
-          </li>
-          <li className="h-11">
-            <Link href="/menu">
-              <a className="h-full grid place-items-center">Contact Us</a>
-            </Link>
-          </li>
-          {/* <li className="w-full h-11 md:h-fit">
-            <Link href="/contact" className="text-[#ffba00] md:text-black">
-              <a className="md:bg-[#ffba00] clipped-button md:text-black md:py-2 md:px-5 md:uppercase md:hover:bg-black md:hover:text-slate-50 md:font-bold h-full grid place-items-center">
-                Contact
-              </a>
-            </Link>
-          </li> */}
-        </ul>
-      </div>
+      <Navbar />
 
       <main className="flex w-full flex-1 flex-col items-center justify-center text-center">
-        <div className="w-full min-h-fit text-slate-50 ">
-          <div className="relative h-10 pt-[15%] pb-[20%]">
+        <div className="w-full min-h-fit text-slate-50 bg-[#00000061] md:bg-[#00000026]">
+          <div className="relative h-80 lg:h-10 pt-[15%] pb-[20%] md:py-[33%] lg:py-[20%]">
             <Image
               src={hero}
               alt="Picture of Kuhns trucks"
@@ -88,8 +32,8 @@ const Home: NextPage = () => {
               objectFit="cover"
               priority
             />
-            <div className="flex-grow flex flex-col items-center justify-center max-w-7xl mx-auto z-10 relative bottom-20">
-              <h1 className="text-white uppercase pb-10">
+            <div className="lg:max-w-7xl max-w-[90%] mx-auto z-10 relative lg:bottom-20 grid place-items-center h-full md:bottom-10">
+              <h1 className="text-white uppercase">
                 Call today for a free estimate
               </h1>
             </div>
@@ -106,14 +50,14 @@ const Home: NextPage = () => {
               objectFit="cover"
               priority
             />
-            <div className="max-w-6xl mx-auto py-12 z-10 relative grid grid-cols-2">
-              <p className="text-white uppercase text-left text-xl font-bold">
+            <div className="lg:max-w-6xl max-w-[90%] mx-auto py-9 z-10 relative flex flex-col md:flex-row gap-y-10 items-center">
+              <p className="text-white uppercase md:text-left text-xl font-bold flex-grow">
                 Tree services delivered with the earth in mind
               </p>
-              <div className="text-right">
+              <div className="md:text-right">
                 <a
                   href="tel:301-384-4724"
-                  className="bg-[#639c4d] text-white py-4 px-8 hover:bg-[#1b381f] text-lg"
+                  className="bg-[#639c4d] text-white py-4 px-8 hover:bg-[#1b381f] text-lg inline-block"
                 >
                   Call Now
                 </a>
@@ -122,7 +66,7 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="max-w-3xl flex flex-col py-10">
+        <div className="max-w-[90%] lg:max-w-3xl flex flex-col py-10">
           <h2 className="py-10">
             More Than 35 Years of Serving Your Community
           </h2>
@@ -153,7 +97,7 @@ const Home: NextPage = () => {
           className="h-fit w-full py-10"
           style={{ backgroundImage: `url(${woodBg.src})` }}
         >
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-[90%] lg:max-w-6xl mx-auto">
             <h3 className="py-4">
               Tree Services Available from Kuhn's Experts
             </h3>
@@ -170,7 +114,7 @@ const Home: NextPage = () => {
               Trust our tree service technicians to accomplish the following
               when you need us most:
             </p>
-            <div className="grid grid-cols-3 gap-24 text-white my-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-24 text-white my-5">
               <div className="pb-2 bg-[#244b29] hover:bg-[#639c4d] shadow-xl">
                 <Image src={trimming} alt="Picture of tree trimming" />
                 <h5 className="text-white">Tree Trimming</h5>
@@ -187,8 +131,8 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="max-w-6xl grid grid-cols-2 gap-14 my-5">
-          <div className="text-left flex flex-col gap-4 justify-center pt-5">
+        <div className="max-w-[90%] lg:max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-14 my-5">
+          <div className="text-left flex flex-col gap-4 justify-center md:pt-5 order-last md:-order-none">
             <h3>24-Hour Emergency Tree Services</h3>
             <p>
               Lightning strikes, major ice storms, and heavy winds can all cause
@@ -209,15 +153,15 @@ const Home: NextPage = () => {
               </Link>
             </div>
           </div>
-          <div>
+          <div className="grid place-items-center pt-10">
             <Image src={fallen} alt="Picture of a tree fallen on a house" />
           </div>
         </div>
 
         <div className="bg-[#f7f7f7] w-full h-full py-10">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-[90%] lg:max-w-6xl mx-auto">
             <h3 className="text-[#639c4d]">Tree Services Gallery</h3>
-            <div className="grid grid-cols-4 gap-20 py-11">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 pt-11 pb-3">
               <div>
                 <Image
                   src={gallery1}
