@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "kuhn-light-green": "#639c4d",
         "kuhn-green": "#244B29",
         "kuhn-dark-green": "#1b381f",
       },

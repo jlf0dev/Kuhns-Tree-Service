@@ -57,7 +57,7 @@ const Home: NextPage = () => {
               <div className="md:text-right">
                 <a
                   href="tel:301-384-4724"
-                  className="bg-[#639c4d] text-white py-4 px-8 hover:bg-[#1b381f] text-lg inline-block"
+                  className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg inline-block"
                 >
                   Call Now
                 </a>
@@ -86,7 +86,7 @@ const Home: NextPage = () => {
           </p>
           <div className="py-10">
             <Link href="/menu">
-              <a className="bg-[#639c4d] text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
+              <a className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
                 Learn More
               </a>
             </Link>
@@ -115,15 +115,15 @@ const Home: NextPage = () => {
               when you need us most:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-24 text-white my-5">
-              <div className="pb-2 bg-[#244b29] hover:bg-[#639c4d] shadow-xl">
+              <div className="pb-2 bg-[#244b29] hover:bg-kuhn-light-green shadow-xl">
                 <Image src={trimming} alt="Picture of tree trimming" />
                 <h5 className="text-white">Tree Trimming</h5>
               </div>
-              <div className="pb-2 bg-[#244b29] hover:bg-[#639c4d] shadow-xl">
+              <div className="pb-2 bg-[#244b29] hover:bg-kuhn-light-green shadow-xl">
                 <Image src={removal} alt="Picture of tree removal" />
                 <h5 className="text-white">Tree Removal</h5>
               </div>
-              <div className="pb-2 bg-[#244b29] hover:bg-[#639c4d] shadow-xl">
+              <div className="pb-2 bg-[#244b29] hover:bg-kuhn-light-green shadow-xl">
                 <Image src={grinding} alt="Picture of stump grinding" />
                 <h5 className="text-white">Stump Grinding</h5>
               </div>
@@ -147,7 +147,7 @@ const Home: NextPage = () => {
             </p>
             <div className="py-10">
               <Link href="/menu">
-                <a className="bg-[#639c4d] text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
+                <a className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
                   Contact Us
                 </a>
               </Link>
@@ -160,7 +160,7 @@ const Home: NextPage = () => {
 
         <div className="bg-[#f7f7f7] w-full h-full py-10">
           <div className="max-w-[90%] lg:max-w-6xl mx-auto">
-            <h3 className="text-[#639c4d]">Tree Services Gallery</h3>
+            <h3 className="text-kuhn-light-green">Tree Services Gallery</h3>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 pt-11 pb-3">
               <div>
                 <Image
@@ -197,7 +197,7 @@ const Home: NextPage = () => {
             </div>
             <div className="py-10">
               <Link href="/menu">
-                <a className="bg-[#639c4d] text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
+                <a className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
                   View More
                 </a>
               </Link>
