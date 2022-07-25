@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { IconContext } from "react-icons";
 import { FaArrowLeft } from "react-icons/fa";
 import logo from "../public/KuhnsTreeService_logo.png";
@@ -9,6 +10,13 @@ import ActiveLink from "./activeLink";
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
   const toggleMenu = () => setOpen(!isOpen);
+  const closeMenu = () => setOpen(false);
+  const { pathname } = useRouter();
+
+  useEffect(() => {
+    setOpen(false); // close menu if path changes
+  }, [pathname]);
+
   return (
     <>
       {/* Top Bar with Phone Number */}
@@ -45,34 +53,49 @@ export default function Navbar() {
           </div>
           <ul className="uppercase font-bold text-lg flex flex-col gap-y-6 m-4 mt-9">
             <li className="">
-              <Link href="/" className="">
-                <a className="">About Us</a>
-              </Link>
+              <ActiveLink href="/about" activeClassName="text-kuhn-light-green">
+                <a onClick={closeMenu}>About Us</a>
+              </ActiveLink>
             </li>
             <li className="">
-              <Link href="/about">
-                <a className="">Services</a>
-              </Link>
+              <ActiveLink
+                href="/services"
+                activeClassName="text-kuhn-light-green"
+              >
+                <a onClick={closeMenu}>Services</a>
+              </ActiveLink>
             </li>
             <li className="">
-              <Link href="/about">
-                <a className="">Discounts</a>
-              </Link>
+              <ActiveLink
+                href="/discounts"
+                activeClassName="text-kuhn-light-green"
+              >
+                <a onClick={closeMenu}>Discounts</a>
+              </ActiveLink>
             </li>
             <li className="">
-              <Link href="/menu">
-                <a className="">Gallery</a>
-              </Link>
+              <ActiveLink
+                href="/gallery"
+                activeClassName="text-kuhn-light-green"
+              >
+                <a onClick={closeMenu}>Gallery</a>
+              </ActiveLink>
             </li>
             <li className="">
-              <Link href="/menu">
-                <a className="">Testimonials</a>
-              </Link>
+              <ActiveLink
+                href="/testimonials"
+                activeClassName="text-kuhn-light-green"
+              >
+                <a onClick={closeMenu}>Testimonials</a>
+              </ActiveLink>
             </li>
             <li className="">
-              <Link href="/menu">
-                <a className="">Contact Us</a>
-              </Link>
+              <ActiveLink
+                href="/contact"
+                activeClassName="text-kuhn-light-green"
+              >
+                <a onClick={closeMenu}>Contact Us</a>
+              </ActiveLink>
             </li>
           </ul>
         </div>
@@ -86,18 +109,20 @@ export default function Navbar() {
 
       {/* Navbar */}
       <div className="max-w-[90%] lg:max-w-6xl m-auto h-fit lg:py-5 flex flex-wrap justify-between items-center">
-        <div className="h-[75px] w-full flex items-center justify-center lg:w-64">
+        <div className="h-[75px] w-full flex items-center justify-center lg:w-64 relative">
           <Hamburger toggleMenu={toggleMenu} />
-          <Link href="/">
-            <a className="relative inline-block h-[77%] w-full">
-              <Image
-                src={logo}
-                alt="Kuhns Tree Service"
-                layout={"fill"}
-                objectFit="contain"
-              />
-            </a>
-          </Link>
+          <div className="w-full h-full grid place-items-center">
+            <Link href="/">
+              <a className="relative inline-block h-[77%] w-64 mx-auto">
+                <Image
+                  src={logo}
+                  alt="Kuhns Tree Service"
+                  layout={"fill"}
+                  objectFit="contain"
+                />
+              </a>
+            </Link>
+          </div>
         </div>
         <ul className="hidden lg:flex flex-col lg:flex-row justify-between items-center uppercase font-bold text-sm gap-6">
           <li className="">
@@ -151,7 +176,7 @@ interface HamburgerProps {
 
 function Hamburger({ toggleMenu }: HamburgerProps) {
   return (
-    <button onClick={toggleMenu}>
+    <button onClick={toggleMenu} className="absolute left-0">
       <div className="lg:hidden">
         <span className="block w-[33px] h-[4px] mb-[5px] rounded-[3px] bg-kuhn-light-green" />
         <span className="block w-[33px] h-[4px] mb-[5px] rounded-[3px] bg-kuhn-light-green" />
