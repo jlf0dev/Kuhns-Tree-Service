@@ -1,6 +1,4 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer base {
   /* @font-face {
@@ -23,13 +21,17 @@
       font-size: 14px;
     }
   }
+  main {
+    @apply text-center;
+  }
   h1 {
     @apply font-heading;
     @apply text-3xl;
     @apply md:text-5xl;
     @apply lg:text-8xl;
     @apply font-bold;
-    @apply text-kuhn-green;
+    @apply text-white;
+    @apply uppercase;
   }
   h2 {
     @apply font-heading;
@@ -65,6 +67,14 @@
     @apply text-sm;
     @apply my-1;
     @apply focus:outline-none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
   textarea {
     @apply border;
@@ -85,4 +95,16 @@
   a {
     @apply font-semibold;
   }
+  /* Reset Safari Form Styles */
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
 }
+
+@tailwind components;
+@tailwind utilities;

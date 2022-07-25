@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import SectionWrapper from "./sectionWrapper";
 
 let countries: Country[] = require("../data/countryList.json");
 let serviceType: ServiceType[] = require("../data/serviceType.json");
@@ -29,7 +30,11 @@ interface IFormData {
   details: string;
 }
 
-export default function ContactForm() {
+interface ContactFormProps {
+  background: string;
+}
+
+export default function ContactForm({ background }: ContactFormProps) {
   const {
     register,
     handleSubmit,
@@ -39,69 +44,65 @@ export default function ContactForm() {
   const onSubmit: SubmitHandler<IFormData> = (data) => console.log(data);
 
   return (
-    <div className="bg-white w-full h-full py-10">
-      <div className="max-w-[90%] lg:max-w-4xl mx-auto">
-        <h3 className="pb-10">Request An Estimate</h3>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-5"
+    <SectionWrapper className="lg:max-w-4xl" background={background}>
+      <h3 className="pb-10">Request An Estimate</h3>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-5"
+      >
+        <label
+          htmlFor="firstName"
+          className="font-bold flex flex-col text-left"
         >
+          First Name *
+          <input
+            type="text"
+            id="firstName"
+            placeholder="First Name"
+            {...(register("firstName"), { required: true })}
+          />
+        </label>
+        <label htmlFor="lastName" className="font-bold flex flex-col text-left">
+          Last Name *
+          <input
+            type="text"
+            id="lastName"
+            placeholder="Last Name"
+            {...(register("lastName"), { required: true })}
+          />
+        </label>
+        <label htmlFor="phone" className="font-bold flex flex-col text-left">
+          Phone *
+          <input
+            type="text"
+            id="phone"
+            placeholder="Phone"
+            {...(register("phone"), { required: true })}
+          />
+        </label>
+        <label htmlFor="email" className="font-bold flex flex-col text-left">
+          Email *
+          <input
+            type="text"
+            id="email"
+            placeholder="Email"
+            {...(register("email"), { required: true })}
+          />
+        </label>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-2 md:col-span-2">
           <label
-            htmlFor="firstName"
-            className="font-bold flex flex-col text-left"
+            htmlFor="address"
+            className="font-bold flex flex-col text-left md:col-span-2"
           >
-            First Name *
+            Service Address *
             <input
               type="text"
-              id="firstName"
-              placeholder="First Name"
-              {...(register("firstName"), { required: true })}
+              id="address"
+              placeholder="REQUIRED"
+              {...(register("address"), { required: true })}
             />
           </label>
-          <label
-            htmlFor="lastName"
-            className="font-bold flex flex-col text-left"
-          >
-            Last Name *
-            <input
-              type="text"
-              id="lastName"
-              placeholder="Last Name"
-              {...(register("lastName"), { required: true })}
-            />
-          </label>
-          <label htmlFor="phone" className="font-bold flex flex-col text-left">
-            Phone *
-            <input
-              type="text"
-              id="phone"
-              placeholder="Phone"
-              {...(register("phone"), { required: true })}
-            />
-          </label>
-          <label htmlFor="email" className="font-bold flex flex-col text-left">
-            Email *
-            <input
-              type="text"
-              id="email"
-              placeholder="Email"
-              {...(register("email"), { required: true })}
-            />
-          </label>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-2 md:col-span-2">
-            <label
-              htmlFor="address"
-              className="font-bold flex flex-col text-left md:col-span-2"
-            >
-              Service Address *
-              <input
-                type="text"
-                id="address"
-                placeholder="REQUIRED"
-                {...(register("address"), { required: true })}
-              />
-            </label>
-            {/* <label
+          {/* <label
               htmlFor="streetAddress"
               className="font-normal text-xs flex flex-col text-left"
             >
@@ -114,84 +115,58 @@ export default function ContactForm() {
                 placeholder="REQUIRED"
               />
             </label> */}
-            <label
-              htmlFor="city"
-              className="font-normal text-xs flex flex-col text-left"
-            >
-              City
-              <input
-                className="font-bold"
-                type="text"
-                id="city"
-                placeholder="REQUIRED"
-                {...(register("city"), { required: true })}
-              />
-            </label>
-            <label
-              htmlFor="state"
-              className="font-normal text-xs flex flex-col text-left justify-end"
-            >
-              State / Province / Region
-              <input
-                className="font-bold"
-                type="text"
-                id="state"
-                placeholder="REQUIRED"
-                {...(register("state"), { required: true })}
-              />
-            </label>
-            <label
-              htmlFor="zip"
-              className="font-normal text-xs flex flex-col text-left"
-            >
-              ZIP / Postal Code
-              <input
-                className="font-bold"
-                type="text"
-                id="zip"
-                placeholder="REQUIRED"
-                {...(register("zip"), { required: true })}
-              />
-            </label>
-            <label
-              htmlFor="country"
-              className="font-normal text-xs flex flex-col text-left"
-            >
-              Country
-              <select
-                className="cursor-pointer"
-                id="country"
-                placeholder="REQUIRED"
-                defaultValue={"US"}
-                {...(register("country"), { required: true })}
-              >
-                {countries.map((item) => {
-                  return (
-                    <option
-                      key={item.code}
-                      value={item.code}
-                      className="cursor-pointer"
-                    >
-                      {item.name}
-                    </option>
-                  );
-                })}
-              </select>
-            </label>
-          </div>
           <label
-            htmlFor="serviceType"
-            className="font-bold flex flex-col text-left md:col-span-2"
+            htmlFor="city"
+            className="font-normal text-xs flex flex-col text-left"
           >
-            How Can We Help You *
-            <select
-              className="font-normal cursor-pointer"
-              id="serviceType"
+            City
+            <input
+              className="font-bold"
+              type="text"
+              id="city"
               placeholder="REQUIRED"
-              defaultValue={"treeTrimming"}
-              {...(register("serviceType"), { required: true })}
+              {...(register("city"), { required: true })}
+            />
+          </label>
+          <label
+            htmlFor="state"
+            className="font-normal text-xs flex flex-col text-left justify-end"
+          >
+            State / Province / Region
+            <input
+              className="font-bold"
+              type="text"
+              id="state"
+              placeholder="REQUIRED"
+              {...(register("state"), { required: true })}
+            />
+          </label>
+          <label
+            htmlFor="zip"
+            className="font-normal text-xs flex flex-col text-left"
+          >
+            ZIP / Postal Code
+            <input
+              className="font-bold"
+              type="text"
+              id="zip"
+              placeholder="REQUIRED"
+              {...(register("zip"), { required: true })}
+            />
+          </label>
+          <label
+            htmlFor="country"
+            className="font-normal text-xs flex flex-col text-left"
+          >
+            Country
+            <select
+              className="cursor-pointer"
+              id="country"
+              placeholder="REQUIRED"
+              defaultValue={"US"}
+              {...(register("country"), { required: true })}
             >
-              {serviceType.map((item) => {
+              {countries.map((item) => {
                 return (
                   <option
                     key={item.code}
@@ -204,28 +179,53 @@ export default function ContactForm() {
               })}
             </select>
           </label>
-          <label
-            htmlFor="details"
-            className="font-bold flex flex-col text-left md:col-span-2"
+        </div>
+        <label
+          htmlFor="serviceType"
+          className="font-bold flex flex-col text-left md:col-span-2"
+        >
+          How Can We Help You *
+          <select
+            className="font-normal cursor-pointer"
+            id="serviceType"
+            placeholder="REQUIRED"
+            defaultValue={"treeTrimming"}
+            {...(register("serviceType"), { required: true })}
           >
-            Please Provide Any Additional Details
-            <textarea
-              className="font-bold h-48 resize-none"
-              id="details"
-              placeholder="Write your message"
-              {...register("details")}
-            />
-          </label>
-          <div className="md:col-span-2 py-10">
-            <a
-              type="submit"
-              className="bg-[#639c4d] text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl"
-            >
-              Submit
-            </a>
-          </div>
-        </form>
-      </div>
-    </div>
+            {serviceType.map((item) => {
+              return (
+                <option
+                  key={item.code}
+                  value={item.code}
+                  className="cursor-pointer"
+                >
+                  {item.name}
+                </option>
+              );
+            })}
+          </select>
+        </label>
+        <label
+          htmlFor="details"
+          className="font-bold flex flex-col text-left md:col-span-2"
+        >
+          Please Provide Any Additional Details
+          <textarea
+            className="font-bold h-48 resize-none"
+            id="details"
+            placeholder="Write your message"
+            {...register("details")}
+          />
+        </label>
+        <div className="md:col-span-2 py-10">
+          <a
+            type="submit"
+            className="bg-[#639c4d] text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl"
+          >
+            Submit
+          </a>
+        </div>
+      </form>
+    </SectionWrapper>
   );
 }

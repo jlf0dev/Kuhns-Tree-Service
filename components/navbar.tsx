@@ -4,6 +4,7 @@ import { useState } from "react";
 import { IconContext } from "react-icons";
 import { FaArrowLeft } from "react-icons/fa";
 import logo from "../public/KuhnsTreeService_logo.png";
+import ActiveLink from "./activeLink";
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
@@ -25,7 +26,7 @@ export default function Navbar() {
             isOpen ? "left-0" : "-left-full"
           }`}
         >
-          <div className="h-[55px] flex justify-between items-center m-4 pr-1">
+          <div className="min-h-[55px] flex justify-between items-center m-4 pr-1">
             <div className="w-2/3">
               <Link href="/">
                 <a className=" h-full w-full">
@@ -100,42 +101,44 @@ export default function Navbar() {
         </div>
         <ul className="hidden lg:flex flex-col lg:flex-row justify-between items-center uppercase font-bold text-sm gap-6">
           <li className="">
-            <Link href="/" className="">
+            <ActiveLink href="/about" activeClassName="text-kuhn-light-green">
               <a className="">About Us</a>
-            </Link>
+            </ActiveLink>
           </li>
           <li className="h-11">
-            <Link href="/about">
+            <ActiveLink
+              href="/services"
+              activeClassName="text-kuhn-light-green"
+            >
               <a className="h-full grid place-items-center">Services</a>
-            </Link>
+            </ActiveLink>
           </li>
           <li className="h-11">
-            <Link href="/about">
+            <ActiveLink
+              href="/discounts"
+              activeClassName="text-kuhn-light-green"
+            >
               <a className="h-full grid place-items-center">Discounts</a>
-            </Link>
+            </ActiveLink>
           </li>
           <li className="h-11">
-            <Link href="/menu">
+            <ActiveLink href="/gallery" activeClassName="text-kuhn-light-green">
               <a className="h-full grid place-items-center">Gallery</a>
-            </Link>
+            </ActiveLink>
           </li>
           <li className="h-11">
-            <Link href="/menu">
+            <ActiveLink
+              href="/testimonials"
+              activeClassName="text-kuhn-light-green"
+            >
               <a className="h-full grid place-items-center">Testimonials</a>
-            </Link>
+            </ActiveLink>
           </li>
           <li className="h-11">
-            <Link href="/menu">
+            <ActiveLink href="/contact" activeClassName="text-kuhn-light-green">
               <a className="h-full grid place-items-center">Contact Us</a>
-            </Link>
+            </ActiveLink>
           </li>
-          {/* <li className="w-full h-11 md:h-fit">
-            <Link href="/contact" className="text-[#ffba00] md:text-black">
-              <a className="md:bg-[#ffba00] clipped-button md:text-black md:py-2 md:px-5 md:uppercase md:hover:bg-black md:hover:text-slate-50 md:font-bold h-full grid place-items-center">
-                Contact
-              </a>
-            </Link>
-          </li> */}
         </ul>
       </div>
     </>
