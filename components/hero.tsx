@@ -17,6 +17,7 @@ export default function Hero({ backgroundImage, text }: HeroProps) {
             layout="fill"
             objectFit="cover"
             height={100}
+            placeholder="blur"
             priority
           />
           <div className="z-10 grid place-items-center h-full">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { IconContext } from "react-icons";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft, FaPhoneAlt } from "react-icons/fa";
 import logo from "../public/KuhnsTreeService_logo.png";
 import ActiveLink from "./activeLink";
 
@@ -20,12 +20,24 @@ export default function Navbar() {
   return (
     <>
       {/* Top Bar with Phone Number */}
-      <div className="hidden md:block w-full bg-kuhn-green">
-        <div className="max-w-6xl m-auto grid grid-cols-2 text-white py-1">
-          <p className="pl-7 text-sm">Operating for Over 35 Years</p>
-          <p className="text-right text-sm">301-384-4724</p>
+      <IconContext.Provider value={{ size: "16" }}>
+        <div className="hidden md:block w-full bg-kuhn-green py-0.5">
+          <div className="max-w-6xl m-auto text-white py-1 flex justify-between">
+            <p className="pl-7 text-sm">Operating for Over 35 Years</p>
+            <div className="md:pr-7 lg:pr-0">
+              <a
+                href="tel:301-384-4724"
+                className=" hover:text-kuhn-light-green"
+              >
+                <p className="text-sm">
+                  <FaPhoneAlt className="inline mr-2" />
+                  301-384-4724
+                </p>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      </IconContext.Provider>
 
       {/* Mobile Menu */}
       <IconContext.Provider value={{ size: "32" }}>

@@ -34,6 +34,7 @@ const Home: NextPage = () => {
             className="-z-10"
             layout="fill"
             objectFit="cover"
+            placeholder="blur"
             priority
           />
           <div className="lg:max-w-7xl max-w-[90%] mx-auto z-10 relative lg:bottom-20 grid place-items-center h-full md:bottom-10">
