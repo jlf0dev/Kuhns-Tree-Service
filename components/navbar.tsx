@@ -6,6 +6,8 @@ import { IconContext } from "react-icons";
 import { FaArrowLeft, FaPhoneAlt } from "react-icons/fa";
 import logo from "../public/KuhnsTreeService_logo.png";
 import ActiveLink from "./activeLink";
+import MenuButton from "./menuButton";
+import MobileMenuButton from "./mobileMenuButton";
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
@@ -63,26 +65,37 @@ export default function Navbar() {
               <FaArrowLeft className="text-kuhn-light-green" />
             </button>
           </div>
-          <ul className="uppercase font-bold text-lg flex flex-col gap-y-6 m-4 mt-9">
+          <ul className="uppercase font-bold text-lg flex flex-col m-4 mt-9">
             <li className="">
               <ActiveLink href="/about" activeClassName="text-kuhn-light-green">
-                <a onClick={closeMenu}>About Us</a>
+                <a
+                  className="inline-block h-full w-full py-3"
+                  onClick={closeMenu}
+                >
+                  About Us
+                </a>
               </ActiveLink>
             </li>
             <li className="">
-              <ActiveLink
+              {/* <ActiveLink
                 href="/services"
                 activeClassName="text-kuhn-light-green"
               >
                 <a onClick={closeMenu}>Services</a>
-              </ActiveLink>
+              </ActiveLink> */}
+              <MobileMenuButton closeMenu={closeMenu} />
             </li>
             <li className="">
               <ActiveLink
                 href="/discounts"
                 activeClassName="text-kuhn-light-green"
               >
-                <a onClick={closeMenu}>Discounts</a>
+                <a
+                  className="inline-block h-full w-full py-3"
+                  onClick={closeMenu}
+                >
+                  Discounts
+                </a>
               </ActiveLink>
             </li>
             <li className="">
@@ -90,7 +103,12 @@ export default function Navbar() {
                 href="/gallery"
                 activeClassName="text-kuhn-light-green"
               >
-                <a onClick={closeMenu}>Gallery</a>
+                <a
+                  className="inline-block h-full w-full py-3"
+                  onClick={closeMenu}
+                >
+                  Gallery
+                </a>
               </ActiveLink>
             </li>
             <li className="">
@@ -98,7 +116,12 @@ export default function Navbar() {
                 href="/testimonials"
                 activeClassName="text-kuhn-light-green"
               >
-                <a onClick={closeMenu}>Testimonials</a>
+                <a
+                  className="inline-block h-full w-full py-3"
+                  onClick={closeMenu}
+                >
+                  Testimonials
+                </a>
               </ActiveLink>
             </li>
             <li className="">
@@ -106,7 +129,12 @@ export default function Navbar() {
                 href="/contact"
                 activeClassName="text-kuhn-light-green"
               >
-                <a onClick={closeMenu}>Contact Us</a>
+                <a
+                  className="inline-block h-full w-full py-3"
+                  onClick={closeMenu}
+                >
+                  Contact Us
+                </a>
               </ActiveLink>
             </li>
           </ul>
@@ -137,30 +165,37 @@ export default function Navbar() {
           </div>
         </div>
         <ul className="hidden lg:flex flex-col lg:flex-row justify-between items-center uppercase font-bold text-sm gap-6">
-          <li className="">
+          <li className="h-11">
             <ActiveLink href="/about" activeClassName="text-kuhn-light-green">
-              <a className="">About Us</a>
+              <a className="h-full grid place-items-center hover:text-kuhn-light-green">
+                About Us
+              </a>
             </ActiveLink>
           </li>
           <li className="h-11">
-            <ActiveLink
+            {/* <ActiveLink
               href="/services"
               activeClassName="text-kuhn-light-green"
             >
               <a className="h-full grid place-items-center">Services</a>
-            </ActiveLink>
+            </ActiveLink> */}
+            <MenuButton />
           </li>
           <li className="h-11">
             <ActiveLink
               href="/discounts"
               activeClassName="text-kuhn-light-green"
             >
-              <a className="h-full grid place-items-center">Discounts</a>
+              <a className="h-full grid place-items-center hover:text-kuhn-light-green">
+                Discounts
+              </a>
             </ActiveLink>
           </li>
           <li className="h-11">
             <ActiveLink href="/gallery" activeClassName="text-kuhn-light-green">
-              <a className="h-full grid place-items-center">Gallery</a>
+              <a className="h-full grid place-items-center hover:text-kuhn-light-green">
+                Gallery
+              </a>
             </ActiveLink>
           </li>
           <li className="h-11">
@@ -168,12 +203,16 @@ export default function Navbar() {
               href="/testimonials"
               activeClassName="text-kuhn-light-green"
             >
-              <a className="h-full grid place-items-center">Testimonials</a>
+              <a className="h-full grid place-items-center hover:text-kuhn-light-green">
+                Testimonials
+              </a>
             </ActiveLink>
           </li>
           <li className="h-11">
             <ActiveLink href="/contact" activeClassName="text-kuhn-light-green">
-              <a className="h-full grid place-items-center">Contact Us</a>
+              <a className="h-full grid place-items-center hover:text-kuhn-light-green">
+                Contact Us
+              </a>
             </ActiveLink>
           </li>
         </ul>

@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
-import Hero from "../components/hero";
+import Hero from "../../components/hero";
 import Image from "next/image";
-import SectionWrapper from "../components/sectionWrapper";
-import heroBg from "../public/kuhn-services-hero.jpg";
-import saw from "../public/kuhn-saw-tree.jpg";
-import ContactForm from "../components/contactForm";
+import SectionWrapper from "../../components/sectionWrapper";
+import heroBg from "../../public/kuhn-services-hero.jpg";
+import saw from "../../public/kuhn-saw-tree.jpg";
+import ContactForm from "../../components/contactForm";
 
 export default function Services() {
   return (
