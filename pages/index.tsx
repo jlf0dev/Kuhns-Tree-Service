@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import hero from "../public/kuhns-hero.jpg";
+import hero from "../public/kuhn-hero.jpg";
 import leavesBg from "../public/kuhn-leaves-bg.jpg";
 import woodBg from "../public/kuhn-wood-bg.jpg";
 import trimming from "../public/kuhn-tree-trimming.jpg";
