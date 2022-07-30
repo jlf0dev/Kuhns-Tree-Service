@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import SectionWrapper from "./sectionWrapper";
 
 let countries: Country[] = require("../data/countryList.json");
@@ -38,10 +38,25 @@ export default function ContactForm({ background }: ContactFormProps) {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<IFormData>();
-  const onSubmit: SubmitHandler<IFormData> = (data) => console.log(data);
+
+  // its gross but it works
+  function normalizePhoneNumber(value: string): string {
+    var x = value.replace(/\D/g, "").match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+    if (x) {
+      return !x[2] ? x[1] : "(" + x[1] + ") " + x[2] + (x[3] ? "-" + x[3] : "");
+    } else {
+      return "";
+    }
+  }
+
+  const onSubmit: SubmitHandler<IFormData> = (data) => {
+    fetch("/api/contact", {
+      method: "post",
+      body: JSON.stringify(data),
+    });
+  };
 
   return (
     <SectionWrapper className="lg:max-w-4xl" background={background}>
@@ -56,38 +71,79 @@ export default function ContactForm({ background }: ContactFormProps) {
         >
           First Name *
           <input
-            type="text"
+            {...register("firstName", {
+              required: "First name is required",
+              maxLength: { value: 30, message: "First name is too long" },
+            })}
+            className={`${errors.firstName ? "border-red-500" : ""}`}
             id="firstName"
             placeholder="First Name"
-            {...(register("firstName"), { required: true })}
+            type="text"
+            autoComplete="given-name"
           />
+          {errors.firstName && (
+            <p className="text-sm text-red-500">{errors.firstName?.message}</p>
+          )}
         </label>
         <label htmlFor="lastName" className="font-bold flex flex-col text-left">
           Last Name *
           <input
-            type="text"
+            {...register("lastName", {
+              required: "Last name is required",
+              maxLength: { value: 30, message: "Last name is too long" },
+            })}
+            className={`${errors.lastName ? "border-red-500" : ""}`}
             id="lastName"
             placeholder="Last Name"
-            {...(register("lastName"), { required: true })}
+            type="text"
+            autoComplete="family-name"
           />
+          {errors.lastName && (
+            <p className="text-sm text-red-500">{errors.lastName?.message}</p>
+          )}
         </label>
         <label htmlFor="phone" className="font-bold flex flex-col text-left">
           Phone *
           <input
-            type="text"
+            {...register("phone", {
+              required: "Phone number is required",
+              maxLength: { value: 20, message: "Phone number is too long" },
+              minLength: { value: 14, message: "Phone number is too short" },
+              onChange: (e) => {
+                const { value } = e.target;
+                e.target.value = normalizePhoneNumber(value);
+              },
+            })}
+            className={`${errors.phone ? "border-red-500" : ""}`}
             id="phone"
             placeholder="Phone"
-            {...(register("phone"), { required: true })}
+            type="tel"
+            autoComplete="tel"
           />
+          {errors.phone && (
+            <p className="text-sm text-red-500">{errors.phone?.message}</p>
+          )}
         </label>
         <label htmlFor="email" className="font-bold flex flex-col text-left">
           Email *
           <input
-            type="text"
+            {...register("email", {
+              required: "Email is required",
+              maxLength: { value: 50, message: "Email is too long" },
+              pattern: {
+                value: /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/,
+                message: "Email is invalid",
+              },
+            })}
+            className={`${errors.email ? "border-red-500" : ""}`}
             id="email"
             placeholder="Email"
-            {...(register("email"), { required: true })}
+            type="text"
+            autoComplete="email"
           />
+          {errors.email && (
+            <p className="text-sm text-red-500">{errors.email?.message}</p>
+          )}
         </label>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-2 md:col-span-2">
           <label
@@ -96,11 +152,22 @@ export default function ContactForm({ background }: ContactFormProps) {
           >
             Service Address *
             <input
-              type="text"
+              {...register("address", {
+                required: "Street address is required",
+                maxLength: {
+                  value: 100,
+                  message: "Street address is too long",
+                },
+              })}
+              className={`${errors.address ? "border-red-500" : ""}`}
               id="address"
               placeholder="REQUIRED"
-              {...(register("address"), { required: true })}
+              type="text"
+              autoComplete="street-address"
             />
+            {errors.address && (
+              <p className="text-sm text-red-500">{errors.address?.message}</p>
+            )}
           </label>
           {/* <label
               htmlFor="streetAddress"
@@ -121,12 +188,19 @@ export default function ContactForm({ background }: ContactFormProps) {
           >
             City
             <input
-              className="font-bold"
-              type="text"
+              {...register("city", {
+                required: "City is required",
+                maxLength: { value: 50, message: "City name is too long" },
+              })}
+              className={`font-bold ${errors.city ? "border-red-500" : ""}`}
               id="city"
               placeholder="REQUIRED"
-              {...(register("city"), { required: true })}
+              type="text"
+              autoComplete="address-level2"
             />
+            {errors.city && (
+              <p className="text-sm text-red-500">{errors.city?.message}</p>
+            )}
           </label>
           <label
             htmlFor="state"
@@ -134,12 +208,19 @@ export default function ContactForm({ background }: ContactFormProps) {
           >
             State / Province / Region
             <input
-              className="font-bold"
-              type="text"
+              {...register("state", {
+                required: "State is required",
+                maxLength: { value: 50, message: "State name is too long" },
+              })}
+              className={`font-bold ${errors.state ? "border-red-500" : ""}`}
               id="state"
               placeholder="REQUIRED"
-              {...(register("state"), { required: true })}
+              type="text"
+              autoComplete="address-level1"
             />
+            {errors.state && (
+              <p className="text-sm text-red-500">{errors.state?.message}</p>
+            )}
           </label>
           <label
             htmlFor="zip"
@@ -147,12 +228,22 @@ export default function ContactForm({ background }: ContactFormProps) {
           >
             ZIP / Postal Code
             <input
-              className="font-bold"
-              type="text"
+              {...register("zip", {
+                required: "ZIP/Postal code is required",
+                maxLength: {
+                  value: 20,
+                  message: "ZIP/Postal code is too long",
+                },
+              })}
+              className={`font-bold ${errors.zip ? "border-red-500" : ""}`}
               id="zip"
               placeholder="REQUIRED"
-              {...(register("zip"), { required: true })}
+              type="text"
+              autoComplete="postal-code"
             />
+            {errors.zip && (
+              <p className="text-sm text-red-500">{errors.zip?.message}</p>
+            )}
           </label>
           <label
             htmlFor="country"
@@ -160,11 +251,11 @@ export default function ContactForm({ background }: ContactFormProps) {
           >
             Country
             <select
+              {...register("country")}
               className="cursor-pointer"
               id="country"
               placeholder="REQUIRED"
               defaultValue={"US"}
-              {...(register("country"), { required: true })}
             >
               {countries.map((item) => {
                 return (
@@ -186,11 +277,11 @@ export default function ContactForm({ background }: ContactFormProps) {
         >
           How Can We Help You *
           <select
-            className="font-normal cursor-pointer"
+            {...register("serviceType", { required: true })}
+            className="font-normal"
             id="serviceType"
             placeholder="REQUIRED"
             defaultValue={"treeTrimming"}
-            {...(register("serviceType"), { required: true })}
           >
             {serviceType.map((item) => {
               return (
@@ -211,19 +302,19 @@ export default function ContactForm({ background }: ContactFormProps) {
         >
           Please Provide Any Additional Details
           <textarea
+            {...register("details")}
             className="font-bold h-48 resize-none"
             id="details"
             placeholder="Write your message"
-            {...register("details")}
           />
         </label>
         <div className="md:col-span-2 py-10">
-          <a
+          <button
             type="submit"
             className="bg-[#639c4d] text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl"
           >
             Submit
-          </a>
+          </button>
         </div>
       </form>
     </SectionWrapper>
