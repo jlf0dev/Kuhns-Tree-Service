@@ -6,6 +6,7 @@ import SectionWrapper from "../../components/sectionWrapper";
 import heroBg from "../../public/kuhn-services-hero.jpg";
 import saw from "../../public/kuhn-saw-tree.jpg";
 import ContactForm from "../../components/contactForm";
+import KuhnButton from "../../components/kuhnButton";
 
 export default function Services() {
   return (
@@ -32,13 +33,7 @@ export default function Services() {
             start the conversation and to get us to your property to assess,
             diagnose, and develop a game plan for the tree services needed.
           </p>
-          <div className="py-10">
-            <Link href="/contact">
-              <a className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
-                Contact Us
-              </a>
-            </Link>
-          </div>
+          <KuhnButton href="/contact" text="Contact Us" center />
         </div>
       </SectionWrapper>
 

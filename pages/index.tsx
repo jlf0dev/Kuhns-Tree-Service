@@ -17,6 +17,7 @@ import ContactForm from "../components/contactForm";
 import Navbar from "../components/navbar";
 import SectionWrapper from "../components/sectionWrapper";
 import Footer from "../components/footer";
+import KuhnButton from "../components/kuhnButton";
 
 const Home: NextPage = () => {
   return (
@@ -88,13 +89,7 @@ const Home: NextPage = () => {
           <p className="pb-5">
             Kuhn's Tree Service is fully licensed and insured.
           </p>
-          <div className="my-10 h-fit w-fit shadow-xl self-center">
-            <Link href="/about">
-              <a className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg inline-block">
-                Learn More
-              </a>
-            </Link>
-          </div>
+          <KuhnButton href="/about" text="Learn More" center />
         </div>
       </SectionWrapper>
 
@@ -143,13 +138,7 @@ const Home: NextPage = () => {
               job done quickly, protecting you and your family from further
               problems.
             </p>
-            <div className="py-10">
-              <Link href="/contact">
-                <a className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
-                  Contact Us
-                </a>
-              </Link>
-            </div>
+            <KuhnButton href="/contact" text="Contact Us" />
           </div>
           <div className="grid place-items-center">
             <Image src={fallen} alt="Picture of a tree fallen on a house" />
@@ -193,13 +182,7 @@ const Home: NextPage = () => {
             />
           </div>
         </div>
-        <div className="py-10">
-          <Link href="/menu">
-            <a className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
-              View More
-            </a>
-          </Link>
-        </div>
+        <KuhnButton href="/contact" text="Contact Us" center />
       </SectionWrapper>
 
       <ContactForm background="bg-white" />

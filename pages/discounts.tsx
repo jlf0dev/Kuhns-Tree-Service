@@ -6,6 +6,7 @@ import SectionWrapper from "../components/sectionWrapper";
 import heroBg from "../public/kuhn-discount-hero.jpg";
 import crew from "../public/kuhn-crew-working.jpg";
 import ContactForm from "../components/contactForm";
+import KuhnButton from "../components/kuhnButton";
 
 export default function Discounts() {
   return (
@@ -29,13 +30,7 @@ export default function Discounts() {
             how big or small the job, we get it done efficiently, effectively
             and done right the first time.
           </p>
-          <div className="py-10">
-            <Link href="/contact">
-              <a className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
-                Contact Us
-              </a>
-            </Link>
-          </div>
+          <KuhnButton href="/contact" text="Contact Us" center />
         </div>
       </SectionWrapper>
 

@@ -6,6 +6,7 @@ import SectionWrapper from "../../components/sectionWrapper";
 import heroBg from "../../public/kuhn-removal-hero.jpg";
 import removal from "../../public/kuhn-tree-removal.jpg";
 import ContactForm from "../../components/contactForm";
+import KuhnButton from "../../components/kuhnButton";
 
 export default function TreeRemoval() {
   return (
@@ -33,13 +34,7 @@ export default function TreeRemoval() {
             periods. Our team carries the training and knowledge to know when
             and how to remove a tree.
           </p>
-          <div className="py-10">
-            <Link href="/contact">
-              <a className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
-                Contact Us
-              </a>
-            </Link>
-          </div>
+          <KuhnButton href="/contact" text="Contact Us" center />
         </div>
       </SectionWrapper>
 
@@ -53,7 +48,7 @@ export default function TreeRemoval() {
             <p>
               While some trees may look unhealthy, they may not need to be
               removed and could need special treatment instead. The
-              professionals at Kuhn's Tree Service know exactly when it’s time
+              professionals at Kuhn's Tree Service know exactly when it's time
               to say, “TIMBER!” Trees often have to be removed when they become
               diseased, such as an oak dying from golden-spotted oak borer
               damage, or the roots have caused structural damage to your

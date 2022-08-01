@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "../components/contactForm";
 import Hero from "../components/hero";
+import KuhnButton from "../components/kuhnButton";
 import SectionWrapper from "../components/sectionWrapper";
 import heroBg from "../public/kuhn-about-hero.jpg";
 import trucks from "../public/kuhn-trucks.jpg";
@@ -31,13 +32,7 @@ export default function About() {
             personalized treatment plan to help them live longer or remove and
             take care of the Green Waste in an environmentally friendly way.
           </p>
-          <div className="py-10">
-            <Link href="/contact">
-              <a className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
-                Contact Us
-              </a>
-            </Link>
-          </div>
+          <KuhnButton href="/contact" text="Contact Us" center />
         </div>
       </SectionWrapper>
 
