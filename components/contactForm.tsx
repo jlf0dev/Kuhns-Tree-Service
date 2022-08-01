@@ -1,6 +1,8 @@
+import { syncBuiltinESMExports } from "module";
 import Link from "next/link";
 import React from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import { TailSpin } from "react-loader-spinner";
 import SectionWrapper from "./sectionWrapper";
 
 let countries: Country[] = require("../data/countryList.json");
@@ -38,7 +40,7 @@ export default function ContactForm({ background }: ContactFormProps) {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<IFormData>();
 
   // its gross but it works
@@ -51,7 +53,8 @@ export default function ContactForm({ background }: ContactFormProps) {
     }
   }
 
-  const onSubmit: SubmitHandler<IFormData> = (data) => {
+  const onSubmit: SubmitHandler<IFormData> = async (data) => {
+    await new Promise((r) => setTimeout(r, 5000));
     fetch("/api/contact", {
       method: "post",
       body: JSON.stringify(data),
@@ -311,9 +314,21 @@ export default function ContactForm({ background }: ContactFormProps) {
         <div className="md:col-span-2 py-10">
           <button
             type="submit"
-            className="bg-[#639c4d] text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl"
+            disabled={isSubmitting}
+            className={`inline-flex items-center text-white py-4 px-8 text-lg shadow-xl  ${
+              isSubmitting ? "bg-[#1b381f] " : "bg-[#639c4d] hover:bg-[#1b381f]"
+            }`}
           >
-            Submit
+            <TailSpin
+              height="15"
+              width="15"
+              color="#FFFFFF"
+              ariaLabel="tail-spin-loading"
+              radius="1"
+              wrapperStyle={{ "padding-right": "10px" }}
+              visible={isSubmitting}
+            />
+            {isSubmitting ? "Submitting..." : "Submit"}
           </button>
         </div>
       </form>

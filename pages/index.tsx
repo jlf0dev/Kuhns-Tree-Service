@@ -88,9 +88,9 @@ const Home: NextPage = () => {
           <p className="pb-5">
             Kuhn's Tree Service is fully licensed and insured.
           </p>
-          <div className="py-10">
+          <div className="my-10 h-fit w-fit shadow-xl self-center">
             <Link href="/about">
-              <a className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
+              <a className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg inline-block">
                 Learn More
               </a>
             </Link>
@@ -144,7 +144,7 @@ const Home: NextPage = () => {
               problems.
             </p>
             <div className="py-10">
-              <Link href="/menu">
+              <Link href="/contact">
                 <a className="bg-kuhn-light-green text-white py-4 px-8 hover:bg-[#1b381f] text-lg shadow-xl">
                   Contact Us
                 </a>
