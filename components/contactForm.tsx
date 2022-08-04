@@ -58,7 +58,6 @@ export default function ContactForm({ background }: ContactFormProps) {
   }
 
   const enableRecaptcha = () => {
-    console.log("enableRecaptcha");
     setRecaptchaNeeded(true);
   };
 
@@ -66,7 +65,6 @@ export default function ContactForm({ background }: ContactFormProps) {
     console.log("executing captcha");
     const token = await recaptchaRef.current?.executeAsync();
 
-    console.log(token);
     try {
       const response = await fetch("/api/contact", {
         method: "post",
