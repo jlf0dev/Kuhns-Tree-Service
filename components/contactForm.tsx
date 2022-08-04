@@ -417,7 +417,7 @@ export default function ContactForm({ background }: ContactFormProps) {
   } else {
     return (
       <SectionWrapper>
-        <h3 className="text-black pb-4">Thank you for contacting us</h3>
+        <h3 className="pb-4">Thank You for Contacting Us!</h3>
         <p>
           We have received your information and will get back to you shortly.
         </p>
