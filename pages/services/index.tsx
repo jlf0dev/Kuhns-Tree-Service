@@ -12,7 +12,9 @@ export default function Services() {
   return (
     <>
       <Head>
-        <title>Kuhn's Tree Service | Services</title>
+        <title>
+          Professional and Comprehensive Service | Kuhn's Tree Service
+        </title>
       </Head>
       <Hero backgroundImage={heroBg} text="Services" />
 

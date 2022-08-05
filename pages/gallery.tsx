@@ -8,7 +8,7 @@ export default function Gallery() {
   return (
     <>
       <Head>
-        <title>Kuhn's Tree Service | Gallery</title>
+        <title>Professional Tree Services Gallery | Kuhn's Tree Service</title>
       </Head>
       <Hero backgroundImage={heroBg} text="Gallery" />
 

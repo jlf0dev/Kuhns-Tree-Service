@@ -12,7 +12,7 @@ export default function TreeTrimming() {
   return (
     <>
       <Head>
-        <title>Kuhn's Tree Service | Tree Trimming</title>
+        <title>Tree Trimming Services in Maryland | Kuhn's Tree Service</title>
       </Head>
       <Hero backgroundImage={heroBg} text="Tree Trimming" />
 

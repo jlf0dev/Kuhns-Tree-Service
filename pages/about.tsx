@@ -12,7 +12,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Kuhn's Tree Service | About Us</title>
+        <title>About Us - 35 Years of Experience | Kuhn's Tree Service</title>
       </Head>
       <Hero backgroundImage={heroBg} text="About Us" />
 

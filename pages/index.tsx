@@ -23,7 +23,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Tree Services Maryland | Kuhn's Tree Service | Home</title>
+        <title>Professional Tree Services Maryland | Kuhn's Tree Service</title>
       </Head>
 
       {/* Hero */}

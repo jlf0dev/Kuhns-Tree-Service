@@ -12,7 +12,9 @@ export default function Discounts() {
   return (
     <>
       <Head>
-        <title>Kuhn's Tree Service | Discounts</title>
+        <title>
+          Discounts Available for Maryland Customers | Kuhn's Tree Service
+        </title>
       </Head>
       <Hero backgroundImage={heroBg} text="Discounts" />
 

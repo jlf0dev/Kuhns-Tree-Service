@@ -12,7 +12,7 @@ export default function TreeRemoval() {
   return (
     <>
       <Head>
-        <title>Kuhn's Tree Service | Tree Removal</title>
+        <title>Professional Tree Removal | Kuhn's Tree Service</title>
       </Head>
       <Hero backgroundImage={heroBg} text="Tree Removal" />
 

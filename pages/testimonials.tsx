@@ -16,7 +16,9 @@ export default function Testimonials() {
   return (
     <>
       <Head>
-        <title>Kuhn's Tree Service | Testimonials</title>
+        <title>
+          Satisfied Tree Service Customer Testimonials | Kuhn's Tree Service
+        </title>
       </Head>
       <Hero backgroundImage={heroBg} text="Testimonials" />
 

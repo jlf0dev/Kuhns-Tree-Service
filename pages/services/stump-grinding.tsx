@@ -11,7 +11,7 @@ export default function StumpGrinding() {
   return (
     <>
       <Head>
-        <title>Kuhn's Tree Service | Stump Grinding</title>
+        <title>Stump Grinding Services | Kuhn's Tree Service</title>
       </Head>
       <Hero backgroundImage={heroBg} text="Stump Grinding" />
 

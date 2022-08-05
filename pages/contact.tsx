@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Kuhn's Tree Service | Contact Us</title>
+        <title>Contact Us for an Estimate | Kuhn's Tree Service</title>
       </Head>
       <Hero backgroundImage={heroBg} text="Contact Us" />
 

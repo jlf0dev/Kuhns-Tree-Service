@@ -9,7 +9,7 @@ export default function FirewoodForSale() {
   return (
     <>
       <Head>
-        <title>Kuhn's Tree Service | Firewood For Sale</title>
+        <title>Firewood For Sale | Kuhn's Tree Service</title>
       </Head>
       <Hero backgroundImage={heroBg} text="Firewood For Sale" />
 
