@@ -108,18 +108,24 @@ const Home: NextPage = () => {
           to accomplish the following when you need us most:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 md: place-items-center gap-24 text-white my-5">
-          <div className="pb-2 bg-[#244b29] hover:bg-kuhn-light-green shadow-xl w-fit">
-            <Image src={trimming} alt="Picture of tree trimming" />
-            <h5 className="text-white">Tree Trimming</h5>
-          </div>
-          <div className="pb-2 bg-[#244b29] hover:bg-kuhn-light-green shadow-xl w-fit">
-            <Image src={removal} alt="Picture of tree removal" />
-            <h5 className="text-white">Tree Removal</h5>
-          </div>
-          <div className="pb-2 bg-[#244b29] hover:bg-kuhn-light-green shadow-xl w-fit">
-            <Image src={grinding} alt="Picture of stump grinding" />
-            <h5 className="text-white">Stump Grinding</h5>
-          </div>
+          <Link href="/services/tree-trimming">
+            <div className="pb-2 bg-[#244b29] hover:bg-kuhn-light-green shadow-xl w-fit cursor-pointer">
+              <Image src={trimming} alt="Picture of tree trimming" />
+              <h5 className="text-white">Tree Trimming</h5>
+            </div>
+          </Link>
+          <Link href="/services/tree-removal">
+            <div className="pb-2 bg-[#244b29] hover:bg-kuhn-light-green shadow-xl w-fit cursor-pointer">
+              <Image src={removal} alt="Picture of tree removal" />
+              <h5 className="text-white">Tree Removal</h5>
+            </div>
+          </Link>
+          <Link href="/services/stump-grinding">
+            <div className="pb-2 bg-[#244b29] hover:bg-kuhn-light-green shadow-xl w-fit cursor-pointer">
+              <Image src={grinding} alt="Picture of stump grinding" />
+              <h5 className="text-white">Stump Grinding</h5>
+            </div>
+          </Link>
         </div>
       </SectionWrapper>
 
