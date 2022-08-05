@@ -392,6 +392,7 @@ export default function ContactForm({ background }: ContactFormProps) {
           <div className="md:col-span-2 py-10">
             <button
               type="submit"
+              aria-label="Submit"
               disabled={isSubmitting}
               className={`inline-flex items-center text-white py-4 px-8 text-lg shadow-xl  ${
                 isSubmitting

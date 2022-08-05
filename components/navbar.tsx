@@ -61,7 +61,7 @@ export default function Navbar() {
                 </a>
               </Link>
             </div>
-            <button onClick={() => setOpen(false)}>
+            <button onClick={() => setOpen(false)} aria-label="Close Menu">
               <FaArrowLeft className="text-kuhn-light-green" />
             </button>
           </div>
@@ -227,7 +227,11 @@ interface HamburgerProps {
 
 function Hamburger({ toggleMenu }: HamburgerProps) {
   return (
-    <button onClick={toggleMenu} className="absolute left-0">
+    <button
+      onClick={toggleMenu}
+      className="absolute left-0"
+      aria-label="Open Menu"
+    >
       <div className="lg:hidden">
         <span className="block w-[33px] h-[4px] mb-[5px] rounded-[3px] bg-kuhn-light-green" />
         <span className="block w-[33px] h-[4px] mb-[5px] rounded-[3px] bg-kuhn-light-green" />
