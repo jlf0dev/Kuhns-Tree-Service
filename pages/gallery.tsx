@@ -1,14 +1,17 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
 import Hero from "../components/hero";
 import SectionWrapper from "../components/sectionWrapper";
 import heroBg from "../public/kuhn-gallery-hero.jpg";
+
+let pictureUrls: string[] = require("../data/gallery.json");
 
 export default function Gallery() {
   return (
     <>
       <Head>
-        <title>Professional Tree Services Gallery | Kuhn's Tree Service</title>
+        <title>Tree Services Gallery | Kuhn's Tree Service</title>
       </Head>
       <Hero backgroundImage={heroBg} text="Gallery" />
 
@@ -26,6 +29,33 @@ export default function Gallery() {
           </p>
         </div>
       </SectionWrapper>
+
+      <SectionWrapper className="lg:max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-10">
+          {pictureUrls.map((url, index) => {
+            return <ImageFrame url={url} key={index} />;
+          })}
+        </div>
+      </SectionWrapper>
     </>
   );
 }
+
+type FrameProps = {
+  url: string | StaticImageData;
+};
+
+export const ImageFrame = ({ url }: FrameProps) => {
+  return (
+    <>
+      <div className="relative w-72 h-72 m-auto drop-shadow md:drop-shadow-2xl ">
+        <Image
+          src={url}
+          alt="Picture of Kuhn's tree services working"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+    </>
+  );
+};

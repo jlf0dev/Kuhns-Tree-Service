@@ -1,10 +1,13 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import fetch from "node-fetch";
+import sendgrid from "@sendgrid/mail";
 
 interface FormResponse {
   status: string;
 }
+
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY ?? "");
 
 export default async function handler(
   req: NextApiRequest,
@@ -42,8 +45,25 @@ export default async function handler(
         }
        */
       if (captchaValidation.success) {
-        await new Promise((r) => setTimeout(r, 5000));
-        console.log(data);
+        try {
+          await sendgrid.send({
+            to: "jakeatral@gmail.com",
+            from: "kuhnstreeservice@gmail.com",
+            subject: "New Website Submission",
+            html: `
+            <p>${data.firstName} ${data.lastName}</p>
+            <p>${data.phone}</p>
+            <p>${data.email}</p>
+            <p>${data.address}</p> 
+            <p>${data.city}, ${data.state} ${data.zip}</p>
+            <p>${data.serviceType}</p>
+            <p>${data.details}</p>`,
+          });
+        } catch (error: any) {
+          return res
+            .status(error.statusCode || 500)
+            .json({ status: error.message });
+        }
         return res.status(200).send({ status: "Ok" });
       }
 

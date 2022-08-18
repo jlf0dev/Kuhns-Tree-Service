@@ -18,6 +18,7 @@ import Navbar from "../components/navbar";
 import SectionWrapper from "../components/sectionWrapper";
 import Footer from "../components/footer";
 import KuhnButton from "../components/kuhnButton";
+import { ImageFrame } from "./gallery";
 
 const Home: NextPage = () => {
   return (
@@ -160,41 +161,13 @@ const Home: NextPage = () => {
 
       <SectionWrapper className="lg:max-w-6xl" background="bg-[#f7f7f7]">
         <h3 className="text-kuhn-light-green">Tree Services Gallery</h3>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 pt-11 pb-3">
-          <div>
-            <Image
-              src={gallery1}
-              alt="Picture of a tree removal"
-              width={276}
-              height={276}
-            />
-          </div>
-          <div>
-            <Image
-              src={gallery2}
-              alt="Picture of a fallen tree"
-              width={276}
-              height={276}
-            />
-          </div>
-          <div>
-            <Image
-              src={gallery3}
-              alt="Picture of Kuhn's Tree Service crew"
-              width={276}
-              height={276}
-            />
-          </div>
-          <div>
-            <Image
-              src={gallery4}
-              alt="Picture of crew removing tree next to house"
-              width={276}
-              height={276}
-            />
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 pt-11 pb-3">
+          <ImageFrame url={gallery1} />
+          <ImageFrame url={gallery2} />
+          <ImageFrame url={gallery3} />
+          <ImageFrame url={gallery4} />
         </div>
-        <KuhnButton href="/contact" text="Contact Us" center />
+        <KuhnButton href="/gallery" text="See Gallery" center />
       </SectionWrapper>
 
       <ContactForm background="bg-white" />

@@ -18,7 +18,7 @@ type ServiceType = {
   name: string;
 };
 
-interface IFormData {
+export interface IFormData {
   firstName: string;
   lastName: string;
   phone: number;
@@ -62,7 +62,6 @@ export default function ContactForm({ background }: ContactFormProps) {
   };
 
   const onSubmit: SubmitHandler<IFormData> = async (data) => {
-    console.log("executing captcha");
     const token = await recaptchaRef.current?.executeAsync();
 
     try {
@@ -312,7 +311,8 @@ export default function ContactForm({ background }: ContactFormProps) {
                     enableRecaptcha();
                   },
                 })}
-                className="cursor-pointer"
+                disabled
+                className="cursor-pointer bg-gray-200"
                 id="country"
                 placeholder="REQUIRED"
                 defaultValue={"US"}
@@ -352,7 +352,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                 return (
                   <option
                     key={item.code}
-                    value={item.code}
+                    value={item.name}
                     className="cursor-pointer"
                   >
                     {item.name}
@@ -384,11 +384,6 @@ export default function ContactForm({ background }: ContactFormProps) {
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}
             />
           )}
-          {/* <ReCAPTCHA
-            ref={recaptchaRef}
-            size="invisible"
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}
-          /> */}
           <div className="md:col-span-2 py-10">
             <button
               type="submit"
@@ -417,7 +412,7 @@ export default function ContactForm({ background }: ContactFormProps) {
     );
   } else {
     return (
-      <SectionWrapper>
+      <SectionWrapper background={background}>
         <h3 className="pb-4">Thank You for Contacting Us!</h3>
         <p>
           We have received your information and will get back to you shortly.

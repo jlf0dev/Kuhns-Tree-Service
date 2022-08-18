@@ -50,6 +50,14 @@
     @apply font-bold;
     @apply text-kuhn-green;
   }
+  h4 {
+    @apply font-heading;
+    @apply text-xl;
+    @apply md:text-2xl;
+    @apply lg:text-3xl;
+    @apply font-bold;
+    @apply text-kuhn-green;
+  }
   h5 {
     @apply font-heading;
     @apply text-lg;
@@ -62,6 +70,7 @@
   }
   input {
     @apply border;
+    @apply rounded-none;
     @apply border-kuhn-green;
     @apply p-3;
     @apply text-sm;
@@ -88,9 +97,12 @@
     @apply border;
     @apply border-kuhn-green;
     @apply p-3;
-    @apply text-base;
+    @apply text-sm;
     @apply my-1;
     @apply bg-white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
   a {
     @apply font-semibold;
