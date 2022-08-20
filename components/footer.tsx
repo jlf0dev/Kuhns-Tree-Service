@@ -91,8 +91,10 @@ export default function Footer() {
               <a
                 href="https://www.facebook.com/kuhnstreeservices/"
                 className="hover:text-kuhn-light-green"
+                title="Facebook"
               >
                 <FaFacebookSquare className="inline mr-2" />
+                <span className="sr-only">Facebook</span>
               </a>
             </IconContext.Provider>
           </div>

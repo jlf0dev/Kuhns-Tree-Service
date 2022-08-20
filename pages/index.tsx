@@ -90,7 +90,7 @@ const Home: NextPage = () => {
           <p className="pb-5">
             Kuhn's Tree Service is fully licensed and insured.
           </p>
-          <KuhnButton href="/about" text="Learn More" center />
+          <KuhnButton href="/about" text="Who We Are" center />
         </div>
       </SectionWrapper>
 
