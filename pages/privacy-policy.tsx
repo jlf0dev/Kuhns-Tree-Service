@@ -59,7 +59,7 @@ export default function PrivacyPolicy() {
             personal information depending on how you interact with Kuhn's Tree
             Service and the Services, the choices you make, and the products and
             features you use. Click{" "}
-            <a href="#" className="text-kuhn-light-green">
+            <a href="#collect" className="text-kuhn-light-green">
               here{" "}
             </a>
             to learn more.
@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
             and to comply with law. We may also process your information for
             other purposes with your consent. We process your information only
             when we have a valid legal reason to do so. Click{" "}
-            <a href="#" className="text-kuhn-light-green">
+            <a href="#process" className="text-kuhn-light-green">
               here
             </a>{" "}
             to learn more.
@@ -91,7 +91,7 @@ export default function PrivacyPolicy() {
             </span>{" "}
             We may share information in specific situations and with specific
             categories of third parties. Click{" "}
-            <a href="#" className="text-kuhn-light-green">
+            <a href="#share" className="text-kuhn-light-green">
               here
             </a>{" "}
             to learn more.
@@ -107,7 +107,7 @@ export default function PrivacyPolicy() {
             that hackers, cybercriminals, or other unauthorized third parties
             will not be able to defeat our security and improperly collect,
             access, steal, or modify your information. Click{" "}
-            <a href="#" className="text-kuhn-light-green">
+            <a href="#security" className="text-kuhn-light-green">
               here
             </a>{" "}
             to learn more.
@@ -117,7 +117,7 @@ export default function PrivacyPolicy() {
             on where you are located geographically, the applicable privacy law
             may mean you have certain rights regarding your personal
             information. Click{" "}
-            <a href="#" className="text-kuhn-light-green">
+            <a href="#rights" className="text-kuhn-light-green">
               here
             </a>{" "}
             to learn more.
@@ -131,72 +131,74 @@ export default function PrivacyPolicy() {
           <p className="mb-5">
             Want to learn more about what Kuhn's Tree Service does with any
             information we collect? Click{" "}
-            <a href="#" className="text-kuhn-light-green">
+            <a href="#process" className="text-kuhn-light-green">
               here
             </a>{" "}
             to review the notice in full.
           </p>
         </div>
         <div className="mb-10">
-          <h3 className="mb-5">TABLE OF CONTENTS</h3>
+          <h3 className="mb-5" id="toc">
+            TABLE OF CONTENTS
+          </h3>
           <ul>
             <li className="mb-5">
-              <a href="#" className="text-kuhn-light-green">
+              <a href="#collect" className="text-kuhn-light-green">
                 1. WHAT INFORMATION DO WE COLLECT?
               </a>
             </li>
             <li className="mb-5">
-              <a href="#" className="text-kuhn-light-green">
+              <a href="#process" className="text-kuhn-light-green">
                 2. HOW DO WE PROCESS YOUR INFORMATION?
               </a>
             </li>
             <li className="mb-5">
-              <a href="#" className="text-kuhn-light-green">
+              <a href="#share" className="text-kuhn-light-green">
                 3. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
               </a>
             </li>
             <li className="mb-5">
-              <a href="#" className="text-kuhn-light-green">
+              <a href="#tracking" className="text-kuhn-light-green">
                 4. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
               </a>
             </li>
             <li className="mb-5">
-              <a href="#" className="text-kuhn-light-green">
+              <a href="#keep" className="text-kuhn-light-green">
                 5. HOW LONG DO WE KEEP YOUR INFORMATION?
               </a>
             </li>
             <li className="mb-5">
-              <a href="#" className="text-kuhn-light-green">
+              <a href="#security" className="text-kuhn-light-green">
                 6. HOW DO WE KEEP YOUR INFORMATION SAFE?
               </a>
             </li>
             <li className="mb-5">
-              <a href="#" className="text-kuhn-light-green">
+              <a href="#rights" className="text-kuhn-light-green">
                 7. WHAT ARE YOUR PRIVACY RIGHTS?
               </a>
             </li>
             <li className="mb-5">
-              <a href="#" className="text-kuhn-light-green">
+              <a href="#controls" className="text-kuhn-light-green">
                 8. CONTROLS FOR DO-NOT-TRACK FEATURES
               </a>
             </li>
             <li className="mb-5">
-              <a href="#" className="text-kuhn-light-green">
+              <a href="#california" className="text-kuhn-light-green">
                 9. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
               </a>
             </li>
             <li className="mb-5">
-              <a href="#" className="text-kuhn-light-green">
+              <a href="#updates" className="text-kuhn-light-green">
                 10. DO WE MAKE UPDATES TO THIS NOTICE?
               </a>
             </li>
             <li className="mb-5">
-              <a href="#" className="text-kuhn-light-green">
+              <a href="#contact" className="text-kuhn-light-green">
                 11. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
               </a>
             </li>
             <li className="mb-5">
-              <a href="#" className="text-kuhn-light-green">
+              <a href="#review" className="text-kuhn-light-green">
                 12. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT
                 FROM YOU?
               </a>
@@ -204,7 +206,9 @@ export default function PrivacyPolicy() {
           </ul>
         </div>
         <div className="mb-10">
-          <h3 className="mb-5">1. WHAT INFORMATION DO WE COLLECT?</h3>
+          <h3 className="mb-5" id="collect">
+            1. WHAT INFORMATION DO WE COLLECT?
+          </h3>
           <div className="mb-2">
             <h4 className="mb-5">Personal information you disclose to us</h4>
             <p className="mb-5">
@@ -298,7 +302,9 @@ export default function PrivacyPolicy() {
           </div>
         </div>
         <div className="mb-10">
-          <h3 className="mb-5">2. HOW DO WE PROCESS YOUR INFORMATION?</h3>
+          <h3 className="mb-5" id="process">
+            2. HOW DO WE PROCESS YOUR INFORMATION?
+          </h3>
           <p className="mb-5">
             <span className="font-bold">In Short:</span> We process your
             information to provide, improve, and administer our Services,
@@ -362,7 +368,7 @@ export default function PrivacyPolicy() {
           </ul>
         </div>
         <div className="mb-10">
-          <h3 className="mb-5">
+          <h3 className="mb-5" id="share">
             3. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
           </h3>
           <p className="mb-5">
@@ -403,7 +409,7 @@ export default function PrivacyPolicy() {
           </ul>
         </div>
         <div className="mb-10">
-          <h3 className="mb-5">
+          <h3 className="mb-5" id="tracking">
             4. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
           </h3>
           <p className="mb-5">
@@ -418,7 +424,9 @@ export default function PrivacyPolicy() {
           </p>
         </div>
         <div className="mb-10">
-          <h3 className="mb-5">5. HOW LONG DO WE KEEP YOUR INFORMATION?</h3>
+          <h3 className="mb-5" id="keep">
+            5. HOW LONG DO WE KEEP YOUR INFORMATION?
+          </h3>
           <p className="mb-5">
             <span className="font-bold">In Short:</span> We keep your
             information for as long as necessary to fulfill the purposes
@@ -442,7 +450,9 @@ export default function PrivacyPolicy() {
           </p>
         </div>
         <div className="mb-10">
-          <h3 className="mb-5">6. HOW DO WE KEEP YOUR INFORMATION SAFE?</h3>
+          <h3 className="mb-5" id="security">
+            6. HOW DO WE KEEP YOUR INFORMATION SAFE?
+          </h3>
           <p className="mb-5">
             <span className="font-bold">In Short:</span> We aim to protect your
             personal information through a system of organizational and
@@ -464,7 +474,9 @@ export default function PrivacyPolicy() {
           </p>
         </div>
         <div className="mb-10">
-          <h3 className="mb-5">7. WHAT ARE YOUR PRIVACY RIGHTS?</h3>
+          <h3 className="mb-5" id="rights">
+            7. WHAT ARE YOUR PRIVACY RIGHTS?
+          </h3>
           <p className="mb-5">
             <span className="font-bold">In Short:</span> You may review, change,
             or terminate your account at any time.
@@ -500,7 +512,7 @@ export default function PrivacyPolicy() {
             applicable law, you have the right to withdraw your consent at any
             time. You can withdraw your consent at any time by contacting us by
             using the contact details provided in the section{" "}
-            <a href="#" className="text-kuhn-light-green">
+            <a href="#contact" className="text-kuhn-light-green">
               "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?"
             </a>{" "}
             below.
@@ -533,7 +545,9 @@ export default function PrivacyPolicy() {
           </p>
         </div>
         <div className="mb-10">
-          <h3 className="mb-5">8. CONTROLS FOR DO-NOT-TRACK FEATURES</h3>
+          <h3 className="mb-5" id="controls">
+            8. CONTROLS FOR DO-NOT-TRACK FEATURES
+          </h3>
           <p className="mb-5">
             Most web browsers and some mobile operating systems and mobile
             applications include a Do-Not-Track ("DNT") feature or setting you
@@ -549,7 +563,7 @@ export default function PrivacyPolicy() {
           </p>
         </div>
         <div className="mb-10">
-          <h3 className="mb-5">
+          <h3 className="mb-5" id="california">
             9. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
           </h3>
           <p className="mb-5">
@@ -582,7 +596,9 @@ export default function PrivacyPolicy() {
           </p>
         </div>
         <div className="mb-10">
-          <h3 className="mb-5">10. DO WE MAKE UPDATES TO THIS NOTICE?</h3>
+          <h3 className="mb-5" id="updates">
+            10. DO WE MAKE UPDATES TO THIS NOTICE?
+          </h3>
           <p className="mb-5">
             <span className="font-bold">In Short:</span> Yes, we will update
             this notice as necessary to stay compliant with relevant laws.
@@ -599,7 +615,7 @@ export default function PrivacyPolicy() {
           </p>
         </div>
         <div className="mb-10">
-          <h3 className="mb-5">
+          <h3 className="mb-5" id="contact">
             11. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
           </h3>
           <p className="mb-5">
@@ -612,7 +628,7 @@ export default function PrivacyPolicy() {
           <p>United States</p>
         </div>
         <div className="mb-10">
-          <h3 className="mb-5">
+          <h3 className="mb-5" id="review">
             12. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM
             YOU?
           </h3>

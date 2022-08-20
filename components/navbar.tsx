@@ -29,7 +29,7 @@ export default function Navbar() {
             <div className="md:pr-7 lg:pr-0">
               <a
                 href="tel:301-384-4724"
-                className=" hover:text-kuhn-light-green"
+                className="hover:text-kuhn-light-green"
               >
                 <p className="text-sm">
                   <FaPhoneAlt className="inline mr-2" />
@@ -77,12 +77,6 @@ export default function Navbar() {
               </ActiveLink>
             </li>
             <li className="">
-              {/* <ActiveLink
-                href="/services"
-                activeClassName="text-kuhn-light-green"
-              >
-                <a onClick={closeMenu}>Services</a>
-              </ActiveLink> */}
               <MobileMenuButton closeMenu={closeMenu} />
             </li>
             <li className="">
@@ -173,12 +167,6 @@ export default function Navbar() {
             </ActiveLink>
           </li>
           <li className="h-11">
-            {/* <ActiveLink
-              href="/services"
-              activeClassName="text-kuhn-light-green"
-            >
-              <a className="h-full grid place-items-center">Services</a>
-            </ActiveLink> */}
             <MenuButton />
           </li>
           <li className="h-11">
