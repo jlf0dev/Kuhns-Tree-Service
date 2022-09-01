@@ -104,7 +104,9 @@ export default function ContactForm({ background }: ContactFormProps) {
                   enableRecaptcha();
                 },
               })}
-              className={`${errors.firstName ? "border-red-500" : ""}`}
+              className={`font-normal ${
+                errors.firstName ? "border-red-500" : ""
+              }`}
               id="firstName"
               placeholder="First Name"
               type="text"
@@ -129,7 +131,9 @@ export default function ContactForm({ background }: ContactFormProps) {
                   enableRecaptcha();
                 },
               })}
-              className={`${errors.lastName ? "border-red-500" : ""}`}
+              className={`font-normal ${
+                errors.lastName ? "border-red-500" : ""
+              }`}
               id="lastName"
               placeholder="Last Name"
               type="text"
@@ -152,7 +156,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                   enableRecaptcha();
                 },
               })}
-              className={`${errors.phone ? "border-red-500" : ""}`}
+              className={`font-normal ${errors.phone ? "border-red-500" : ""}`}
               id="phone"
               placeholder="Phone"
               type="tel"
@@ -176,7 +180,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                   enableRecaptcha();
                 },
               })}
-              className={`${errors.email ? "border-red-500" : ""}`}
+              className={`font-normal ${errors.email ? "border-red-500" : ""}`}
               id="email"
               placeholder="Email"
               type="text"
@@ -203,7 +207,9 @@ export default function ContactForm({ background }: ContactFormProps) {
                     enableRecaptcha();
                   },
                 })}
-                className={`${errors.address ? "border-red-500" : ""}`}
+                className={`font-normal ${
+                  errors.address ? "border-red-500" : ""
+                }`}
                 id="address"
                 placeholder="REQUIRED"
                 type="text"
@@ -241,7 +247,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                     enableRecaptcha();
                   },
                 })}
-                className={`font-bold ${errors.city ? "border-red-500" : ""}`}
+                className={`font-normal ${errors.city ? "border-red-500" : ""}`}
                 id="city"
                 placeholder="REQUIRED"
                 type="text"
@@ -264,7 +270,9 @@ export default function ContactForm({ background }: ContactFormProps) {
                     enableRecaptcha();
                   },
                 })}
-                className={`font-bold ${errors.state ? "border-red-500" : ""}`}
+                className={`font-normal ${
+                  errors.state ? "border-red-500" : ""
+                }`}
                 id="state"
                 placeholder="REQUIRED"
                 type="text"
@@ -290,7 +298,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                     enableRecaptcha();
                   },
                 })}
-                className={`font-bold ${errors.zip ? "border-red-500" : ""}`}
+                className={`font-normal ${errors.zip ? "border-red-500" : ""}`}
                 id="zip"
                 placeholder="REQUIRED"
                 type="text"
@@ -312,7 +320,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                   },
                 })}
                 disabled
-                className="cursor-pointer bg-gray-200"
+                className="bg-gray-200"
                 id="country"
                 placeholder="REQUIRED"
                 defaultValue={"US"}
@@ -372,7 +380,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                   enableRecaptcha();
                 },
               })}
-              className="font-bold h-48 resize-none"
+              className="font-normal h-48 resize-none"
               id="details"
               placeholder="Write your message"
             />

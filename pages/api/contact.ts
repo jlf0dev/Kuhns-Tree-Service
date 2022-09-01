@@ -47,7 +47,7 @@ export default async function handler(
       if (captchaValidation.success) {
         try {
           await sendgrid.send({
-            to: "jakeatral@gmail.com",
+            to: process.env.CONTACT_FORM_SUBMIT_TO,
             from: "kuhnstreeservice@gmail.com",
             subject: "New Website Submission",
             html: `
