@@ -5,6 +5,7 @@ import "@fontsource/kameron/700.css";
 import type { AppProps } from "next/app";
 import Layout from "../components/layout";
 import Head from "next/head";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -37,6 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
+      <GoogleAnalytics trackPageViews />
       <Layout>
         <Component {...pageProps} />
       </Layout>

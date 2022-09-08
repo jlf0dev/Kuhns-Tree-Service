@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
   return (
     <>
       <Head>
-        <title>Privacy Policy| Kuhn's Tree Service</title>
+        <title>Privacy Policy | Kuhn's Tree Service</title>
       </Head>
       <Hero backgroundImage={heroBg} text="Privacy Policy" />
 
