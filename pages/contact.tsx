@@ -21,8 +21,8 @@ export default function Contact() {
             <p>
               Maryland, Silver Spring, Gaithersburg, Chevy Chase, Bethesda,
               Potomac, Rockville, Olney, Kensington, Washington DC (NE and NW),
-              Silver Spring, Laurel, Takoma Park, Northern Prince George's
-              County, and Parts of Howard County
+              Laurel, Takoma Park, Northern Prince George's County, and Parts of
+              Howard County
             </p>
           </div>
           <div className="pb-5">
