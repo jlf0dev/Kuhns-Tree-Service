@@ -12,6 +12,7 @@
     "next": "latest",
     "nextjs-google-analytics": "^2.1.0",
     "node-fetch": "^3.2.10",
+    "preact": "^10.11.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-google-recaptcha": "^2.1.0",
