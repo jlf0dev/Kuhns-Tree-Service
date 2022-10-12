@@ -37,9 +37,6 @@ export default function FirewoodForSale() {
             <li>Stacking 1/2 cord: $50</li>
           </ul>
         </div>
-        {/* <div className="pb-5">
-          <p>Stacking is also available for an additional fee.</p>
-        </div> */}
         <div className="pb-5">
           <p>
             Call us today at{" "}
