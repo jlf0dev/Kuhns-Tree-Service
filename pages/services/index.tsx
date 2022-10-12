@@ -58,8 +58,6 @@ export default function Services() {
               <li className="mb-1">Tree Removal</li>
               <li className="mb-1">Tree Pruning</li>
               <li className="mb-1">Stump Grinding</li>
-              <li className="mb-1">Landscaping</li>
-              <li className="mb-1">Storm Damage</li>
               <li className="mb-1">And So Much More</li>
             </ul>
           </div>
@@ -67,16 +65,12 @@ export default function Services() {
       </SectionWrapper>
 
       <SectionWrapper className="lg:max-w-3xl">
-        <h3 className="pb-5">Snow Plowing and Firewood Services</h3>
+        <h3 className="pb-5">Firewood Services</h3>
         <p>
-          We figured if we were going to equip our team with big trucks to
-          handle tree services, we might as well put a plow on them for the
-          Maryland winters. Businesses and homeowners can rely on us to help
-          keep their driveways and parking lots clear of snow and ice. We also
-          provide our clients with firewood services as a green way to handle
-          trees we have to cut down for health or other reasons. We can stack it
-          as well for an additional fee. You can either keep the wood from your
-          tree we work on or purchase cords from our staff.
+          We also provide our clients with firewood services as a green way to
+          handle trees we have to cut down for health or other reasons. We can
+          stack it as well for an additional fee. You can either keep the wood
+          from your tree we work on or purchase cords from our staff.
         </p>
       </SectionWrapper>
 
