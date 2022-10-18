@@ -24,7 +24,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Professional Tree Services Maryland | Kuhn's Tree Service</title>
+        <title>Maryland Tree Trimming & Removal Services | Kuhns Tree Service </title>
+        <description>Kuhns Tree Service offers tree trimming and removal services to residential and commercial properties in Silver Spring, Maryland. Call us today for a free estimate!</>
       </Head>
 
       {/* Hero */}
