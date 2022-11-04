@@ -14,9 +14,7 @@ import gallery2 from "../public/kuhn-gallery-2.jpg";
 import gallery3 from "../public/kuhn-gallery-3.jpg";
 import gallery4 from "../public/kuhn-gallery-4.jpg";
 import ContactForm from "../components/contactForm";
-import Navbar from "../components/navbar";
 import SectionWrapper from "../components/sectionWrapper";
-import Footer from "../components/footer";
 import KuhnButton from "../components/kuhnButton";
 import { ImageFrame } from "./gallery";
 
@@ -24,8 +22,15 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Maryland Tree Trimming & Removal Services | Kuhns Tree Service </title>
-        <description>Kuhns Tree Service offers tree trimming and removal services to residential and commercial properties in Silver Spring, Maryland. Call us today for a free estimate!</>
+        <title>
+          Maryland Tree Trimming & Removal Services | Kuhns Tree Service{" "}
+        </title>
+        <meta
+          name="description"
+          content="Kuhns Tree Service offers tree trimming and removal services to
+          residential and commercial properties in Silver Spring, Maryland. Call
+          us today for a free estimate!"
+        ></meta>
       </Head>
 
       {/* Hero */}
