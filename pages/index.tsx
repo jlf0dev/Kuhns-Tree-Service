@@ -31,9 +31,22 @@ const Home: NextPage = () => {
           residential and commercial properties in Silver Spring, Maryland. Call
           us today for a free estimate!"
         ></meta>
+        
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5W39XPX');</script>
+<!-- End Google Tag Manager -->
+        
       </Head>
-
       {/* Hero */}
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5W39XPX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
       <div className="w-full min-h-fit text-slate-50 bg-[#00000061] md:bg-[#00000026]">
         <div className="relative h-80 lg:h-10 pt-[15%] pb-[20%] md:py-[33%] lg:py-[20%]">
           <Image
