@@ -23,7 +23,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>
-          Maryland Tree Trimming & Removal Services | Kuhns Tree Service{" "}
+          Tree Trimming & Removal Services in Silver Springs, MD | Kuhns Tree Service{" "}
         </title>
         <meta
           name="description"
