@@ -12,6 +12,12 @@ export default function TreeTrimming() {
     <>
       <Head>
         <title>Tree Trimming Services in Maryland | Kuhn's Tree Service</title>
+        <meta
+          name='description'
+          content='Kuhns Tree Service is the team to call for all your tree trimming
+          needs! Keep your trees healthy and beautiful with our professional trimming
+          service. We offer free estimates and are fully insured.'
+        ></meta>
       </Head>
       <Hero backgroundImage={heroBg} text='Tree Trimming' />
 

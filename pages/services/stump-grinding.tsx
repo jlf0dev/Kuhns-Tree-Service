@@ -12,6 +12,11 @@ export default function StumpGrinding() {
     <>
       <Head>
         <title>Stump Grinding Services | Kuhn's Tree Service</title>
+        <meta
+          name='description'
+          content='Call Kuhns Tree Service for professional stump grinding services
+          in your area. We offer free estimates and are fully insured.'
+        ></meta>
       </Head>
       <Hero backgroundImage={heroBg} text='Stump Grinding' />
 

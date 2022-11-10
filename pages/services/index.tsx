@@ -12,6 +12,12 @@ export default function Services() {
     <>
       <Head>
         <title>Comprehensive Tree Services | Kuhn's Tree Service</title>
+        <meta
+          name='description'
+          content='Kuhns Tree Service offers extensive tree services to residential and
+          commercial properties in Silver Spring, Maryland. Call us today for Tree
+          Removal, Tree Trimming, Stump Grinding, and more!'
+        ></meta>
       </Head>
       <Hero backgroundImage={heroBg} text='Services' />
 

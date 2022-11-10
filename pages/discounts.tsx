@@ -14,6 +14,12 @@ export default function Discounts() {
         <title>
           Discounts Available for Maryland Customers | Kuhn's Tree Service
         </title>
+        <meta
+          name='description'
+          content='As a part of the community for over 35 years, Kuhns Tree Service
+          is proud to offer multiple discounts to Maryland residents. Call today
+          to schedule a free estimate!'
+        ></meta>
       </Head>
       <Hero backgroundImage={heroBg} text='Discounts' />
 

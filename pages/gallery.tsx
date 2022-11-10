@@ -11,6 +11,12 @@ export default function Gallery() {
     <>
       <Head>
         <title>Tree Services Gallery | Kuhn's Tree Service</title>
+        <meta
+          name='description'
+          content='Kuhns Tree Services is a family owned and operated tree service, proud
+          to serve Silver Spring, MD and the surrounding areas. We offer a wide variety of
+          services including tree removal, tree trimming, stump grinding, and more.'
+        ></meta>
       </Head>
       <Hero backgroundImage={heroBg} text='Gallery' />
 
