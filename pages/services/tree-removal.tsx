@@ -66,18 +66,15 @@ export default function TreeRemoval() {
       </SectionWrapper>
 
       <SectionWrapper className='lg:max-w-3xl'>
-        <h3 className='pb-5'>Experience Where It Counts</h3>
+        <h3 className='pb-5'>Experience When it Counts</h3>
         <p>
-          ot only should you have a professional team remove your tree when
+          Not only should you have a professional team remove your tree when
           needed, but you need an experienced one. Our team has helped Maryland
-          with these services for more than 35 years Within this time we have
+          with these services for more than 35 years. Within this time we have
           been able to train our staff on traditional and modern methods and
           work with industry-leading tools. We keep your property and trees safe
           by handling effectively and efficiently. Thanks to our cutting-edge
-          technology, there is no tree we can't handle! Removing the stump is
-          also included in this service because of the necessity, we don't
-          consider it a separate service.
-        </p>
+          technology, there is no tree we can't handle!</p>
       </SectionWrapper>
 
       <ContactForm background='bg-[#f7f7f7]' />

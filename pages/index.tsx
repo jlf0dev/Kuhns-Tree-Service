@@ -85,7 +85,7 @@ const Home: NextPage = () => {
           <p className='pb-5'>
             When you need tree services in Maryland, there is only one team to
             call. Kuhn's Tree Service has been helping residents for more than
-            35 years our team has removed tree and their stumps, trimmed,
+            35 years. Our team has removed trees and their stumps, trimmed,
             planted, and more. We've become a reliable source for post-storm
             cleanup, as heavy winds, rain, and snow can all break limbs or split
             trees. We also help healthy trees get the attention they need to
