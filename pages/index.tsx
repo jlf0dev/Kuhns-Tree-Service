@@ -46,7 +46,7 @@ const Home: NextPage = () => {
             priority
           />
           <div className='relative z-10 mx-auto grid h-full max-w-[90%] place-items-center md:bottom-10 lg:bottom-20 lg:max-w-7xl'>
-            <h1>Call today for a free estimate</h1>
+            <h1>Call today for a professional free estimate</h1>
           </div>
         </div>
       </div>
