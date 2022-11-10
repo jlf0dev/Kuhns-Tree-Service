@@ -1,9 +1,9 @@
-import { StaticImageData } from "next/image";
+import { StaticImageData } from 'next/image'
 
 interface SectionWrapperProps {
-  className?: string;
-  background?: string | StaticImageData;
-  children: JSX.Element | JSX.Element[];
+  className?: string
+  background?: string | StaticImageData
+  children: JSX.Element | JSX.Element[]
 }
 
 // A section wrapper
@@ -15,29 +15,29 @@ export default function SectionWrapper({
   children,
 }: SectionWrapperProps) {
   if (background) {
-    if (typeof background === "string") {
+    if (typeof background === 'string') {
       return (
         <div className={`h-fit w-full ${background}`}>
-          <div className={`max-w-[90%] mx-auto py-10 ${className}`}>
+          <div className={`mx-auto max-w-[90%] py-10 ${className}`}>
             {children}
           </div>
         </div>
-      );
+      )
     } else {
       return (
         <div
-          className="h-fit w-full"
+          className='h-fit w-full'
           style={{ backgroundImage: `url(${background.src})` }}
         >
-          <div className={`max-w-[90%] mx-auto py-10 ${className}`}>
+          <div className={`mx-auto max-w-[90%] py-10 ${className}`}>
             {children}
           </div>
         </div>
-      );
+      )
     }
   } else {
     return (
-      <div className={`max-w-[90%] mx-auto py-10 ${className}`}>{children}</div>
-    );
+      <div className={`mx-auto max-w-[90%] py-10 ${className}`}>{children}</div>
+    )
   }
 }

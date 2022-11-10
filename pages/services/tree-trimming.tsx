@@ -1,12 +1,12 @@
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import Hero from "../../components/hero";
-import SectionWrapper from "../../components/sectionWrapper";
-import heroBg from "../../public/kuhn-trimming-hero.jpg";
-import saw from "../../public/kuhn-saw-branch.jpg";
-import ContactForm from "../../components/contactForm";
-import KuhnButton from "../../components/kuhnButton";
+import Head from 'next/head'
+import Link from 'next/link'
+import Image from 'next/image'
+import Hero from '../../components/hero'
+import SectionWrapper from '../../components/sectionWrapper'
+import heroBg from '../../public/kuhn-trimming-hero.jpg'
+import saw from '../../public/kuhn-saw-branch.jpg'
+import ContactForm from '../../components/contactForm'
+import KuhnButton from '../../components/kuhnButton'
 
 export default function TreeTrimming() {
   return (
@@ -14,12 +14,12 @@ export default function TreeTrimming() {
       <Head>
         <title>Tree Trimming Services in Maryland | Kuhn's Tree Service</title>
       </Head>
-      <Hero backgroundImage={heroBg} text="Tree Trimming" />
+      <Hero backgroundImage={heroBg} text='Tree Trimming' />
 
-      <SectionWrapper className="lg:max-w-3xl">
-        <div className="flex flex-col">
-          <h2 className="pt-5 pb-10">Tree Trimming from Kuhn's Tree Service</h2>
-          <p className="pb-5">
+      <SectionWrapper className='lg:max-w-3xl'>
+        <div className='flex flex-col'>
+          <h2 className='pt-5 pb-10'>Tree Trimming from Kuhn's Tree Service</h2>
+          <p className='pb-5'>
             When you work with Kuhn's Tree Service, you can expect high-quality
             tree trimming services and professionalism unparalleled in the
             industry. For more than 25 years, we've been helping residents and
@@ -36,16 +36,16 @@ export default function TreeTrimming() {
             treatment plan to help them live longer, better lives, and retain
             their aesthetic.
           </p>
-          <KuhnButton href="/contact" text="Contact Us" center />
+          <KuhnButton href='/contact' text='Contact Us' center />
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="lg:max-w-6xl" background="bg-[#f7f7f7]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 my-5">
-          <div className="grid place-items-center">
-            <Image src={saw} alt="Picture of chainsaw cutting tree" />
+      <SectionWrapper className='lg:max-w-6xl' background='bg-[#f7f7f7]'>
+        <div className='my-5 grid grid-cols-1 gap-14 md:grid-cols-2'>
+          <div className='grid place-items-center'>
+            <Image src={saw} alt='Picture of chainsaw cutting tree' />
           </div>
-          <div className="text-left flex flex-col gap-4 justify-center md:pt-5 order-last md:-order-none">
+          <div className='order-last flex flex-col justify-center gap-4 text-left md:-order-none md:pt-5'>
             <h3>Tree Trimming at Homes and Businesses</h3>
             <p>
               Our team has not only the knowledge, but the proper tools to
@@ -57,28 +57,28 @@ export default function TreeTrimming() {
               than happy to explain in detail the process and reasoning behind
               our tree trimming services. Count on us for the following:
             </p>
-            <div className="grid grid-cols-2">
-              <ul className="list-disc pl-10">
-                <li className="mb-1">Deadwood Removal</li>
-                <li className="mb-1">Tree Shaping</li>
-                <li className="mb-1">Roof or Building Clearance</li>
-                <li className="mb-1">Crown Thinning and Reduction</li>
-                <li className="mb-1">Weight Reduction</li>
+            <div className='grid grid-cols-2'>
+              <ul className='list-disc pl-10'>
+                <li className='mb-1'>Deadwood Removal</li>
+                <li className='mb-1'>Tree Shaping</li>
+                <li className='mb-1'>Roof or Building Clearance</li>
+                <li className='mb-1'>Crown Thinning and Reduction</li>
+                <li className='mb-1'>Weight Reduction</li>
               </ul>
-              <ul className="list-disc pl-10">
-                <li className="mb-1">Shaping</li>
-                <li className="mb-1">Vista Pruning</li>
-                <li className="mb-1">Crown Raising</li>
-                <li className="mb-1">Crown Cleaning</li>
-                <li className="mb-1">Tree Restoration</li>
+              <ul className='list-disc pl-10'>
+                <li className='mb-1'>Shaping</li>
+                <li className='mb-1'>Vista Pruning</li>
+                <li className='mb-1'>Crown Raising</li>
+                <li className='mb-1'>Crown Cleaning</li>
+                <li className='mb-1'>Tree Restoration</li>
               </ul>
             </div>
           </div>
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="lg:max-w-3xl">
-        <h3 className="pb-5">Emergency Tree Trimming Services</h3>
+      <SectionWrapper className='lg:max-w-3xl'>
+        <h3 className='pb-5'>Emergency Tree Trimming Services</h3>
         <p>
           Kuhn's Tree Service is at the ready whenever you need assistance with
           tree trimming services. Available 24/7, we can be there at a moment's
@@ -90,7 +90,7 @@ export default function TreeTrimming() {
         </p>
       </SectionWrapper>
 
-      <ContactForm background="bg-[#f7f7f7]" />
+      <ContactForm background='bg-[#f7f7f7]' />
     </>
-  );
+  )
 }

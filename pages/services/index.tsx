@@ -1,12 +1,12 @@
-import Head from "next/head";
-import Link from "next/link";
-import Hero from "../../components/hero";
-import Image from "next/image";
-import SectionWrapper from "../../components/sectionWrapper";
-import heroBg from "../../public/kuhn-services-hero.jpg";
-import saw from "../../public/kuhn-saw-tree.jpg";
-import ContactForm from "../../components/contactForm";
-import KuhnButton from "../../components/kuhnButton";
+import Head from 'next/head'
+import Link from 'next/link'
+import Hero from '../../components/hero'
+import Image from 'next/image'
+import SectionWrapper from '../../components/sectionWrapper'
+import heroBg from '../../public/kuhn-services-hero.jpg'
+import saw from '../../public/kuhn-saw-tree.jpg'
+import ContactForm from '../../components/contactForm'
+import KuhnButton from '../../components/kuhnButton'
 
 export default function Services() {
   return (
@@ -14,14 +14,14 @@ export default function Services() {
       <Head>
         <title>Comprehensive Tree Services | Kuhn's Tree Service</title>
       </Head>
-      <Hero backgroundImage={heroBg} text="Services" />
+      <Hero backgroundImage={heroBg} text='Services' />
 
-      <SectionWrapper className="lg:max-w-3xl">
-        <div className="flex flex-col">
-          <h2 className="pt-5 pb-10">
+      <SectionWrapper className='lg:max-w-3xl'>
+        <div className='flex flex-col'>
+          <h2 className='pt-5 pb-10'>
             Kuhn's Tree Service Helps Homes and Offices
           </h2>
-          <p className="pb-5">
+          <p className='pb-5'>
             Our tree services extend well beyond your average neighborhood
             landscaping. We help businesses maintain their property to draw in
             more customers and potential clients. The front of your business
@@ -33,16 +33,16 @@ export default function Services() {
             start the conversation and to get us to your property to assess,
             diagnose, and develop a game plan for the tree services needed.
           </p>
-          <KuhnButton href="/contact" text="Contact Us" center />
+          <KuhnButton href='/contact' text='Contact Us' center />
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="lg:max-w-6xl" background="bg-[#f7f7f7]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 my-5">
-          <div className="grid place-items-center">
-            <Image src={saw} alt="Picture of chainsaw cutting tree" />
+      <SectionWrapper className='lg:max-w-6xl' background='bg-[#f7f7f7]'>
+        <div className='my-5 grid grid-cols-1 gap-14 md:grid-cols-2'>
+          <div className='grid place-items-center'>
+            <Image src={saw} alt='Picture of chainsaw cutting tree' />
           </div>
-          <div className="text-left flex flex-col gap-4 justify-center md:pt-5 order-last md:-order-none">
+          <div className='order-last flex flex-col justify-center gap-4 text-left md:-order-none md:pt-5'>
             <h3>Tree Services from the Experts</h3>
             <p>
               We understand every property is unique and all your individual
@@ -54,18 +54,18 @@ export default function Services() {
               quickly. We provide residents and business owners with the
               following tree services:
             </p>
-            <ul className="list-disc pl-10">
-              <li className="mb-1">Tree Removal</li>
-              <li className="mb-1">Tree Pruning</li>
-              <li className="mb-1">Stump Grinding</li>
-              <li className="mb-1">And So Much More</li>
+            <ul className='list-disc pl-10'>
+              <li className='mb-1'>Tree Removal</li>
+              <li className='mb-1'>Tree Pruning</li>
+              <li className='mb-1'>Stump Grinding</li>
+              <li className='mb-1'>And So Much More</li>
             </ul>
           </div>
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="lg:max-w-3xl">
-        <h3 className="pb-5">Firewood Services</h3>
+      <SectionWrapper className='lg:max-w-3xl'>
+        <h3 className='pb-5'>Firewood Services</h3>
         <p>
           We also provide our clients with firewood services as a green way to
           handle trees we have to cut down for health or other reasons. We can
@@ -74,7 +74,7 @@ export default function Services() {
         </p>
       </SectionWrapper>
 
-      <ContactForm background="bg-[#f7f7f7]" />
+      <ContactForm background='bg-[#f7f7f7]' />
     </>
-  );
+  )
 }
