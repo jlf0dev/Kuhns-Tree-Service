@@ -1,8 +1,8 @@
-import Footer from './footer'
-import Navbar from './navbar'
+import Footer from './footer';
+import Navbar from './navbar';
 
 interface LayoutProps {
-  children: JSX.Element | JSX.Element[]
+  children: JSX.Element | JSX.Element[];
 }
 
 export default function Layout({ children }: LayoutProps) {
@@ -12,5 +12,5 @@ export default function Layout({ children }: LayoutProps) {
       <main>{children}</main>
       <Footer />
     </>
-  )
+  );
 }

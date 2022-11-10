@@ -1,27 +1,27 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
-import fetch from 'node-fetch'
-import sendgrid from '@sendgrid/mail'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fetch from 'node-fetch';
+import sendgrid from '@sendgrid/mail';
 
 interface FormResponse {
-  status: string
+  status: string;
 }
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY ?? '')
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY ?? '');
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<FormResponse>,
 ) {
-  const { body, method } = req
-  const { data, token } = JSON.parse(body)
+  const { body, method } = req;
+  const { data, token } = JSON.parse(body);
 
   if (method === 'POST') {
     // If email or captcha are missing return an error
     if (!data || !token) {
       return res.status(422).json({
         status: 'Unproccesable request, please provide the required fields',
-      })
+      });
     }
     try {
       // Ping the google recaptcha verify API to verify the captcha code you received
@@ -33,8 +33,8 @@ export default async function handler(
           },
           method: 'POST',
         },
-      )
-      const captchaValidation: any = await response.json()
+      );
+      const captchaValidation: any = await response.json();
       /**
        * The structure of response from the verify API is
        * {
@@ -58,23 +58,23 @@ export default async function handler(
             <p>${data.city}, ${data.state} ${data.zip}</p>
             <p>${data.serviceType}</p>
             <p>${data.details}</p>`,
-          })
+          });
         } catch (error: any) {
           return res
             .status(error.statusCode || 500)
-            .json({ status: error.message })
+            .json({ status: error.message });
         }
-        return res.status(200).send({ status: 'Ok' })
+        return res.status(200).send({ status: 'Ok' });
       }
 
       return res.status(422).json({
         status: 'Unproccesable request, Invalid captcha code',
-      })
+      });
     } catch (error) {
-      return res.status(422).json({ status: 'Something went wrong' })
+      return res.status(422).json({ status: 'Something went wrong' });
     }
   }
   // Return 404 if someone pings the API with a method other than
   // POST
-  return res.status(404).send({ status: 'Not found' })
+  return res.status(404).send({ status: 'Not found' });
 }

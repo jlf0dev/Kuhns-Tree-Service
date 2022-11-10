@@ -1,16 +1,16 @@
-import { useState } from 'react'
-import { IconContext } from 'react-icons'
-import { FaChevronDown } from 'react-icons/fa'
-import ActiveLink from './activeLink'
+import { useState } from 'react';
+import { IconContext } from 'react-icons';
+import { FaChevronDown } from 'react-icons/fa';
+import ActiveLink from './activeLink';
 
 interface MobileMenuButtonProps {
-  closeMenu: () => void
+  closeMenu: () => void;
 }
 
 export default function MobileMenuButton({ closeMenu }: MobileMenuButtonProps) {
-  const [isOpen, setIsOpen] = useState(false)
-  const toggleDropdown = () => setIsOpen(!isOpen)
-  const closeDropdown = () => setIsOpen(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDropdown = () => setIsOpen(!isOpen);
+  const closeDropdown = () => setIsOpen(false);
   return (
     <>
       <IconContext.Provider value={{ size: '20' }}>
@@ -78,5 +78,5 @@ export default function MobileMenuButton({ closeMenu }: MobileMenuButtonProps) {
         </div>
       </IconContext.Provider>
     </>
-  )
+  );
 }

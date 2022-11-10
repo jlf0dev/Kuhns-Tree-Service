@@ -1,16 +1,16 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Hero from '../components/hero'
-import KuhnButton from '../components/kuhnButton'
-import SectionWrapper from '../components/sectionWrapper'
-import heroBg from '../public/kuhn-testimonials-hero.jpg'
+import Head from 'next/head';
+import Link from 'next/link';
+import Hero from '../components/hero';
+import KuhnButton from '../components/kuhnButton';
+import SectionWrapper from '../components/sectionWrapper';
+import heroBg from '../public/kuhn-testimonials-hero.jpg';
 
-let reviews: Review[] = require('../data/reviews.json')
+let reviews: Review[] = require('../data/reviews.json');
 
 type Review = {
-  author: string
-  review: string
-}
+  author: string;
+  review: string;
+};
 
 export default function Testimonials() {
   return (
@@ -53,10 +53,10 @@ export default function Testimonials() {
                 </div>
                 <hr className='pb-10' />
               </div>
-            )
+            );
           })}
         </>
       </SectionWrapper>
     </>
-  )
+  );
 }

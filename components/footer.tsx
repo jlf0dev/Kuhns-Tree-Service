@@ -1,6 +1,6 @@
-import { IconContext } from 'react-icons'
-import { FaFacebookSquare, FaPhoneAlt } from 'react-icons/fa'
-import ActiveLink from './activeLink'
+import { IconContext } from 'react-icons';
+import { FaFacebookSquare, FaPhoneAlt } from 'react-icons/fa';
+import ActiveLink from './activeLink';
 
 export default function Footer() {
   return (
@@ -118,5 +118,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

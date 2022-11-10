@@ -1,9 +1,9 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 interface ButtonProps {
-  href: string
-  text: string
-  center?: boolean
+  href: string;
+  text: string;
+  center?: boolean;
 }
 // having a shadow on a button with hover
 // breaks on mobile. Using a div wrapper is a workaround.
@@ -16,5 +16,5 @@ export default function KuhnButton({ href, text, center }: ButtonProps) {
         </a>
       </Link>
     </div>
-  )
+  );
 }

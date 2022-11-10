@@ -1,26 +1,26 @@
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import React, { Children, FC } from 'react'
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import React, { Children, FC } from 'react';
 
 type ActiveLinkProps = {
-  children: any
-  activeClassName: string
-  href: string
-}
+  children: any;
+  activeClassName: string;
+  href: string;
+};
 
 export default function ActiveLink({
   children,
   activeClassName,
   href,
 }: ActiveLinkProps) {
-  const { asPath } = useRouter()
-  const child = Children.only(children)
-  const childClassName = child.props.className || ''
+  const { asPath } = useRouter();
+  const child = Children.only(children);
+  const childClassName = child.props.className || '';
 
   const className =
     asPath === href
       ? `${childClassName} ${activeClassName}`.trim()
-      : childClassName
+      : childClassName;
 
   return (
     <Link href={href}>
@@ -28,5 +28,5 @@ export default function ActiveLink({
         className: className || null,
       })}
     </Link>
-  )
+  );
 }

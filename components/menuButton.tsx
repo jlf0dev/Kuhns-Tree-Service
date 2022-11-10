@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import { FaChevronDown } from 'react-icons/fa'
-import ActiveLink from './activeLink'
+import { useState } from 'react';
+import { FaChevronDown } from 'react-icons/fa';
+import ActiveLink from './activeLink';
 
 interface MenuButtonProps {
-  children: JSX.Element | JSX.Element[]
+  children: JSX.Element | JSX.Element[];
 }
 
 export default function MenuButton() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div
@@ -72,5 +72,5 @@ export default function MenuButton() {
         </ul>
       </div>
     </>
-  )
+  );
 }

@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Hero from '../../components/hero'
-import Image from 'next/image'
-import SectionWrapper from '../../components/sectionWrapper'
-import heroBg from '../../public/kuhn-services-hero.jpg'
-import saw from '../../public/kuhn-saw-tree.jpg'
-import ContactForm from '../../components/contactForm'
-import KuhnButton from '../../components/kuhnButton'
+import Head from 'next/head';
+import Link from 'next/link';
+import Hero from '../../components/hero';
+import Image from 'next/image';
+import SectionWrapper from '../../components/sectionWrapper';
+import heroBg from '../../public/kuhn-services-hero.jpg';
+import saw from '../../public/kuhn-saw-tree.jpg';
+import ContactForm from '../../components/contactForm';
+import KuhnButton from '../../components/kuhnButton';
 
 export default function Services() {
   return (
@@ -76,5 +76,5 @@ export default function Services() {
 
       <ContactForm background='bg-[#f7f7f7]' />
     </>
-  )
+  );
 }

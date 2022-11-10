@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import ContactForm from '../components/contactForm'
-import Hero from '../components/hero'
-import SectionWrapper from '../components/sectionWrapper'
-import heroBg from '../public/kuhn-contact-hero.jpg'
+import Head from 'next/head';
+import Link from 'next/link';
+import ContactForm from '../components/contactForm';
+import Hero from '../components/hero';
+import SectionWrapper from '../components/sectionWrapper';
+import heroBg from '../public/kuhn-contact-hero.jpg';
 
 export default function Contact() {
   return (
@@ -62,5 +62,5 @@ export default function Contact() {
 
       <ContactForm background='bg-[#f7f7f7]' />
     </>
-  )
+  );
 }

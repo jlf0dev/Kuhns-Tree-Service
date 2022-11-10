@@ -1,9 +1,9 @@
-import { StaticImageData } from 'next/image'
-import Image from 'next/image'
+import { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 interface HeroProps {
-  backgroundImage: StaticImageData
-  text: string
+  backgroundImage: StaticImageData;
+  text: string;
 }
 export default function Hero({ backgroundImage, text }: HeroProps) {
   return (
@@ -26,5 +26,5 @@ export default function Hero({ backgroundImage, text }: HeroProps) {
         </div>
       </div>
     </>
-  )
+  );
 }

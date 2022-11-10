@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import ContactForm from '../components/contactForm'
-import Hero from '../components/hero'
-import KuhnButton from '../components/kuhnButton'
-import SectionWrapper from '../components/sectionWrapper'
-import heroBg from '../public/kuhn-about-hero.jpg'
-import trucks from '../public/kuhn-trucks.jpg'
+import Head from 'next/head';
+import Image from 'next/image';
+import ContactForm from '../components/contactForm';
+import Hero from '../components/hero';
+import KuhnButton from '../components/kuhnButton';
+import SectionWrapper from '../components/sectionWrapper';
+import heroBg from '../public/kuhn-about-hero.jpg';
+import trucks from '../public/kuhn-trucks.jpg';
 
 export default function About() {
   return (
@@ -94,5 +94,5 @@ export default function About() {
 
       <ContactForm background='bg-[#f7f7f7]' />
     </>
-  )
+  );
 }

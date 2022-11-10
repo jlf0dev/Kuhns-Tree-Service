@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Image, { StaticImageData } from 'next/image'
-import Hero from '../components/hero'
-import SectionWrapper from '../components/sectionWrapper'
-import heroBg from '../public/kuhn-gallery-hero.jpg'
+import Head from 'next/head';
+import Link from 'next/link';
+import Image, { StaticImageData } from 'next/image';
+import Hero from '../components/hero';
+import SectionWrapper from '../components/sectionWrapper';
+import heroBg from '../public/kuhn-gallery-hero.jpg';
 
-let pictureUrls: string[] = require('../data/gallery.json')
+let pictureUrls: string[] = require('../data/gallery.json');
 
 export default function Gallery() {
   return (
@@ -33,17 +33,17 @@ export default function Gallery() {
       <SectionWrapper className='lg:max-w-6xl'>
         <div className='grid grid-cols-1 gap-y-24 gap-x-10 md:grid-cols-2 lg:grid-cols-3'>
           {pictureUrls.map((url, index) => {
-            return <ImageFrame url={url} key={index} />
+            return <ImageFrame url={url} key={index} />;
           })}
         </div>
       </SectionWrapper>
     </>
-  )
+  );
 }
 
 type FrameProps = {
-  url: string | StaticImageData
-}
+  url: string | StaticImageData;
+};
 
 export const ImageFrame = ({ url }: FrameProps) => {
   return (
@@ -57,5 +57,5 @@ export const ImageFrame = ({ url }: FrameProps) => {
         />
       </div>
     </>
-  )
-}
+  );
+};

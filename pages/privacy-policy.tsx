@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Hero from '../components/hero'
-import SectionWrapper from '../components/sectionWrapper'
-import heroBg from '../public/kuhn-wood-hero.jpg'
+import Head from 'next/head';
+import Hero from '../components/hero';
+import SectionWrapper from '../components/sectionWrapper';
+import heroBg from '../public/kuhn-wood-hero.jpg';
 
 export default function PrivacyPolicy() {
   return (
@@ -642,5 +642,5 @@ export default function PrivacyPolicy() {
         </div>
       </SectionWrapper>
     </>
-  )
+  );
 }

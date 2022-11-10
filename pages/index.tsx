@@ -1,22 +1,22 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import hero from '../public/kuhn-hero.jpg'
-import leavesBg from '../public/kuhn-leaves-bg.jpg'
-import woodBg from '../public/kuhn-wood-bg.jpg'
-import trimming from '../public/kuhn-tree-trimming.jpg'
-import grinding from '../public/kuhn-stump-grinding.jpg'
-import removal from '../public/kuhn-tree-removal.jpg'
-import fallen from '../public/kuhn-tree-fallen.jpg'
-import gallery1 from '../public/kuhn-gallery-1.jpg'
-import gallery2 from '../public/kuhn-gallery-2.jpg'
-import gallery3 from '../public/kuhn-gallery-3.jpg'
-import gallery4 from '../public/kuhn-gallery-4.jpg'
-import ContactForm from '../components/contactForm'
-import SectionWrapper from '../components/sectionWrapper'
-import KuhnButton from '../components/kuhnButton'
-import { ImageFrame } from './gallery'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import hero from '../public/kuhn-hero.jpg';
+import leavesBg from '../public/kuhn-leaves-bg.jpg';
+import woodBg from '../public/kuhn-wood-bg.jpg';
+import trimming from '../public/kuhn-tree-trimming.jpg';
+import grinding from '../public/kuhn-stump-grinding.jpg';
+import removal from '../public/kuhn-tree-removal.jpg';
+import fallen from '../public/kuhn-tree-fallen.jpg';
+import gallery1 from '../public/kuhn-gallery-1.jpg';
+import gallery2 from '../public/kuhn-gallery-2.jpg';
+import gallery3 from '../public/kuhn-gallery-3.jpg';
+import gallery4 from '../public/kuhn-gallery-4.jpg';
+import ContactForm from '../components/contactForm';
+import SectionWrapper from '../components/sectionWrapper';
+import KuhnButton from '../components/kuhnButton';
+import { ImageFrame } from './gallery';
 
 const Home: NextPage = () => {
   return (
@@ -178,7 +178,7 @@ const Home: NextPage = () => {
 
       <ContactForm background='bg-white' />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -1,39 +1,39 @@
-import dynamic from 'next/dynamic'
-import React, { useState } from 'react'
-import { SubmitHandler, useForm } from 'react-hook-form'
-import { TailSpin } from 'react-loader-spinner'
-import SectionWrapper from './sectionWrapper'
-import ReCAPTCHA from 'react-google-recaptcha'
+import dynamic from 'next/dynamic';
+import React, { useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { TailSpin } from 'react-loader-spinner';
+import SectionWrapper from './sectionWrapper';
+import ReCAPTCHA from 'react-google-recaptcha';
 
-let countries: Country[] = require('../data/countryList.json')
-let serviceType: ServiceType[] = require('../data/serviceType.json')
+let countries: Country[] = require('../data/countryList.json');
+let serviceType: ServiceType[] = require('../data/serviceType.json');
 
 type Country = {
-  code: string
-  name: string
-}
+  code: string;
+  name: string;
+};
 
 type ServiceType = {
-  code: string
-  name: string
-}
+  code: string;
+  name: string;
+};
 
 export interface IFormData {
-  firstName: string
-  lastName: string
-  phone: number
-  email: string
-  address: string
-  city: string
-  state: string
-  zip: string
-  country: string
-  serviceType: string
-  details: string
+  firstName: string;
+  lastName: string;
+  phone: number;
+  email: string;
+  address: string;
+  city: string;
+  state: string;
+  zip: string;
+  country: string;
+  serviceType: string;
+  details: string;
 }
 
 interface ContactFormProps {
-  background: string
+  background: string;
 }
 
 export default function ContactForm({ background }: ContactFormProps) {
@@ -41,47 +41,47 @@ export default function ContactForm({ background }: ContactFormProps) {
     register,
     handleSubmit,
     formState: { errors, isSubmitting, isSubmitSuccessful },
-  } = useForm<IFormData>()
+  } = useForm<IFormData>();
 
   // const recaptchaRef = React.useRef<ReCaptchaType>(null);
-  const recaptchaRef = React.useRef<ReCAPTCHA>(null)
-  const [recaptchaNeeded, setRecaptchaNeeded] = useState(false)
+  const recaptchaRef = React.useRef<ReCAPTCHA>(null);
+  const [recaptchaNeeded, setRecaptchaNeeded] = useState(false);
 
   // its gross but it works
   function normalizePhoneNumber(value: string): string {
-    var x = value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/)
+    var x = value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
     if (x) {
-      return !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '')
+      return !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
     } else {
-      return ''
+      return '';
     }
   }
 
   const enableRecaptcha = () => {
-    setRecaptchaNeeded(true)
-  }
+    setRecaptchaNeeded(true);
+  };
 
-  const onSubmit: SubmitHandler<IFormData> = async (data) => {
-    const token = await recaptchaRef.current?.executeAsync()
+  const onSubmit: SubmitHandler<IFormData> = async data => {
+    const token = await recaptchaRef.current?.executeAsync();
 
     try {
       const response = await fetch('/api/contact', {
         method: 'post',
         body: JSON.stringify({ data: data, token: token }),
-      })
+      });
       if (response.ok) {
       } else {
         // Else throw an error with the message returned
         // from the API
-        const error = await response.json()
-        throw new Error(error.message)
+        const error = await response.json();
+        throw new Error(error.message);
       }
     } catch (error: any) {
-      alert(error?.message || 'Something went wrong')
+      alert(error?.message || 'Something went wrong');
     } finally {
-      recaptchaRef.current?.reset()
+      recaptchaRef.current?.reset();
     }
-  }
+  };
 
   if (!isSubmitSuccessful) {
     return (
@@ -100,8 +100,8 @@ export default function ContactForm({ background }: ContactFormProps) {
               {...register('firstName', {
                 required: 'First name is required',
                 maxLength: { value: 30, message: 'First name is too long' },
-                onChange: (e) => {
-                  enableRecaptcha()
+                onChange: e => {
+                  enableRecaptcha();
                 },
               })}
               className={`font-normal ${
@@ -127,8 +127,8 @@ export default function ContactForm({ background }: ContactFormProps) {
               {...register('lastName', {
                 required: 'Last name is required',
                 maxLength: { value: 30, message: 'Last name is too long' },
-                onChange: (e) => {
-                  enableRecaptcha()
+                onChange: e => {
+                  enableRecaptcha();
                 },
               })}
               className={`font-normal ${
@@ -150,10 +150,10 @@ export default function ContactForm({ background }: ContactFormProps) {
                 required: 'Phone number is required',
                 maxLength: { value: 20, message: 'Phone number is too long' },
                 minLength: { value: 14, message: 'Phone number is too short' },
-                onChange: (e) => {
-                  const { value } = e.target
-                  e.target.value = normalizePhoneNumber(value)
-                  enableRecaptcha()
+                onChange: e => {
+                  const { value } = e.target;
+                  e.target.value = normalizePhoneNumber(value);
+                  enableRecaptcha();
                 },
               })}
               className={`font-normal ${errors.phone ? 'border-red-500' : ''}`}
@@ -176,8 +176,8 @@ export default function ContactForm({ background }: ContactFormProps) {
                   value: /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/,
                   message: 'Email is invalid',
                 },
-                onChange: (e) => {
-                  enableRecaptcha()
+                onChange: e => {
+                  enableRecaptcha();
                 },
               })}
               className={`font-normal ${errors.email ? 'border-red-500' : ''}`}
@@ -203,8 +203,8 @@ export default function ContactForm({ background }: ContactFormProps) {
                     value: 100,
                     message: 'Street address is too long',
                   },
-                  onChange: (e) => {
-                    enableRecaptcha()
+                  onChange: e => {
+                    enableRecaptcha();
                   },
                 })}
                 className={`font-normal ${
@@ -243,8 +243,8 @@ export default function ContactForm({ background }: ContactFormProps) {
                 {...register('city', {
                   required: 'City is required',
                   maxLength: { value: 50, message: 'City name is too long' },
-                  onChange: (e) => {
-                    enableRecaptcha()
+                  onChange: e => {
+                    enableRecaptcha();
                   },
                 })}
                 className={`font-normal ${errors.city ? 'border-red-500' : ''}`}
@@ -266,8 +266,8 @@ export default function ContactForm({ background }: ContactFormProps) {
                 {...register('state', {
                   required: 'State is required',
                   maxLength: { value: 50, message: 'State name is too long' },
-                  onChange: (e) => {
-                    enableRecaptcha()
+                  onChange: e => {
+                    enableRecaptcha();
                   },
                 })}
                 className={`font-normal ${
@@ -294,8 +294,8 @@ export default function ContactForm({ background }: ContactFormProps) {
                     value: 20,
                     message: 'ZIP/Postal code is too long',
                   },
-                  onChange: (e) => {
-                    enableRecaptcha()
+                  onChange: e => {
+                    enableRecaptcha();
                   },
                 })}
                 className={`font-normal ${errors.zip ? 'border-red-500' : ''}`}
@@ -315,8 +315,8 @@ export default function ContactForm({ background }: ContactFormProps) {
               Country
               <select
                 {...register('country', {
-                  onChange: (e) => {
-                    enableRecaptcha()
+                  onChange: e => {
+                    enableRecaptcha();
                   },
                 })}
                 disabled
@@ -325,7 +325,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                 placeholder='REQUIRED'
                 defaultValue={'US'}
               >
-                {countries.map((item) => {
+                {countries.map(item => {
                   return (
                     <option
                       key={item.code}
@@ -334,7 +334,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                     >
                       {item.name}
                     </option>
-                  )
+                  );
                 })}
               </select>
             </label>
@@ -347,8 +347,8 @@ export default function ContactForm({ background }: ContactFormProps) {
             <select
               {...register('serviceType', {
                 required: true,
-                onChange: (e) => {
-                  enableRecaptcha()
+                onChange: e => {
+                  enableRecaptcha();
                 },
               })}
               className='font-normal'
@@ -356,7 +356,7 @@ export default function ContactForm({ background }: ContactFormProps) {
               placeholder='REQUIRED'
               defaultValue={'treeTrimming'}
             >
-              {serviceType.map((item) => {
+              {serviceType.map(item => {
                 return (
                   <option
                     key={item.code}
@@ -365,7 +365,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                   >
                     {item.name}
                   </option>
-                )
+                );
               })}
             </select>
           </label>
@@ -376,8 +376,8 @@ export default function ContactForm({ background }: ContactFormProps) {
             Please Provide Any Additional Details
             <textarea
               {...register('details', {
-                onChange: (e) => {
-                  enableRecaptcha()
+                onChange: e => {
+                  enableRecaptcha();
                 },
               })}
               className='h-48 resize-none font-normal'
@@ -417,7 +417,7 @@ export default function ContactForm({ background }: ContactFormProps) {
           </div>
         </form>
       </SectionWrapper>
-    )
+    );
   } else {
     return (
       <SectionWrapper background={background}>
@@ -426,6 +426,6 @@ export default function ContactForm({ background }: ContactFormProps) {
           We have received your information and will get back to you shortly.
         </p>
       </SectionWrapper>
-    )
+    );
   }
 }

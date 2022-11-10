@@ -1,23 +1,23 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
-import { IconContext } from 'react-icons'
-import { FaArrowLeft, FaPhoneAlt } from 'react-icons/fa'
-import logo from '../public/KuhnsTreeService_logo.png'
-import ActiveLink from './activeLink'
-import MenuButton from './menuButton'
-import MobileMenuButton from './mobileMenuButton'
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { IconContext } from 'react-icons';
+import { FaArrowLeft, FaPhoneAlt } from 'react-icons/fa';
+import logo from '../public/KuhnsTreeService_logo.png';
+import ActiveLink from './activeLink';
+import MenuButton from './menuButton';
+import MobileMenuButton from './mobileMenuButton';
 
 export default function Navbar() {
-  const [isOpen, setOpen] = useState(false)
-  const toggleMenu = () => setOpen(!isOpen)
-  const closeMenu = () => setOpen(false)
-  const { pathname } = useRouter()
+  const [isOpen, setOpen] = useState(false);
+  const toggleMenu = () => setOpen(!isOpen);
+  const closeMenu = () => setOpen(false);
+  const { pathname } = useRouter();
 
   useEffect(() => {
-    setOpen(false) // close menu if path changes
-  }, [pathname])
+    setOpen(false); // close menu if path changes
+  }, [pathname]);
 
   return (
     <>
@@ -206,11 +206,11 @@ export default function Navbar() {
         </ul>
       </div>
     </>
-  )
+  );
 }
 
 interface HamburgerProps {
-  toggleMenu: () => void
+  toggleMenu: () => void;
 }
 
 function Hamburger({ toggleMenu }: HamburgerProps) {
@@ -226,5 +226,5 @@ function Hamburger({ toggleMenu }: HamburgerProps) {
         <span className='mb-[5px] block h-[4px] w-[33px] rounded-[3px] bg-kuhn-light-green' />
       </div>
     </button>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-import '../styles/globals.css'
-import '@fontsource/abeezee/400.css'
-import '@fontsource/kameron/700.css'
+import '../styles/globals.css';
+import '@fontsource/abeezee/400.css';
+import '@fontsource/kameron/700.css';
 
-import type { AppProps } from 'next/app'
-import Layout from '../components/layout'
-import Head from 'next/head'
-import { GoogleAnalytics } from 'nextjs-google-analytics'
+import type { AppProps } from 'next/app';
+import Layout from '../components/layout';
+import Head from 'next/head';
+import { GoogleAnalytics } from 'nextjs-google-analytics';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </Layout>
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

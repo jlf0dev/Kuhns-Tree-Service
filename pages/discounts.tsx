@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Hero from '../components/hero'
-import Image from 'next/image'
-import SectionWrapper from '../components/sectionWrapper'
-import heroBg from '../public/kuhn-discount-hero.jpg'
-import crew from '../public/kuhn-crew-working.jpg'
-import ContactForm from '../components/contactForm'
-import KuhnButton from '../components/kuhnButton'
+import Head from 'next/head';
+import Link from 'next/link';
+import Hero from '../components/hero';
+import Image from 'next/image';
+import SectionWrapper from '../components/sectionWrapper';
+import heroBg from '../public/kuhn-discount-hero.jpg';
+import crew from '../public/kuhn-crew-working.jpg';
+import ContactForm from '../components/contactForm';
+import KuhnButton from '../components/kuhnButton';
 
 export default function Discounts() {
   return (
@@ -60,5 +60,5 @@ export default function Discounts() {
 
       <ContactForm background='bg-white' />
     </>
-  )
+  );
 }

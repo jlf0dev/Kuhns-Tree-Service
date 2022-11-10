@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
-import Hero from '../../components/hero'
-import SectionWrapper from '../../components/sectionWrapper'
-import heroBg from '../../public/kuhn-trimming-hero.jpg'
-import saw from '../../public/kuhn-saw-branch.jpg'
-import ContactForm from '../../components/contactForm'
-import KuhnButton from '../../components/kuhnButton'
+import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
+import Hero from '../../components/hero';
+import SectionWrapper from '../../components/sectionWrapper';
+import heroBg from '../../public/kuhn-trimming-hero.jpg';
+import saw from '../../public/kuhn-saw-branch.jpg';
+import ContactForm from '../../components/contactForm';
+import KuhnButton from '../../components/kuhnButton';
 
 export default function TreeTrimming() {
   return (
@@ -92,5 +92,5 @@ export default function TreeTrimming() {
 
       <ContactForm background='bg-[#f7f7f7]' />
     </>
-  )
+  );
 }

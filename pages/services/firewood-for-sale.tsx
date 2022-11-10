@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import ContactForm from '../../components/contactForm'
-import Hero from '../../components/hero'
-import KuhnButton from '../../components/kuhnButton'
-import SectionWrapper from '../../components/sectionWrapper'
-import heroBg from '../../public/kuhn-discount-hero.jpg'
+import Head from 'next/head';
+import ContactForm from '../../components/contactForm';
+import Hero from '../../components/hero';
+import KuhnButton from '../../components/kuhnButton';
+import SectionWrapper from '../../components/sectionWrapper';
+import heroBg from '../../public/kuhn-discount-hero.jpg';
 
 export default function FirewoodForSale() {
   return (
@@ -54,5 +54,5 @@ export default function FirewoodForSale() {
 
       <ContactForm background='bg-[#f7f7f7]' />
     </>
-  )
+  );
 }

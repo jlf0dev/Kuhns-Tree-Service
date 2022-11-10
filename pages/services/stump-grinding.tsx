@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import ContactForm from '../../components/contactForm'
-import Hero from '../../components/hero'
-import KuhnButton from '../../components/kuhnButton'
-import SectionWrapper from '../../components/sectionWrapper'
-import heroBg from '../../public/kuhn-about-hero.jpg'
-import stumpGrinding from '../../public/kuhn-stump-grinding-full.jpg'
+import Head from 'next/head';
+import Image from 'next/image';
+import ContactForm from '../../components/contactForm';
+import Hero from '../../components/hero';
+import KuhnButton from '../../components/kuhnButton';
+import SectionWrapper from '../../components/sectionWrapper';
+import heroBg from '../../public/kuhn-about-hero.jpg';
+import stumpGrinding from '../../public/kuhn-stump-grinding-full.jpg';
 
 export default function StumpGrinding() {
   return (
@@ -57,5 +57,5 @@ export default function StumpGrinding() {
 
       <ContactForm background='bg-[#f7f7f7]' />
     </>
-  )
+  );
 }
