@@ -63,7 +63,7 @@ const Home: NextPage = () => {
           />
           <div className='relative z-10 mx-auto flex max-w-[90%] flex-col items-center gap-y-10 py-9 md:flex-row lg:max-w-6xl'>
             <p className='flex-grow text-xl font-bold uppercase text-white md:text-left'>
-              Tree services delivered with the earth in mind
+              Tree services delivered with the earth and environment in mind
             </p>
             <div className='md:text-right'>
               <a
