@@ -12,6 +12,12 @@ export default function TreeRemoval() {
     <>
       <Head>
         <title>Professional Tree Removal | Kuhn's Tree Service</title>
+        <meta
+          name='description'
+          content='Call Kuhns Tree Service for safe and professional
+          tree removal services in Maryland. We can quickly remove any tree,
+          followed by extensive stump grinding services. Call today for a free estimate!'
+        ></meta>
       </Head>
       <Hero backgroundImage={heroBg} text='Tree Removal' />
 
@@ -74,7 +80,8 @@ export default function TreeRemoval() {
           been able to train our staff on traditional and modern methods and
           work with industry-leading tools. We keep your property and trees safe
           by handling effectively and efficiently. Thanks to our cutting-edge
-          technology, there is no tree we can't handle!</p>
+          technology, there is no tree we can't handle!
+        </p>
       </SectionWrapper>
 
       <ContactForm background='bg-[#f7f7f7]' />

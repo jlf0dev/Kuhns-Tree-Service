@@ -12,6 +12,11 @@ export default function About() {
     <>
       <Head>
         <title>About Us - 35 Years of Experience | Kuhn's Tree Service</title>
+        <meta
+          name='description'
+          content='Kuhns Tree Service has over 35 years of experience in tree trimming 
+          and removal services. Call us today for a free estimate!'
+        ></meta>
       </Head>
       <Hero backgroundImage={heroBg} text='About Us' />
 

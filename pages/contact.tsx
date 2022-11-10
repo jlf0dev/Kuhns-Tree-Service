@@ -9,6 +9,11 @@ export default function Contact() {
     <>
       <Head>
         <title>Contact Us for an Estimate | Kuhn's Tree Service</title>
+        <meta
+          name='description'
+          content='Kuhns Tree Service prides ourselves on our customer service. Please 
+          contact us today for questions, comments, or to schedule a free estimate!'
+        ></meta>
       </Head>
       <Hero backgroundImage={heroBg} text='Contact Us' />
 

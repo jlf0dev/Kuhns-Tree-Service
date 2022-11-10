@@ -10,6 +10,12 @@ export default function FirewoodForSale() {
     <>
       <Head>
         <title>Firewood For Sale | Kuhn's Tree Service</title>
+        <meta
+          name='description'
+          content='Kuhns Tree Service now has firewood for sale! We offer mixed
+          hardwoods for puchase in cord and half cord volumes. Call today to ask
+          about our delivery options.'
+        ></meta>
       </Head>
       <Hero backgroundImage={heroBg} text='Firewood For Sale' />
 
