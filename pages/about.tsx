@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import ContactForm from "../components/contactForm";
 import Hero from "../components/hero";
 import KuhnButton from "../components/kuhnButton";
