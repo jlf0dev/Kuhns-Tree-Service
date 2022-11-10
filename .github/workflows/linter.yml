@@ -1,14 +1,11 @@
 name: Linter
 
 on:
-  push:
-    branches-ignore: [master, main]
-    # Remove the line above to run when pushing to master
   pull_request:
     branches: [master, main]
 jobs:
   build:
-    name: Linter
+    name: Lint Project
     runs-on: ubuntu-latest
 
     steps:
@@ -18,5 +15,5 @@ jobs:
           node-version: 16
       - name: Install NPM Packages
         run: npm ci
-      - name: Lint Projects
+      - name: Lint Project
         run: npm run lint
