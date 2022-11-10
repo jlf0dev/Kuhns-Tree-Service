@@ -1,117 +1,117 @@
-import { IconContext } from "react-icons";
-import { FaFacebookSquare, FaPhoneAlt } from "react-icons/fa";
-import ActiveLink from "./activeLink";
+import { IconContext } from 'react-icons';
+import { FaFacebookSquare, FaPhoneAlt } from 'react-icons/fa';
+import ActiveLink from './activeLink';
 
 export default function Footer() {
   return (
-    <footer className="text-white">
-      <div className="lg:h-24 h-full w-full bg-kuhn-dark-green">
-        <div className="max-w-[90%] lg:max-w-7xl h-full w-full mx-auto flex flex-col lg:flex-row py-5">
-          <ul className="lg:min-w-[900px] lg:h-full flex flex-col md:flex-row items-center justify-center md:justify-between">
+    <footer className='text-white'>
+      <div className='h-full w-full bg-kuhn-dark-green lg:h-24'>
+        <div className='mx-auto flex h-full w-full max-w-[90%] flex-col py-5 lg:max-w-7xl lg:flex-row'>
+          <ul className='flex flex-col items-center justify-center md:flex-row md:justify-between lg:h-full lg:min-w-[900px]'>
             <li>
-              <ActiveLink href="/" activeClassName="text-kuhn-light-green">
-                <a className="hover:text-kuhn-light-green inline-block h-full w-full py-3">
-                  <p className="text-base md:text-sm">Home</p>
+              <ActiveLink href='/' activeClassName='text-kuhn-light-green'>
+                <a className='inline-block h-full w-full py-3 hover:text-kuhn-light-green'>
+                  <p className='text-base md:text-sm'>Home</p>
                 </a>
               </ActiveLink>
             </li>
             <li>
-              <ActiveLink href="/about" activeClassName="text-kuhn-light-green">
-                <a className="hover:text-kuhn-light-green inline-block h-full w-full py-3">
-                  <p className="text-base md:text-sm">About Us</p>
-                </a>
-              </ActiveLink>
-            </li>
-            <li>
-              <ActiveLink
-                href="/services"
-                activeClassName="text-kuhn-light-green"
-              >
-                <a className="hover:text-kuhn-light-green inline-block h-full w-full py-3">
-                  <p className="text-base md:text-sm">Services</p>
+              <ActiveLink href='/about' activeClassName='text-kuhn-light-green'>
+                <a className='inline-block h-full w-full py-3 hover:text-kuhn-light-green'>
+                  <p className='text-base md:text-sm'>About Us</p>
                 </a>
               </ActiveLink>
             </li>
             <li>
               <ActiveLink
-                href="/discounts"
-                activeClassName="text-kuhn-light-green"
+                href='/services'
+                activeClassName='text-kuhn-light-green'
               >
-                <a className="hover:text-kuhn-light-green inline-block h-full w-full py-3">
-                  <p className="text-base md:text-sm">Discounts</p>
+                <a className='inline-block h-full w-full py-3 hover:text-kuhn-light-green'>
+                  <p className='text-base md:text-sm'>Services</p>
                 </a>
               </ActiveLink>
             </li>
             <li>
               <ActiveLink
-                href="/gallery"
-                activeClassName="text-kuhn-light-green"
+                href='/discounts'
+                activeClassName='text-kuhn-light-green'
               >
-                <a className="hover:text-kuhn-light-green inline-block h-full w-full py-3">
-                  <p className="text-base md:text-sm">Gallery</p>
+                <a className='inline-block h-full w-full py-3 hover:text-kuhn-light-green'>
+                  <p className='text-base md:text-sm'>Discounts</p>
                 </a>
               </ActiveLink>
             </li>
             <li>
               <ActiveLink
-                href="/testimonials"
-                activeClassName="text-kuhn-light-green"
+                href='/gallery'
+                activeClassName='text-kuhn-light-green'
               >
-                <a className="hover:text-kuhn-light-green inline-block h-full w-full py-3">
-                  <p className="text-base md:text-sm">Testimonials</p>
+                <a className='inline-block h-full w-full py-3 hover:text-kuhn-light-green'>
+                  <p className='text-base md:text-sm'>Gallery</p>
                 </a>
               </ActiveLink>
             </li>
             <li>
               <ActiveLink
-                href="/contact"
-                activeClassName="text-kuhn-light-green"
+                href='/testimonials'
+                activeClassName='text-kuhn-light-green'
               >
-                <a className="hover:text-kuhn-light-green inline-block h-full w-full py-3">
-                  <p className="text-base md:text-sm">Contact Us</p>
+                <a className='inline-block h-full w-full py-3 hover:text-kuhn-light-green'>
+                  <p className='text-base md:text-sm'>Testimonials</p>
                 </a>
               </ActiveLink>
             </li>
             <li>
-              <IconContext.Provider value={{ size: "20" }}>
+              <ActiveLink
+                href='/contact'
+                activeClassName='text-kuhn-light-green'
+              >
+                <a className='inline-block h-full w-full py-3 hover:text-kuhn-light-green'>
+                  <p className='text-base md:text-sm'>Contact Us</p>
+                </a>
+              </ActiveLink>
+            </li>
+            <li>
+              <IconContext.Provider value={{ size: '20' }}>
                 <a
-                  href="tel:301-384-4724"
-                  className="hover:text-kuhn-light-green inline-block h-full w-full py-3"
+                  href='tel:301-384-4724'
+                  className='inline-block h-full w-full py-3 hover:text-kuhn-light-green'
                 >
-                  <p className="text-base md:text-sm">
-                    <FaPhoneAlt className="inline mr-2" />
+                  <p className='text-base md:text-sm'>
+                    <FaPhoneAlt className='mr-2 inline' />
                     Call Now 301-384-4724
                   </p>
                 </a>
               </IconContext.Provider>
             </li>
           </ul>
-          <div className="lg:w-full h-full flex items-center justify-center lg:justify-end lg:justify-self-end py-3">
-            <IconContext.Provider value={{ size: "30" }}>
+          <div className='flex h-full items-center justify-center py-3 lg:w-full lg:justify-end lg:justify-self-end'>
+            <IconContext.Provider value={{ size: '30' }}>
               <a
-                href="https://www.facebook.com/kuhnstreeservices/"
-                className="hover:text-kuhn-light-green"
-                title="Facebook"
+                href='https://www.facebook.com/kuhnstreeservices/'
+                className='hover:text-kuhn-light-green'
+                title='Facebook'
               >
-                <FaFacebookSquare className="inline mr-2" />
-                <span className="sr-only">Facebook</span>
+                <FaFacebookSquare className='mr-2 inline' />
+                <span className='sr-only'>Facebook</span>
               </a>
             </IconContext.Provider>
           </div>
         </div>
       </div>
-      <div className="md:h-24 w-full bg-kuhn-green">
-        <div className="lg:max-w-7xl max-w-[90%] mx-auto h-full flex flex-col md:flex-row items-center justify-center md:justify-start py-10 md:py-5 text-center md:text-left">
-          <p className="text-base md:text-sm">
+      <div className='w-full bg-kuhn-green md:h-24'>
+        <div className='mx-auto flex h-full max-w-[90%] flex-col items-center justify-center py-10 text-center md:flex-row md:justify-start md:py-5 md:text-left lg:max-w-7xl'>
+          <p className='text-base md:text-sm'>
             © 2022 Kuhn's Tree Service. All Rights Reserved.
           </p>
-          <div className="md:px-10">
+          <div className='md:px-10'>
             <ActiveLink
-              href="/privacy-policy"
-              activeClassName="text-kuhn-light-green"
+              href='/privacy-policy'
+              activeClassName='text-kuhn-light-green'
             >
-              <a className="hover:text-kuhn-light-green inline-block h-full w-full py-3">
-                <p className="text-base md:text-sm">Privacy Policy</p>
+              <a className='inline-block h-full w-full py-3 hover:text-kuhn-light-green'>
+                <p className='text-base md:text-sm'>Privacy Policy</p>
               </a>
             </ActiveLink>
           </div>

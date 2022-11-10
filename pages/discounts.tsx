@@ -1,12 +1,11 @@
-import Head from "next/head";
-import Link from "next/link";
-import Hero from "../components/hero";
-import Image from "next/image";
-import SectionWrapper from "../components/sectionWrapper";
-import heroBg from "../public/kuhn-discount-hero.jpg";
-import crew from "../public/kuhn-crew-working.jpg";
-import ContactForm from "../components/contactForm";
-import KuhnButton from "../components/kuhnButton";
+import Head from 'next/head';
+import Hero from '../components/hero';
+import Image from 'next/image';
+import SectionWrapper from '../components/sectionWrapper';
+import heroBg from '../public/kuhn-discount-hero.jpg';
+import crew from '../public/kuhn-crew-working.jpg';
+import ContactForm from '../components/contactForm';
+import KuhnButton from '../components/kuhnButton';
 
 export default function Discounts() {
   return (
@@ -16,12 +15,12 @@ export default function Discounts() {
           Discounts Available for Maryland Customers | Kuhn's Tree Service
         </title>
       </Head>
-      <Hero backgroundImage={heroBg} text="Discounts" />
+      <Hero backgroundImage={heroBg} text='Discounts' />
 
-      <SectionWrapper className="lg:max-w-3xl">
-        <div className="flex flex-col">
-          <h2 className="pt-5 pb-10">Affordable Tree Services in Maryland</h2>
-          <p className="pb-5">
+      <SectionWrapper className='lg:max-w-3xl'>
+        <div className='flex flex-col'>
+          <h2 className='pt-5 pb-10'>Affordable Tree Services in Maryland</h2>
+          <p className='pb-5'>
             Kuhn's Tree Service does what we can to help the community look it's
             best, whether it takes shape as tree trimming, removal, stump
             grinding, snow removal, and so much more. We also do so in an
@@ -32,16 +31,16 @@ export default function Discounts() {
             how big or small the job, we get it done efficiently, effectively
             and done right the first time.
           </p>
-          <KuhnButton href="/contact" text="Contact Us" center />
+          <KuhnButton href='/contact' text='Contact Us' center />
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="lg:max-w-6xl" background="bg-[#f7f7f7]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 my-5">
-          <div className="grid place-items-center">
-            <Image src={crew} alt="Picture of crew removing trees" />
+      <SectionWrapper className='lg:max-w-6xl' background='bg-[#f7f7f7]'>
+        <div className='my-5 grid grid-cols-1 gap-14 md:grid-cols-2'>
+          <div className='grid place-items-center'>
+            <Image src={crew} alt='Picture of crew removing trees' />
           </div>
-          <div className="text-left flex flex-col gap-4 justify-center md:pt-5 order-last md:-order-none">
+          <div className='order-last flex flex-col justify-center gap-4 text-left md:-order-none md:pt-5'>
             <h3>Discounts Currently Available from Kuhn's Tree Service</h3>
             <p>
               Below are some of the special discounts we offer for our stellar
@@ -50,15 +49,15 @@ export default function Discounts() {
               us know if you have any other questions during your free estimate
               and consultation.
             </p>
-            <ul className="list-disc pl-10">
-              <li className="mb-1">5% off for senior citizens</li>
-              <li className="mb-1">5% off for active military</li>
+            <ul className='list-disc pl-10'>
+              <li className='mb-1'>5% off for senior citizens</li>
+              <li className='mb-1'>5% off for active military</li>
             </ul>
           </div>
         </div>
       </SectionWrapper>
 
-      <ContactForm background="bg-white" />
+      <ContactForm background='bg-white' />
     </>
   );
 }

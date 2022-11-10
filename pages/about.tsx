@@ -1,12 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import ContactForm from "../components/contactForm";
-import Hero from "../components/hero";
-import KuhnButton from "../components/kuhnButton";
-import SectionWrapper from "../components/sectionWrapper";
-import heroBg from "../public/kuhn-about-hero.jpg";
-import trucks from "../public/kuhn-trucks.jpg";
+import Head from 'next/head';
+import Image from 'next/image';
+import ContactForm from '../components/contactForm';
+import Hero from '../components/hero';
+import KuhnButton from '../components/kuhnButton';
+import SectionWrapper from '../components/sectionWrapper';
+import heroBg from '../public/kuhn-about-hero.jpg';
+import trucks from '../public/kuhn-trucks.jpg';
 
 export default function About() {
   return (
@@ -14,12 +13,12 @@ export default function About() {
       <Head>
         <title>About Us - 35 Years of Experience | Kuhn's Tree Service</title>
       </Head>
-      <Hero backgroundImage={heroBg} text="About Us" />
+      <Hero backgroundImage={heroBg} text='About Us' />
 
-      <SectionWrapper className="lg:max-w-3xl">
-        <div className="flex flex-col">
-          <h2 className="pt-5 pb-10">Over 35 Years of Experience</h2>
-          <p className="pb-5">
+      <SectionWrapper className='lg:max-w-3xl'>
+        <div className='flex flex-col'>
+          <h2 className='pt-5 pb-10'>Over 35 Years of Experience</h2>
+          <p className='pb-5'>
             Kuhn's Tree Service is your friend in the industry to help with all
             the necessary tree services you need to protect your landscaping and
             home from potential danger. We pride ourselves on quality,
@@ -32,17 +31,17 @@ export default function About() {
             personalized treatment plan to help them live longer or remove and
             take care of the Green Waste in an environmentally friendly way.
           </p>
-          <KuhnButton href="/contact" text="Contact Us" center />
+          <KuhnButton href='/contact' text='Contact Us' center />
         </div>
       </SectionWrapper>
 
-      <div className="relative h-">
-        <Image src={trucks} alt="Picture of Kuhns trucks" layout="responsive" />
+      <div className='h- relative'>
+        <Image src={trucks} alt='Picture of Kuhns trucks' layout='responsive' />
       </div>
 
-      <SectionWrapper className="lg:max-w-6xl" background="bg-[#f7f7f7]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 my-5">
-          <div className="text-left flex flex-col gap-4 md:pt-5">
+      <SectionWrapper className='lg:max-w-6xl' background='bg-[#f7f7f7]'>
+        <div className='my-5 grid grid-cols-1 gap-14 md:grid-cols-2'>
+          <div className='flex flex-col gap-4 text-left md:pt-5'>
             <h3>Kuhn's Tree Service Offers Complete Tree Care</h3>
             <p>
               When the leaves don't return in the spring or you are noticing
@@ -54,15 +53,15 @@ export default function About() {
               properties in the area for the past 35 years! Below are some of
               the tree services you can expect for our crew:
             </p>
-            <ul className="list-disc pl-10">
-              <li className="mb-1">Tree Removal</li>
-              <li className="mb-1">Tree Pruning</li>
-              <li className="mb-1">Landscaping</li>
-              <li className="mb-1">Storm Damage</li>
-              <li className="mb-1">And Many More</li>
+            <ul className='list-disc pl-10'>
+              <li className='mb-1'>Tree Removal</li>
+              <li className='mb-1'>Tree Pruning</li>
+              <li className='mb-1'>Landscaping</li>
+              <li className='mb-1'>Storm Damage</li>
+              <li className='mb-1'>And Many More</li>
             </ul>
           </div>
-          <div className="text-left flex flex-col gap-4 md:pt-5">
+          <div className='flex flex-col gap-4 text-left md:pt-5'>
             <h3>Clients We Serve in Maryland</h3>
             <p>
               We aim to help the homes and offices in the area with whatever
@@ -70,20 +69,20 @@ export default function About() {
               us day or night, and our team members will be on their way to cut,
               trim, remove, and more. Previous customers include:
             </p>
-            <ul className="list-disc pl-10">
-              <li className="mb-1">Homeowners</li>
-              <li className="mb-1">Apartment Complexes</li>
-              <li className="mb-1">Construction Companies</li>
-              <li className="mb-1">Property Management Companies</li>
-              <li className="mb-1">Insurance Companies</li>
-              <li className="mb-1">Homeowners Association</li>
+            <ul className='list-disc pl-10'>
+              <li className='mb-1'>Homeowners</li>
+              <li className='mb-1'>Apartment Complexes</li>
+              <li className='mb-1'>Construction Companies</li>
+              <li className='mb-1'>Property Management Companies</li>
+              <li className='mb-1'>Insurance Companies</li>
+              <li className='mb-1'>Homeowners Association</li>
             </ul>
           </div>
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="lg:max-w-3xl">
-        <h3 className="pb-5">No Storm Stands in Our Way</h3>
+      <SectionWrapper className='lg:max-w-3xl'>
+        <h3 className='pb-5'>No Storm Stands in Our Way</h3>
         <p>
           24 hours a day, 7 days a week, our staff is prepared to assist by
           bringing our experience, tools, and knowledge to your door. Following
@@ -93,7 +92,7 @@ export default function About() {
         </p>
       </SectionWrapper>
 
-      <ContactForm background="bg-[#f7f7f7]" />
+      <ContactForm background='bg-[#f7f7f7]' />
     </>
   );
 }

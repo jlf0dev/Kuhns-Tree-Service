@@ -109,9 +109,9 @@
   }
   /* Reset Safari Form Styles */
   button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"] {
+  [type='button'],
+  [type='reset'],
+  [type='submit'] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;

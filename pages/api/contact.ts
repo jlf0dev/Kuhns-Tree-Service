@@ -1,26 +1,26 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from "next";
-import fetch from "node-fetch";
-import sendgrid from "@sendgrid/mail";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fetch from 'node-fetch';
+import sendgrid from '@sendgrid/mail';
 
 interface FormResponse {
   status: string;
 }
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY ?? "");
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY ?? '');
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<FormResponse>
+  res: NextApiResponse<FormResponse>,
 ) {
   const { body, method } = req;
   const { data, token } = JSON.parse(body);
 
-  if (method === "POST") {
+  if (method === 'POST') {
     // If email or captcha are missing return an error
     if (!data || !token) {
       return res.status(422).json({
-        status: "Unproccesable request, please provide the required fields",
+        status: 'Unproccesable request, please provide the required fields',
       });
     }
     try {
@@ -29,10 +29,10 @@ export default async function handler(
         `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
         {
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+            'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
           },
-          method: "POST",
-        }
+          method: 'POST',
+        },
       );
       const captchaValidation: any = await response.json();
       /**
@@ -48,8 +48,8 @@ export default async function handler(
         try {
           await sendgrid.send({
             to: process.env.CONTACT_FORM_SUBMIT_TO,
-            from: "kuhnstreeservice@gmail.com",
-            subject: "New Website Submission",
+            from: 'kuhnstreeservice@gmail.com',
+            subject: 'New Website Submission',
             html: `
             <p>${data.firstName} ${data.lastName}</p>
             <p>${data.phone}</p>
@@ -64,17 +64,17 @@ export default async function handler(
             .status(error.statusCode || 500)
             .json({ status: error.message });
         }
-        return res.status(200).send({ status: "Ok" });
+        return res.status(200).send({ status: 'Ok' });
       }
 
       return res.status(422).json({
-        status: "Unproccesable request, Invalid captcha code",
+        status: 'Unproccesable request, Invalid captcha code',
       });
     } catch (error) {
-      return res.status(422).json({ status: "Something went wrong" });
+      return res.status(422).json({ status: 'Something went wrong' });
     }
   }
   // Return 404 if someone pings the API with a method other than
   // POST
-  return res.status(404).send({ status: "Not found" });
+  return res.status(404).send({ status: 'Not found' });
 }

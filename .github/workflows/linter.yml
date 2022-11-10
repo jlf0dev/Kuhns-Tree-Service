@@ -1,0 +1,19 @@
+name: Linter
+
+on:
+  pull_request:
+    branches: [master, main]
+jobs:
+  build:
+    name: Lint Project
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install NPM Packages
+        run: npm ci
+      - name: Lint Project
+        run: npm run lint
