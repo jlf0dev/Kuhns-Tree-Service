@@ -10,7 +10,6 @@ interface MobileMenuButtonProps {
 export default function MobileMenuButton({ closeMenu }: MobileMenuButtonProps) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => setIsOpen(!isOpen);
-  const closeDropdown = () => setIsOpen(false);
   return (
     <>
       <IconContext.Provider value={{ size: '20' }}>
