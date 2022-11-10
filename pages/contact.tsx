@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import ContactForm from '../components/contactForm';
 import Hero from '../components/hero';
 import SectionWrapper from '../components/sectionWrapper';

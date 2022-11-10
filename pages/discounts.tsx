@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Hero from '../components/hero';
 import Image from 'next/image';
 import SectionWrapper from '../components/sectionWrapper';

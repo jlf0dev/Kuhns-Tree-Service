@@ -1,4 +1,3 @@
-import dynamic from 'next/dynamic';
 import React, { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { TailSpin } from 'react-loader-spinner';
@@ -69,8 +68,7 @@ export default function ContactForm({ background }: ContactFormProps) {
         method: 'post',
         body: JSON.stringify({ data: data, token: token }),
       });
-      if (response.ok) {
-      } else {
+      if (!response.ok) {
         // Else throw an error with the message returned
         // from the API
         const error = await response.json();
@@ -100,7 +98,7 @@ export default function ContactForm({ background }: ContactFormProps) {
               {...register('firstName', {
                 required: 'First name is required',
                 maxLength: { value: 30, message: 'First name is too long' },
-                onChange: e => {
+                onChange: () => {
                   enableRecaptcha();
                 },
               })}
@@ -127,7 +125,7 @@ export default function ContactForm({ background }: ContactFormProps) {
               {...register('lastName', {
                 required: 'Last name is required',
                 maxLength: { value: 30, message: 'Last name is too long' },
-                onChange: e => {
+                onChange: () => {
                   enableRecaptcha();
                 },
               })}
@@ -176,7 +174,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                   value: /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/,
                   message: 'Email is invalid',
                 },
-                onChange: e => {
+                onChange: () => {
                   enableRecaptcha();
                 },
               })}
@@ -203,7 +201,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                     value: 100,
                     message: 'Street address is too long',
                   },
-                  onChange: e => {
+                  onChange: () => {
                     enableRecaptcha();
                   },
                 })}
@@ -243,7 +241,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                 {...register('city', {
                   required: 'City is required',
                   maxLength: { value: 50, message: 'City name is too long' },
-                  onChange: e => {
+                  onChange: () => {
                     enableRecaptcha();
                   },
                 })}
@@ -266,7 +264,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                 {...register('state', {
                   required: 'State is required',
                   maxLength: { value: 50, message: 'State name is too long' },
-                  onChange: e => {
+                  onChange: () => {
                     enableRecaptcha();
                   },
                 })}
@@ -294,7 +292,7 @@ export default function ContactForm({ background }: ContactFormProps) {
                     value: 20,
                     message: 'ZIP/Postal code is too long',
                   },
-                  onChange: e => {
+                  onChange: () => {
                     enableRecaptcha();
                   },
                 })}
@@ -315,7 +313,7 @@ export default function ContactForm({ background }: ContactFormProps) {
               Country
               <select
                 {...register('country', {
-                  onChange: e => {
+                  onChange: () => {
                     enableRecaptcha();
                   },
                 })}
@@ -347,7 +345,7 @@ export default function ContactForm({ background }: ContactFormProps) {
             <select
               {...register('serviceType', {
                 required: true,
-                onChange: e => {
+                onChange: () => {
                   enableRecaptcha();
                 },
               })}
@@ -376,7 +374,7 @@ export default function ContactForm({ background }: ContactFormProps) {
             Please Provide Any Additional Details
             <textarea
               {...register('details', {
-                onChange: e => {
+                onChange: () => {
                   enableRecaptcha();
                 },
               })}

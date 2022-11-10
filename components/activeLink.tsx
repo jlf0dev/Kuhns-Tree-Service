@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import React, { Children, FC } from 'react';
+import React, { Children } from 'react';
 
 type ActiveLinkProps = {
   children: any;

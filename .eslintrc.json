@@ -1,6 +1,7 @@
 {
-  "extends": ["next/core-web-vitals", "prettier"],
+  "extends": ["next", "next/core-web-vitals", "prettier", "eslint:recommended"],
   "rules": {
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "no-undef": "off" // https://github.com/typescript-eslint/typescript-eslint/blob/main/docs/linting/TROUBLESHOOTING.md#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
   }
 }
