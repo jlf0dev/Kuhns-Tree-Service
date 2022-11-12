@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import Hero from '../components/hero';
 import SectionWrapper from '../components/sectionWrapper';
 import heroBg from '../public/kuhn-wood-hero.jpg';
@@ -6,9 +6,11 @@ import heroBg from '../public/kuhn-wood-hero.jpg';
 export default function PrivacyPolicy() {
   return (
     <>
-      <Head>
-        <title>Privacy Policy | Kuhn's Tree Service</title>
-      </Head>
+      <NextSeo
+        title='Privacy Policy'
+        description='Kuhns Tree Service privacy policy. We do not sell or share your personal information.'
+      />
+
       <Hero backgroundImage={heroBg} text='Privacy Policy' />
 
       <SectionWrapper className='text-left lg:max-w-7xl'>

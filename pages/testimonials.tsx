@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import Hero from '../components/hero';
 import KuhnButton from '../components/kuhnButton';
 import SectionWrapper from '../components/sectionWrapper';
@@ -14,17 +14,13 @@ type Review = {
 export default function Testimonials() {
   return (
     <>
-      <Head>
-        <title>
-          Satisfied Tree Service Customer Testimonials | Kuhn's Tree Service
-        </title>
-        <meta
-          name='description'
-          content='Kuhns Tree Service has been proudly servicing Silver Spring, MD and the
+      <NextSeo
+        title='Satisfied Tree Service Customer Testimonials'
+        description='Kuhns Tree Service has been proudly servicing Silver Spring, MD and the
           surrounding areas for over 35 years. Come read the testimonials from happy customers
           and call today for a free estimate!'
-        ></meta>
-      </Head>
+      />
+
       <Hero backgroundImage={heroBg} text='Testimonials' />
 
       <SectionWrapper className='lg:max-w-3xl'>

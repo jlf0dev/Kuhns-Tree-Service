@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import Image, { StaticImageData } from 'next/image';
 import Hero from '../components/hero';
 import SectionWrapper from '../components/sectionWrapper';
@@ -9,15 +9,13 @@ let pictureUrls: string[] = require('../data/gallery.json');
 export default function Gallery() {
   return (
     <>
-      <Head>
-        <title>Tree Services Gallery | Kuhn's Tree Service</title>
-        <meta
-          name='description'
-          content='Kuhns Tree Services is a family owned and operated tree service, proud
+      <NextSeo
+        title='Tree Services Gallery'
+        description='Kuhns Tree Services is a family owned and operated tree service, proud
           to serve Silver Spring, MD and the surrounding areas. We offer a wide variety of
           services including tree removal, tree trimming, stump grinding, and more.'
-        ></meta>
-      </Head>
+      />
+
       <Hero backgroundImage={heroBg} text='Gallery' />
 
       <SectionWrapper className='lg:max-w-3xl'>

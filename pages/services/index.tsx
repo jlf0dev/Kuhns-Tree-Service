@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Hero from '../../components/hero';
 import Image from 'next/image';
 import SectionWrapper from '../../components/sectionWrapper';
@@ -6,19 +5,18 @@ import heroBg from '../../public/kuhn-services-hero.jpg';
 import saw from '../../public/kuhn-saw-tree.jpg';
 import ContactForm from '../../components/contactForm';
 import KuhnButton from '../../components/kuhnButton';
+import { NextSeo } from 'next-seo';
 
 export default function Services() {
   return (
     <>
-      <Head>
-        <title>Comprehensive Tree Services | Kuhn's Tree Service</title>
-        <meta
-          name='description'
-          content='Kuhns Tree Service offers extensive tree services to residential and
+      <NextSeo
+        title='Comprehensive Tree Services'
+        description='Kuhns Tree Service offers extensive tree services to residential and
           commercial properties in Silver Spring, Maryland. Call us today for Tree
           Removal, Tree Trimming, Stump Grinding, and more!'
-        ></meta>
-      </Head>
+      />
+
       <Hero backgroundImage={heroBg} text='Services' />
 
       <SectionWrapper className='lg:max-w-3xl'>

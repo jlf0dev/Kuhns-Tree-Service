@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import ContactForm from '../../components/contactForm';
 import Hero from '../../components/hero';
@@ -10,14 +10,12 @@ import stumpGrinding from '../../public/kuhn-stump-grinding-full.jpg';
 export default function StumpGrinding() {
   return (
     <>
-      <Head>
-        <title>Stump Grinding Services | Kuhn's Tree Service</title>
-        <meta
-          name='description'
-          content='Call Kuhns Tree Service for professional stump grinding services
+      <NextSeo
+        title='Stump Grinding Services'
+        description='Call Kuhns Tree Service for professional stump grinding services
           in your area. We offer free estimates and are fully insured.'
-        ></meta>
-      </Head>
+      />
+
       <Hero backgroundImage={heroBg} text='Stump Grinding' />
 
       <SectionWrapper className='lg:max-w-3xl'>

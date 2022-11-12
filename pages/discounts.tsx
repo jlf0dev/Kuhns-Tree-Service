@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Hero from '../components/hero';
 import Image from 'next/image';
 import SectionWrapper from '../components/sectionWrapper';
@@ -6,21 +5,18 @@ import heroBg from '../public/kuhn-discount-hero.jpg';
 import crew from '../public/kuhn-crew-working.jpg';
 import ContactForm from '../components/contactForm';
 import KuhnButton from '../components/kuhnButton';
+import { NextSeo } from 'next-seo';
 
 export default function Discounts() {
   return (
     <>
-      <Head>
-        <title>
-          Discounts Available for Maryland Customers | Kuhn's Tree Service
-        </title>
-        <meta
-          name='description'
-          content='As a part of the community for over 35 years, Kuhns Tree Service
+      <NextSeo
+        title='Discounts Available for Maryland Customers'
+        description='As a part of the community for over 35 years, Kuhns Tree Service
           is proud to offer multiple discounts to Maryland residents. Call today
           to schedule a free estimate!'
-        ></meta>
-      </Head>
+      />
+
       <Hero backgroundImage={heroBg} text='Discounts' />
 
       <SectionWrapper className='lg:max-w-3xl'>

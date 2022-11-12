@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import hero from '../public/kuhn-hero.jpg';
@@ -17,21 +16,18 @@ import ContactForm from '../components/contactForm';
 import SectionWrapper from '../components/sectionWrapper';
 import KuhnButton from '../components/kuhnButton';
 import { ImageFrame } from './gallery';
+import { NextSeo } from 'next-seo';
 
 const Home: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>
-          Maryland Tree Trimming & Removal Services | Kuhns Tree Service{' '}
-        </title>
-        <meta
-          name='description'
-          content='Kuhns Tree Service offers tree trimming and removal services to
-          residential and commercial properties in Silver Spring, Maryland. Call
-          us today for a free estimate!'
-        ></meta>
-      </Head>
+      {/* Page specific SEO, shared tags are set in _app.tsx */}
+      <NextSeo
+        title='Tree Trimming & Removal Services in Silver Spring, MD'
+        description='Kuhns Tree Service offers tree trimming and removal services to 
+        residential and commercial properties in Silver Spring, Maryland. 
+        Call us today for a free estimate!'
+      />
 
       {/* Hero */}
       <div className='min-h-fit w-full bg-[#00000061] text-slate-50 md:bg-[#00000026]'>

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Hero from '../../components/hero';
 import SectionWrapper from '../../components/sectionWrapper';
@@ -6,19 +5,18 @@ import heroBg from '../../public/kuhn-trimming-hero.jpg';
 import saw from '../../public/kuhn-saw-branch.jpg';
 import ContactForm from '../../components/contactForm';
 import KuhnButton from '../../components/kuhnButton';
+import { NextSeo } from 'next-seo';
 
 export default function TreeTrimming() {
   return (
     <>
-      <Head>
-        <title>Tree Trimming Services in Maryland | Kuhn's Tree Service</title>
-        <meta
-          name='description'
-          content='Kuhns Tree Service is the team to call for all your tree trimming
+      <NextSeo
+        title='Tree Trimming Services in Maryland'
+        description='Kuhns Tree Service is the team to call for all your tree trimming
           needs! Keep your trees healthy and beautiful with our professional trimming
           service. We offer free estimates and are fully insured.'
-        ></meta>
-      </Head>
+      />
+
       <Hero backgroundImage={heroBg} text='Tree Trimming' />
 
       <SectionWrapper className='lg:max-w-3xl'>
