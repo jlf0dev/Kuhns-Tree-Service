@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Hero from '../../components/hero';
 import SectionWrapper from '../../components/sectionWrapper';
@@ -6,19 +5,18 @@ import heroBg from '../../public/kuhn-removal-hero.jpg';
 import removal from '../../public/kuhn-tree-removal.jpg';
 import ContactForm from '../../components/contactForm';
 import KuhnButton from '../../components/kuhnButton';
+import { NextSeo } from 'next-seo';
 
 export default function TreeRemoval() {
   return (
     <>
-      <Head>
-        <title>Professional Tree Removal | Kuhn's Tree Service</title>
-        <meta
-          name='description'
-          content='Call Kuhns Tree Service for safe and professional
+      <NextSeo
+        title='Professional Tree Removal'
+        description='Call Kuhns Tree Service for safe and professional
           tree removal services in Maryland. We can quickly remove any tree,
           followed by extensive stump grinding services. Call today for a free estimate!'
-        ></meta>
-      </Head>
+      />
+
       <Hero backgroundImage={heroBg} text='Tree Removal' />
 
       <SectionWrapper className='lg:max-w-3xl'>

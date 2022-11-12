@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 import ContactForm from '../components/contactForm';
 import Hero from '../components/hero';
@@ -7,14 +8,12 @@ import heroBg from '../public/kuhn-contact-hero.jpg';
 export default function Contact() {
   return (
     <>
-      <Head>
-        <title>Contact Us for an Estimate | Kuhn's Tree Service</title>
-        <meta
-          name='description'
-          content='Kuhns Tree Service prides ourselves on our customer service. Please 
+      <NextSeo
+        title='Contact Us for an Estimate'
+        description='Kuhns Tree Service prides ourselves on our customer service. Please 
           contact us today for questions, comments, or to schedule a free estimate!'
-        ></meta>
-      </Head>
+      />
+
       <Hero backgroundImage={heroBg} text='Contact Us' />
 
       <SectionWrapper className='lg:max-w-3xl'>

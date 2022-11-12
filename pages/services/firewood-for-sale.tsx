@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import ContactForm from '../../components/contactForm';
 import Hero from '../../components/hero';
 import KuhnButton from '../../components/kuhnButton';
@@ -8,15 +8,13 @@ import heroBg from '../../public/kuhn-discount-hero.jpg';
 export default function FirewoodForSale() {
   return (
     <>
-      <Head>
-        <title>Firewood For Sale | Kuhn's Tree Service</title>
-        <meta
-          name='description'
-          content='Kuhns Tree Service now has firewood for sale! We offer mixed
+      <NextSeo
+        title='Firewood For Sale'
+        description='Kuhns Tree Service now has firewood for sale! We offer mixed
           hardwoods for puchase in cord and half cord volumes. Call today to ask
           about our delivery options.'
-        ></meta>
-      </Head>
+      />
+
       <Hero backgroundImage={heroBg} text='Firewood For Sale' />
 
       <SectionWrapper className='lg:max-w-3xl'>

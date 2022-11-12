@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import Image from 'next/image';
+import { NextSeo } from 'next-seo';
 import ContactForm from '../components/contactForm';
 import Hero from '../components/hero';
 import KuhnButton from '../components/kuhnButton';
@@ -10,14 +10,12 @@ import trucks from '../public/kuhn-trucks.jpg';
 export default function About() {
   return (
     <>
-      <Head>
-        <title>About Us - 35 Years of Experience | Kuhn's Tree Service</title>
-        <meta
-          name='description'
-          content='Kuhns Tree Service has over 35 years of experience in tree trimming 
+      <NextSeo
+        title='About Us - 35 Years of Experience'
+        description='Kuhns Tree Service has over 35 years of experience in tree trimming 
           and removal services. Call us today for a free estimate!'
-        ></meta>
-      </Head>
+      />
+
       <Hero backgroundImage={heroBg} text='About Us' />
 
       <SectionWrapper className='lg:max-w-3xl'>
