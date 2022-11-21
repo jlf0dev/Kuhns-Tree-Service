@@ -1,8 +1,10 @@
 import { NextSeo } from 'next-seo';
+import Image from 'next/image';
 import Hero from '../components/hero';
 import KuhnButton from '../components/kuhnButton';
 import SectionWrapper from '../components/sectionWrapper';
 import heroBg from '../public/kuhn-testimonials-hero.jpg';
+import reviewCert from '../public/tree-removal-review.png';
 
 let reviews: Review[] = require('../data/reviews.json');
 
@@ -34,15 +36,31 @@ export default function Testimonials() {
             property. It can be very dangerous to try and do these services
             yourself. You will either not have the right tools or not know how
             to use those tools appropriately. Leave the hard work to our
-            dedicated tree technicians and give us a call today. The following
-            is what our previous customers had to say about our tree removal,
-            trimming, stump grinding, and more.
+            dedicated tree technicians and give us a call today. We've included
+            reviews below to demonstrate what customers had to say about our
+            tree removal, trimming, stump grinding, and more.
           </p>
           <KuhnButton href='/contact' text='Contact Us' center />
         </div>
       </SectionWrapper>
 
       <SectionWrapper className='lg:max-w-6xl' background='bg-[#f7f7f7]'>
+        <div className='my-5 grid grid-cols-1 gap-14 md:grid-cols-2'>
+          <div className='grid place-items-center'>
+            <a href='https://www.treeremovalreview.com/usa/maryland/'>
+              <Image
+                src={reviewCert}
+                alt='A certificate from TreeRemovalReview.com with the text "Best rated tree service in Maryland"'
+              />
+            </a>
+          </div>
+          <div className='order-last flex flex-col justify-center gap-4 text-center md:-order-none md:pt-5 md:text-left'>
+            <h3>Rated The Best Tree Service in Maryland in 2022!</h3>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper className='lg:max-w-6xl'>
         <>
           <h3 className='pb-10'>Customer Reviews and Testimonials</h3>
           {reviews.map((item, index) => {
