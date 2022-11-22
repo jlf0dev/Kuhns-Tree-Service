@@ -5,11 +5,13 @@ import KuhnButton from '../components/kuhnButton';
 import SectionWrapper from '../components/sectionWrapper';
 import heroBg from '../public/kuhn-testimonials-hero.jpg';
 import reviewCert from '../public/tree-removal-review.png';
+import quote from '../public/quote.svg';
 
 let reviews: Review[] = require('../data/reviews.json');
 
 type Review = {
   author: string;
+  location: string;
   review: string;
 };
 
@@ -60,20 +62,27 @@ export default function Testimonials() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className='lg:max-w-6xl'>
+      <SectionWrapper>
         <>
           <h3 className='pb-10'>Customer Reviews and Testimonials</h3>
-          {reviews.map((item, index) => {
-            return (
-              <div key={index}>
-                <div className='pb-10 text-left'>
-                  <p className='pb-5'>{item.review}</p>
-                  <p className='font-bold'>{item.author}</p>
+          <div className='columns-1 gap-11 pt-8 md:columns-2 lg:columns-3'>
+            {reviews.map((item, index) => {
+              return (
+                <div key={index} className='break-inside-avoid'>
+                  <div className='relative mb-10 border-l-[12px] border-kuhn-light-green bg-[#f7f7f7] px-4 pt-12 pb-5'>
+                    <div className='absolute right-0 -top-12'>
+                      <Image src={quote} alt='Logo - SVG' width='65' />
+                    </div>
+                    <p className='px-2 pb-5 text-left'>{item.review}</p>
+                    <div className='pr-8 text-right'>
+                      <p className='text-xl font-bold'>{item.author}</p>
+                      <p className=''>{item.location}</p>
+                    </div>
+                  </div>
                 </div>
-                <hr className='pb-10' />
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </>
       </SectionWrapper>
     </>
