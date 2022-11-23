@@ -1,6 +1,6 @@
-import { useRouter } from "next/router";
-import Link from "next/link";
-import React, { Children, FC } from "react";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import React, { Children } from 'react';
 
 type ActiveLinkProps = {
   children: any;
@@ -15,7 +15,7 @@ export default function ActiveLink({
 }: ActiveLinkProps) {
   const { asPath } = useRouter();
   const child = Children.only(children);
-  const childClassName = child.props.className || "";
+  const childClassName = child.props.className || '';
 
   const className =
     asPath === href

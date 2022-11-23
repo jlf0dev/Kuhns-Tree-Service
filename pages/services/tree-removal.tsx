@@ -1,27 +1,30 @@
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import Hero from "../../components/hero";
-import SectionWrapper from "../../components/sectionWrapper";
-import heroBg from "../../public/kuhn-removal-hero.jpg";
-import removal from "../../public/kuhn-tree-removal.jpg";
-import ContactForm from "../../components/contactForm";
-import KuhnButton from "../../components/kuhnButton";
+import Image from 'next/image';
+import Hero from '../../components/hero';
+import SectionWrapper from '../../components/sectionWrapper';
+import heroBg from '../../public/kuhn-removal-hero.jpg';
+import removal from '../../public/kuhn-tree-removal.jpg';
+import ContactForm from '../../components/contactForm';
+import KuhnButton from '../../components/kuhnButton';
+import { NextSeo } from 'next-seo';
 
 export default function TreeRemoval() {
   return (
     <>
-      <Head>
-        <title>Professional Tree Removal | Kuhn's Tree Service</title>
-      </Head>
-      <Hero backgroundImage={heroBg} text="Tree Removal" />
+      <NextSeo
+        title='Professional Tree Removal'
+        description='Call Kuhns Tree Service for safe and professional
+          tree removal services in Maryland. We can quickly remove any tree,
+          followed by extensive stump grinding services. Call today for a free estimate!'
+      />
 
-      <SectionWrapper className="lg:max-w-3xl">
-        <div className="flex flex-col">
-          <h2 className="pt-5 pb-10">
+      <Hero backgroundImage={heroBg} text='Tree Removal' />
+
+      <SectionWrapper className='lg:max-w-3xl'>
+        <div className='flex flex-col'>
+          <h2 className='pt-5 pb-10'>
             Leave Tree Removal to the Professionals
           </h2>
-          <p className="pb-5">
+          <p className='pb-5'>
             For over 35 years, Kuhn's Tree Service has been the team to call
             when you need tree removal services at your home or surrounding your
             office. This is a job you should leave to the professionals. Trying
@@ -34,16 +37,16 @@ export default function TreeRemoval() {
             periods. Our team carries the training and knowledge to know when
             and how to remove a tree.
           </p>
-          <KuhnButton href="/contact" text="Contact Us" center />
+          <KuhnButton href='/contact' text='Contact Us' center />
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="lg:max-w-6xl" background="bg-[#f7f7f7]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 my-5">
-          <div className="grid place-items-center">
-            <Image src={removal} alt="Picture of chainsaw cutting tree" />
+      <SectionWrapper className='lg:max-w-6xl' background='bg-[#f7f7f7]'>
+        <div className='my-5 grid grid-cols-1 gap-14 md:grid-cols-2'>
+          <div className='grid place-items-center'>
+            <Image src={removal} alt='Picture of chainsaw cutting tree' />
           </div>
-          <div className="text-left flex flex-col gap-4 justify-center md:pt-5 order-last md:-order-none">
+          <div className='order-last flex flex-col justify-center gap-4 text-left md:-order-none md:pt-5'>
             <h3>Signs and Steps for Tree Removal</h3>
             <p>
               While some trees may look unhealthy, they may not need to be
@@ -66,22 +69,20 @@ export default function TreeRemoval() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="lg:max-w-3xl">
-        <h3 className="pb-5">Experience Where It Counts</h3>
+      <SectionWrapper className='lg:max-w-3xl'>
+        <h3 className='pb-5'>Experience When it Counts</h3>
         <p>
-          ot only should you have a professional team remove your tree when
+          Not only should you have a professional team remove your tree when
           needed, but you need an experienced one. Our team has helped Maryland
-          with these services for more than 35 years Within this time we have
+          with these services for more than 35 years. Within this time we have
           been able to train our staff on traditional and modern methods and
           work with industry-leading tools. We keep your property and trees safe
           by handling effectively and efficiently. Thanks to our cutting-edge
-          technology, there is no tree we can't handle! Removing the stump is
-          also included in this service because of the necessity, we don't
-          consider it a separate service.
+          technology, there is no tree we can't handle!
         </p>
       </SectionWrapper>
 
-      <ContactForm background="bg-[#f7f7f7]" />
+      <ContactForm background='bg-[#f7f7f7]' />
     </>
   );
 }

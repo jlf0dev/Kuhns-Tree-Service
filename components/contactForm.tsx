@@ -1,12 +1,11 @@
-import dynamic from "next/dynamic";
-import React, { useState } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { TailSpin } from "react-loader-spinner";
-import SectionWrapper from "./sectionWrapper";
-import ReCAPTCHA from "react-google-recaptcha";
+import React, { useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { TailSpin } from 'react-loader-spinner';
+import SectionWrapper from './sectionWrapper';
+import ReCAPTCHA from 'react-google-recaptcha';
 
-let countries: Country[] = require("../data/countryList.json");
-let serviceType: ServiceType[] = require("../data/serviceType.json");
+let countries: Country[] = require('../data/countryList.json');
+let serviceType: ServiceType[] = require('../data/serviceType.json');
 
 type Country = {
   code: string;
@@ -49,11 +48,11 @@ export default function ContactForm({ background }: ContactFormProps) {
 
   // its gross but it works
   function normalizePhoneNumber(value: string): string {
-    var x = value.replace(/\D/g, "").match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+    var x = value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
     if (x) {
-      return !x[2] ? x[1] : "(" + x[1] + ") " + x[2] + (x[3] ? "-" + x[3] : "");
+      return !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
     } else {
-      return "";
+      return '';
     }
   }
 
@@ -61,23 +60,22 @@ export default function ContactForm({ background }: ContactFormProps) {
     setRecaptchaNeeded(true);
   };
 
-  const onSubmit: SubmitHandler<IFormData> = async (data) => {
+  const onSubmit: SubmitHandler<IFormData> = async data => {
     const token = await recaptchaRef.current?.executeAsync();
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "post",
+      const response = await fetch('/api/contact', {
+        method: 'post',
         body: JSON.stringify({ data: data, token: token }),
       });
-      if (response.ok) {
-      } else {
+      if (!response.ok) {
         // Else throw an error with the message returned
         // from the API
         const error = await response.json();
         throw new Error(error.message);
       }
     } catch (error: any) {
-      alert(error?.message || "Something went wrong");
+      alert(error?.message || 'Something went wrong');
     } finally {
       recaptchaRef.current?.reset();
     }
@@ -85,138 +83,138 @@ export default function ContactForm({ background }: ContactFormProps) {
 
   if (!isSubmitSuccessful) {
     return (
-      <SectionWrapper className="lg:max-w-4xl" background={background}>
-        <h3 className="pb-10">Request An Estimate</h3>
+      <SectionWrapper className='lg:max-w-4xl' background={background}>
+        <h3 className='pb-10'>Request An Estimate</h3>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-5"
+          className='grid grid-cols-1 gap-x-7 gap-y-5 md:grid-cols-2'
         >
           <label
-            htmlFor="firstName"
-            className="font-bold flex flex-col text-left"
+            htmlFor='firstName'
+            className='flex flex-col text-left font-bold'
           >
             First Name *
             <input
-              {...register("firstName", {
-                required: "First name is required",
-                maxLength: { value: 30, message: "First name is too long" },
-                onChange: (e) => {
+              {...register('firstName', {
+                required: 'First name is required',
+                maxLength: { value: 30, message: 'First name is too long' },
+                onChange: () => {
                   enableRecaptcha();
                 },
               })}
               className={`font-normal ${
-                errors.firstName ? "border-red-500" : ""
+                errors.firstName ? 'border-red-500' : ''
               }`}
-              id="firstName"
-              placeholder="First Name"
-              type="text"
-              autoComplete="given-name"
+              id='firstName'
+              placeholder='First Name'
+              type='text'
+              autoComplete='given-name'
             />
             {errors.firstName && (
-              <p className="text-sm text-red-500">
+              <p className='text-sm text-red-500'>
                 {errors.firstName?.message}
               </p>
             )}
           </label>
           <label
-            htmlFor="lastName"
-            className="font-bold flex flex-col text-left"
+            htmlFor='lastName'
+            className='flex flex-col text-left font-bold'
           >
             Last Name *
             <input
-              {...register("lastName", {
-                required: "Last name is required",
-                maxLength: { value: 30, message: "Last name is too long" },
-                onChange: (e) => {
+              {...register('lastName', {
+                required: 'Last name is required',
+                maxLength: { value: 30, message: 'Last name is too long' },
+                onChange: () => {
                   enableRecaptcha();
                 },
               })}
               className={`font-normal ${
-                errors.lastName ? "border-red-500" : ""
+                errors.lastName ? 'border-red-500' : ''
               }`}
-              id="lastName"
-              placeholder="Last Name"
-              type="text"
-              autoComplete="family-name"
+              id='lastName'
+              placeholder='Last Name'
+              type='text'
+              autoComplete='family-name'
             />
             {errors.lastName && (
-              <p className="text-sm text-red-500">{errors.lastName?.message}</p>
+              <p className='text-sm text-red-500'>{errors.lastName?.message}</p>
             )}
           </label>
-          <label htmlFor="phone" className="font-bold flex flex-col text-left">
+          <label htmlFor='phone' className='flex flex-col text-left font-bold'>
             Phone *
             <input
-              {...register("phone", {
-                required: "Phone number is required",
-                maxLength: { value: 20, message: "Phone number is too long" },
-                minLength: { value: 14, message: "Phone number is too short" },
-                onChange: (e) => {
+              {...register('phone', {
+                required: 'Phone number is required',
+                maxLength: { value: 20, message: 'Phone number is too long' },
+                minLength: { value: 14, message: 'Phone number is too short' },
+                onChange: e => {
                   const { value } = e.target;
                   e.target.value = normalizePhoneNumber(value);
                   enableRecaptcha();
                 },
               })}
-              className={`font-normal ${errors.phone ? "border-red-500" : ""}`}
-              id="phone"
-              placeholder="Phone"
-              type="tel"
-              autoComplete="tel"
+              className={`font-normal ${errors.phone ? 'border-red-500' : ''}`}
+              id='phone'
+              placeholder='Phone'
+              type='tel'
+              autoComplete='tel'
             />
             {errors.phone && (
-              <p className="text-sm text-red-500">{errors.phone?.message}</p>
+              <p className='text-sm text-red-500'>{errors.phone?.message}</p>
             )}
           </label>
-          <label htmlFor="email" className="font-bold flex flex-col text-left">
+          <label htmlFor='email' className='flex flex-col text-left font-bold'>
             Email *
             <input
-              {...register("email", {
-                required: "Email is required",
-                maxLength: { value: 50, message: "Email is too long" },
+              {...register('email', {
+                required: 'Email is required',
+                maxLength: { value: 50, message: 'Email is too long' },
                 pattern: {
                   value: /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/,
-                  message: "Email is invalid",
+                  message: 'Email is invalid',
                 },
-                onChange: (e) => {
+                onChange: () => {
                   enableRecaptcha();
                 },
               })}
-              className={`font-normal ${errors.email ? "border-red-500" : ""}`}
-              id="email"
-              placeholder="Email"
-              type="text"
-              autoComplete="email"
+              className={`font-normal ${errors.email ? 'border-red-500' : ''}`}
+              id='email'
+              placeholder='Email'
+              type='text'
+              autoComplete='email'
             />
             {errors.email && (
-              <p className="text-sm text-red-500">{errors.email?.message}</p>
+              <p className='text-sm text-red-500'>{errors.email?.message}</p>
             )}
           </label>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-2 md:col-span-2">
+          <div className='grid grid-cols-1 gap-x-7 gap-y-2 md:col-span-2 md:grid-cols-2'>
             <label
-              htmlFor="address"
-              className="font-bold flex flex-col text-left md:col-span-2"
+              htmlFor='address'
+              className='flex flex-col text-left font-bold md:col-span-2'
             >
               Service Address *
               <input
-                {...register("address", {
-                  required: "Street address is required",
+                {...register('address', {
+                  required: 'Street address is required',
                   maxLength: {
                     value: 100,
-                    message: "Street address is too long",
+                    message: 'Street address is too long',
                   },
-                  onChange: (e) => {
+                  onChange: () => {
                     enableRecaptcha();
                   },
                 })}
                 className={`font-normal ${
-                  errors.address ? "border-red-500" : ""
+                  errors.address ? 'border-red-500' : ''
                 }`}
-                id="address"
-                placeholder="REQUIRED"
-                type="text"
-                autoComplete="street-address"
+                id='address'
+                placeholder='REQUIRED'
+                type='text'
+                autoComplete='street-address'
               />
               {errors.address && (
-                <p className="text-sm text-red-500">
+                <p className='text-sm text-red-500'>
                   {errors.address?.message}
                 </p>
               )}
@@ -235,102 +233,102 @@ export default function ContactForm({ background }: ContactFormProps) {
               />
             </label> */}
             <label
-              htmlFor="city"
-              className="font-normal text-xs flex flex-col text-left"
+              htmlFor='city'
+              className='flex flex-col text-left text-xs font-normal'
             >
               City
               <input
-                {...register("city", {
-                  required: "City is required",
-                  maxLength: { value: 50, message: "City name is too long" },
-                  onChange: (e) => {
+                {...register('city', {
+                  required: 'City is required',
+                  maxLength: { value: 50, message: 'City name is too long' },
+                  onChange: () => {
                     enableRecaptcha();
                   },
                 })}
-                className={`font-normal ${errors.city ? "border-red-500" : ""}`}
-                id="city"
-                placeholder="REQUIRED"
-                type="text"
-                autoComplete="address-level2"
+                className={`font-normal ${errors.city ? 'border-red-500' : ''}`}
+                id='city'
+                placeholder='REQUIRED'
+                type='text'
+                autoComplete='address-level2'
               />
               {errors.city && (
-                <p className="text-sm text-red-500">{errors.city?.message}</p>
+                <p className='text-sm text-red-500'>{errors.city?.message}</p>
               )}
             </label>
             <label
-              htmlFor="state"
-              className="font-normal text-xs flex flex-col text-left justify-end"
+              htmlFor='state'
+              className='flex flex-col justify-end text-left text-xs font-normal'
             >
               State / Province / Region
               <input
-                {...register("state", {
-                  required: "State is required",
-                  maxLength: { value: 50, message: "State name is too long" },
-                  onChange: (e) => {
+                {...register('state', {
+                  required: 'State is required',
+                  maxLength: { value: 50, message: 'State name is too long' },
+                  onChange: () => {
                     enableRecaptcha();
                   },
                 })}
                 className={`font-normal ${
-                  errors.state ? "border-red-500" : ""
+                  errors.state ? 'border-red-500' : ''
                 }`}
-                id="state"
-                placeholder="REQUIRED"
-                type="text"
-                autoComplete="address-level1"
+                id='state'
+                placeholder='REQUIRED'
+                type='text'
+                autoComplete='address-level1'
               />
               {errors.state && (
-                <p className="text-sm text-red-500">{errors.state?.message}</p>
+                <p className='text-sm text-red-500'>{errors.state?.message}</p>
               )}
             </label>
             <label
-              htmlFor="zip"
-              className="font-normal text-xs flex flex-col text-left"
+              htmlFor='zip'
+              className='flex flex-col text-left text-xs font-normal'
             >
               ZIP / Postal Code
               <input
-                {...register("zip", {
-                  required: "ZIP/Postal code is required",
+                {...register('zip', {
+                  required: 'ZIP/Postal code is required',
                   maxLength: {
                     value: 20,
-                    message: "ZIP/Postal code is too long",
+                    message: 'ZIP/Postal code is too long',
                   },
-                  onChange: (e) => {
+                  onChange: () => {
                     enableRecaptcha();
                   },
                 })}
-                className={`font-normal ${errors.zip ? "border-red-500" : ""}`}
-                id="zip"
-                placeholder="REQUIRED"
-                type="text"
-                autoComplete="postal-code"
+                className={`font-normal ${errors.zip ? 'border-red-500' : ''}`}
+                id='zip'
+                placeholder='REQUIRED'
+                type='text'
+                autoComplete='postal-code'
               />
               {errors.zip && (
-                <p className="text-sm text-red-500">{errors.zip?.message}</p>
+                <p className='text-sm text-red-500'>{errors.zip?.message}</p>
               )}
             </label>
             <label
-              htmlFor="country"
-              className="font-normal text-xs flex flex-col text-left"
+              htmlFor='country'
+              className='flex flex-col text-left text-xs font-normal'
             >
               Country
               <select
-                {...register("country", {
-                  onChange: (e) => {
+                {...register('country', {
+                  onChange: () => {
                     enableRecaptcha();
                   },
                 })}
                 disabled
-                className="bg-gray-200"
-                id="country"
-                placeholder="REQUIRED"
-                defaultValue={"US"}
+                className='bg-gray-200'
+                id='country'
+                placeholder='REQUIRED'
+                defaultValue={'US'}
               >
-                {countries.map((item) => {
+                {countries.map(item => {
                   return (
                     <option
                       key={item.code}
                       value={item.code}
-                      className="cursor-pointer"
+                      className='cursor-pointer'
                     >
                       {item.name}
                     </option>
@@ -340,28 +338,28 @@ export default function ContactForm({ background }: ContactFormProps) {
             </label>
           </div>
           <label
-            htmlFor="serviceType"
-            className="font-bold flex flex-col text-left md:col-span-2"
+            htmlFor='serviceType'
+            className='flex flex-col text-left font-bold md:col-span-2'
           >
             How Can We Help You *
             <select
-              {...register("serviceType", {
+              {...register('serviceType', {
                 required: true,
-                onChange: (e) => {
+                onChange: () => {
                   enableRecaptcha();
                 },
               })}
-              className="font-normal"
-              id="serviceType"
-              placeholder="REQUIRED"
-              defaultValue={"treeTrimming"}
+              className='font-normal'
+              id='serviceType'
+              placeholder='REQUIRED'
+              defaultValue={'treeTrimming'}
             >
-              {serviceType.map((item) => {
+              {serviceType.map(item => {
                 return (
                   <option
                     key={item.code}
                     value={item.name}
-                    className="cursor-pointer"
+                    className='cursor-pointer'
                   >
                     {item.name}
                   </option>
@@ -370,49 +368,49 @@ export default function ContactForm({ background }: ContactFormProps) {
             </select>
           </label>
           <label
-            htmlFor="details"
-            className="font-bold flex flex-col text-left md:col-span-2"
+            htmlFor='details'
+            className='flex flex-col text-left font-bold md:col-span-2'
           >
             Please Provide Any Additional Details
             <textarea
-              {...register("details", {
-                onChange: (e) => {
+              {...register('details', {
+                onChange: () => {
                   enableRecaptcha();
                 },
               })}
-              className="font-normal h-48 resize-none"
-              id="details"
-              placeholder="Write your message"
+              className='h-48 resize-none font-normal'
+              id='details'
+              placeholder='Write your message'
             />
           </label>
           {recaptchaNeeded && (
             <ReCAPTCHA
               ref={recaptchaRef}
-              size="invisible"
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}
+              size='invisible'
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''}
             />
           )}
-          <div className="md:col-span-2 py-10">
+          <div className='py-10 md:col-span-2'>
             <button
-              type="submit"
-              aria-label="Submit"
+              type='submit'
+              aria-label='Submit'
               disabled={isSubmitting}
-              className={`inline-flex items-center text-white py-4 px-8 text-lg shadow-xl  ${
+              className={`inline-flex items-center py-4 px-8 text-lg text-white shadow-xl  ${
                 isSubmitting
-                  ? "bg-[#1b381f] "
-                  : "bg-[#639c4d] hover:bg-[#1b381f]"
+                  ? 'bg-[#1b381f] '
+                  : 'bg-[#639c4d] hover:bg-[#1b381f]'
               }`}
             >
               <TailSpin
-                height="15"
-                width="15"
-                color="#FFFFFF"
-                ariaLabel="tail-spin-loading"
-                radius="1"
-                wrapperStyle={{ paddingRight: "10px" }}
+                height='15'
+                width='15'
+                color='#FFFFFF'
+                ariaLabel='tail-spin-loading'
+                radius='1'
+                wrapperStyle={{ paddingRight: '10px' }}
                 visible={isSubmitting}
               />
-              {isSubmitting ? "Submitting..." : "Submit"}
+              {isSubmitting ? 'Submitting...' : 'Submit'}
             </button>
           </div>
         </form>
@@ -421,7 +419,7 @@ export default function ContactForm({ background }: ContactFormProps) {
   } else {
     return (
       <SectionWrapper background={background}>
-        <h3 className="pb-4">Thank You for Contacting Us!</h3>
+        <h3 className='pb-4'>Thank You for Contacting Us!</h3>
         <p>
           We have received your information and will get back to you shortly.
         </p>
