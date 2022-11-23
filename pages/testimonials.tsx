@@ -17,7 +17,7 @@ export default function Testimonials() {
   return (
     <>
       <NextSeo
-        title='Satisfied Tree Service Customer Testimonials'
+        title='Satisfied Customer Testimonials'
         description='Kuhns Tree Service has been proudly servicing Silver Spring, MD and the
           surrounding areas for over 35 years. Come read the testimonials from happy customers
           and call today for a free estimate!'
