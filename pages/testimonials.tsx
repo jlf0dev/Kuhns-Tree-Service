@@ -5,7 +5,6 @@ import KuhnButton from '../components/kuhnButton';
 import SectionWrapper from '../components/sectionWrapper';
 import heroBg from '../public/kuhn-testimonials-hero.jpg';
 import reviewCert from '../public/tree-removal-review.png';
-import quote from '../public/quote.svg';
 
 let reviews: Review[] = require('../data/reviews.json');
 
