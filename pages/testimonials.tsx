@@ -64,14 +64,18 @@ export default function Testimonials() {
 
       <SectionWrapper>
         <>
-          <h3 className='pb-10'>Customer Reviews and Testimonials</h3>
+          <h2 className='pt-5 pb-3'>Customer Reviews and Testimonials</h2>
           <div className='columns-1 gap-11 pt-8 md:columns-2 lg:columns-3'>
             {reviews.map((item, index) => {
               return (
-                <div key={index} className='break-inside-avoid'>
-                  <div className='relative mb-10 border-l-[12px] border-kuhn-light-green bg-[#f7f7f7] px-4 pt-12 pb-5'>
-                    <div className='absolute right-0 -top-12'>
-                      <Image src={quote} alt='Logo - SVG' width='65' />
+                <div
+                  key={index}
+                  className='relative inline-block w-full pt-10 align-top'
+                >
+                  <div className='mb-10 border-l-[12px] border-kuhn-light-green bg-[#f7f7f7] px-4 pt-12 pb-5'>
+                    {/* needed extra padding at the top of each box so quote svg wouldn't be cut off */}
+                    <div className='absolute right-0 -top-2'>
+                      <Image src={quote} alt='quote icon' width='65' />
                     </div>
                     <p className='px-2 pb-5 text-left'>{item.review}</p>
                     <div className='pr-8 text-right'>
