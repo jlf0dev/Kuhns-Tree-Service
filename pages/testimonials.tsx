@@ -72,10 +72,11 @@ export default function Testimonials() {
                   key={index}
                   className='relative inline-block w-full pt-10 align-top'
                 >
-                  <div className='mb-10 border-l-[12px] border-kuhn-light-green bg-[#f7f7f7] px-4 pt-12 pb-5'>
-                    {/* needed extra padding at the top of each box so quote svg wouldn't be cut off */}
-                    <div className='absolute right-0 -top-2'>
-                      <Image src={quote} alt='quote icon' width='65' />
+                  <div className='mb-2 border-l-[12px] border-kuhn-light-green bg-[#f7f7f7] px-4 pt-12 pb-5'>
+                    {/* needed extra padding at the top of each box so quote svg wouldn't be cut off in safari*/}
+                    <div className='absolute right-0 top-4'>
+                      {/* needed img element since Image not loading on safari */}
+                      <img src='/quote.svg' alt='quote icon' width='65' />
                     </div>
                     <p className='px-2 pb-5 text-left'>{item.review}</p>
                     <div className='pr-8 text-right'>
