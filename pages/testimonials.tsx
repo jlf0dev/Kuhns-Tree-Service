@@ -75,7 +75,12 @@ export default function Testimonials() {
                     {/* needed extra padding at the top of each box so quote svg wouldn't be cut off in safari*/}
                     <div className='absolute right-0 top-4'>
                       {/* needed img element since Image not loading on safari */}
-                      <img src='/quote.svg' alt='quote icon' width='65' />
+                      <img
+                        src='/quote.svg'
+                        alt='quote icon'
+                        width='65'
+                        height='40'
+                      />
                     </div>
                     <p className='px-2 pb-5 text-left'>{item.review}</p>
                     <div className='pr-8 text-right'>
