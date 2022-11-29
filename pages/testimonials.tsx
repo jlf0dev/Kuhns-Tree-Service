@@ -46,8 +46,8 @@ export default function Testimonials() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className='lg:max-w-6xl' background='bg-[#f7f7f7]'>
-        <div className='my-5 grid grid-cols-1 gap-14 md:grid-cols-2'>
+      <SectionWrapper className='lg:max-w-3xl' background='bg-[#f7f7f7]'>
+        <div className='my-5 grid grid-cols-1 gap-8 md:grid-cols-2'>
           <div className='grid place-items-center'>
             <a href='https://www.treeremovalreview.com/usa/maryland/'>
               <Image
