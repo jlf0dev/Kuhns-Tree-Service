@@ -5,11 +5,13 @@ import KuhnButton from '../components/kuhnButton';
 import SectionWrapper from '../components/sectionWrapper';
 import heroBg from '../public/kuhn-testimonials-hero.jpg';
 import reviewCert from '../public/tree-removal-review.png';
+import quote from '../public/quote.svg';
 
 let reviews: Review[] = require('../data/reviews.json');
 
 type Review = {
   author: string;
+  location: string;
   review: string;
 };
 
@@ -44,8 +46,8 @@ export default function Testimonials() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className='lg:max-w-6xl' background='bg-[#f7f7f7]'>
-        <div className='my-5 grid grid-cols-1 gap-14 md:grid-cols-2'>
+      <SectionWrapper className='lg:max-w-3xl' background='bg-[#f7f7f7]'>
+        <div className='my-5 grid grid-cols-1 gap-8 md:grid-cols-2'>
           <div className='grid place-items-center'>
             <a href='https://www.treeremovalreview.com/usa/maryland/'>
               <Image
@@ -60,20 +62,32 @@ export default function Testimonials() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className='lg:max-w-6xl'>
+      <SectionWrapper>
         <>
-          <h3 className='pb-10'>Customer Reviews and Testimonials</h3>
-          {reviews.map((item, index) => {
-            return (
-              <div key={index}>
-                <div className='pb-10 text-left'>
-                  <p className='pb-5'>{item.review}</p>
-                  <p className='font-bold'>{item.author}</p>
+          <h2 className='pt-5 pb-3'>Customer Reviews and Testimonials</h2>
+          <div className='columns-1 gap-11 pt-8 md:columns-2 lg:columns-3'>
+            {reviews.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className='relative inline-block w-full pt-10 align-top'
+                >
+                  <div className='mb-2 border-l-[12px] border-kuhn-light-green bg-[#f7f7f7] px-4 pt-12 pb-5'>
+                    {/* needed extra padding at the top of each box so quote svg wouldn't be cut off in safari*/}
+                    <div className='absolute right-0 top-4'>
+                      {/* needed img element since Image not loading on safari */}
+                      <img src='/quote.svg' alt='quote icon' width='65' />
+                    </div>
+                    <p className='px-2 pb-5 text-left'>{item.review}</p>
+                    <div className='pr-8 text-right'>
+                      <p className='text-xl font-bold'>{item.author}</p>
+                      <p className=''>{item.location}</p>
+                    </div>
+                  </div>
                 </div>
-                <hr className='pb-10' />
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </>
       </SectionWrapper>
     </>
