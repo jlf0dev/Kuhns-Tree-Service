@@ -1,6 +1,7 @@
 import { IconContext } from 'react-icons';
 import { FaFacebookSquare, FaPhoneAlt } from 'react-icons/fa';
 import ActiveLink from './activeLink';
+import AngiesListIcon from './icons/angies-list';
 
 export default function Footer() {
   return (
@@ -97,6 +98,13 @@ export default function Footer() {
                 <span className='sr-only'>Facebook</span>
               </a>
             </IconContext.Provider>
+            <a
+              href='https://www.angi.com/companylist/us/md/silver-spring/kuhn%27s-tree-service-inc-reviews-161480.htm'
+              className='mr-2 hover:text-kuhn-light-green'
+              title="Angie's List"
+            >
+              <AngiesListIcon />
+            </a>
           </div>
         </div>
       </div>
