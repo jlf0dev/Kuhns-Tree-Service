@@ -23,10 +23,8 @@ const Home: NextPage = () => {
     <>
       {/* Page specific SEO, shared tags are set in _app.tsx */}
       <NextSeo
-        title='Tree Trimming & Removal Services in Silver Spring, MD'
-        description='Kuhns Tree Service offers tree trimming and removal services to 
-        residential and commercial properties in Silver Spring, Maryland. 
-        Call us today for a free estimate!'
+        title='Professional Tree Services in Silver Springs, Maryland | 24-Hour Emergency Tree Services'
+        description="When you need professional tree services at your home in the Silver Springs area, call on Kuhn's Tree Service. We have the experience and tools for the job! Kuhn's Tree Service is fully licensed and insured."
       />
 
       {/* Hero */}

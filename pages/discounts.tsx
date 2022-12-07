@@ -11,10 +11,8 @@ export default function Discounts() {
   return (
     <>
       <NextSeo
-        title='Discounts Available for Maryland Customers'
-        description='As a part of the community for over 35 years, Kuhns Tree Service
-          is proud to offer multiple discounts to Maryland residents. Call today
-          to schedule a free estimate!'
+        title='Discounts Available for Maryland Customers | Affordable Tree Services in Maryland'
+        description="Kuhn's Tree Service does what we can to help the community look it's best, whether it takes shape as tree trimming, removal, stump grinding, snow removal, and so much more."
       />
 
       <Hero backgroundImage={heroBg} text='Discounts' />

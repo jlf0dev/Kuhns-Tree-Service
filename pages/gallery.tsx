@@ -10,10 +10,8 @@ export default function Gallery() {
   return (
     <>
       <NextSeo
-        title='Tree Services Gallery'
-        description='Kuhns Tree Services is a family owned and operated tree service, proud
-          to serve Silver Spring, MD and the surrounding areas. We offer a wide variety of
-          services including tree removal, tree trimming, stump grinding, and more.'
+        title='Tree Services Gallery | Professional Tree Services in Silver Springs, Maryland'
+        description="Check out our gallery of previous jobs we've completed throughout the Silver Springs Maryland area. Each customer is 100 percent satisfied with the tree services received. Kuhn's Tree Service is fully licensed and insured."
       />
 
       <Hero backgroundImage={heroBg} text='Gallery' />

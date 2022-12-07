@@ -11,12 +11,14 @@ export default function StumpGrinding() {
   return (
     <>
       <NextSeo
-        title='Stump Grinding Services'
-        description='Call Kuhns Tree Service for professional stump grinding services
-          in your area. We offer free estimates and are fully insured.'
+        title='Stump Grinding Services in Silver Springs, Maryland | Professional Tree Services'
+        description="Kuhn's team is in your corner to help protect you by bringing affordable stump grinding services to your area. Give us a call today for a free estimate."
       />
 
-      <Hero backgroundImage={heroBg} text='Stump Grinding' />
+      <Hero
+        backgroundImage={heroBg}
+        text='Stump Grinding in Silver Springs, Maryland'
+      />
 
       <SectionWrapper className='lg:max-w-3xl'>
         <div className='flex flex-col'>
