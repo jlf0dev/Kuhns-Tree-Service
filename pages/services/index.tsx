@@ -11,10 +11,8 @@ export default function Services() {
   return (
     <>
       <NextSeo
-        title='Comprehensive Tree Services'
-        description='Kuhns Tree Service offers extensive tree services to residential and
-          commercial properties in Silver Spring, Maryland. Call us today for Tree
-          Removal, Tree Trimming, Stump Grinding, and more!'
+        title='Comprehensive Tree Services in Silver Springs, Maryland | Snow Plowing and Firewood Services'
+        description='Our tree services extend well beyond your average neighborhood landscaping. We help businesses maintain their property to draw in more customers and potential clients.'
       />
 
       <Hero backgroundImage={heroBg} text='Services' />

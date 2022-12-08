@@ -11,13 +11,14 @@ export default function TreeTrimming() {
   return (
     <>
       <NextSeo
-        title='Tree Trimming Services in Maryland'
-        description='Kuhns Tree Service is the team to call for all your tree trimming
-          needs! Keep your trees healthy and beautiful with our professional trimming
-          service. We offer free estimates and are fully insured.'
+        title='Tree Trimming Services in Siliver Springs, Maryland | Emergency Tree Trimming Services'
+        description="When you work with Kuhn's Tree Service, you can expect high-quality tree trimming services and professionalism unparalleled in the industry. Kuhn's Tree Service is fully licensed and insured."
       />
 
-      <Hero backgroundImage={heroBg} text='Tree Trimming' />
+      <Hero
+        backgroundImage={heroBg}
+        text='Tree Trimming in Silver Springs, Maryland'
+      />
 
       <SectionWrapper className='lg:max-w-3xl'>
         <div className='flex flex-col'>

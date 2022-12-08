@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
     <>
       <NextSeo
         title='Privacy Policy'
-        description='Kuhns Tree Service privacy policy. We do not sell or share your personal information.'
+        description="This privacy notice for Kuhn's Tree Service, describes how and why we might collect, store, use, and/or share your information when you use our services."
       />
 
       <Hero backgroundImage={heroBg} text='Privacy Policy' />

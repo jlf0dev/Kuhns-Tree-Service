@@ -11,9 +11,8 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title='About Us - 35 Years of Experience'
-        description='Kuhns Tree Service has over 35 years of experience in tree trimming 
-          and removal services. Call us today for a free estimate!'
+        title='About Us | Professional Tree Services in Silver Springs, Maryland'
+        description="Kuhn's Tree Service is your friend in the industry to help with all the necessary tree services you need to protect your landscaping and home from potential danger."
       />
 
       <Hero backgroundImage={heroBg} text='About Us' />

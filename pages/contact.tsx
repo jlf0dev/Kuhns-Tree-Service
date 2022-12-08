@@ -9,9 +9,8 @@ export default function Contact() {
   return (
     <>
       <NextSeo
-        title='Contact Us for an Estimate'
-        description='Kuhns Tree Service prides ourselves on our customer service. Please 
-          contact us today for questions, comments, or to schedule a free estimate!'
+        title='Contact Us for an Estimate | 24 Hour Emergency Storm Damage Service'
+        description="Kuhn's Tree Service has been helping residents for more than 35 years our team has removed trees and their stumps, trimmed, planted, and more. Kuhn's Tree Service is fully licensed and insured."
       />
 
       <Hero backgroundImage={heroBg} text='Contact Us' />
