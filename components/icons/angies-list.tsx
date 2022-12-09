@@ -4,10 +4,10 @@ export default function AngiesListIcon() {
       <svg
         xmlns='http://www.w3.org/2000/svg'
         xmlSpace='preserve'
-        fill-rule='evenodd'
-        stroke-linejoin='round'
-        stroke-miterlimit='2'
-        clip-rule='evenodd'
+        fillRule='evenodd'
+        strokeLinejoin='round'
+        strokeMiterlimit='2'
+        clipRule='evenodd'
         viewBox='0 0 1820 1822'
         width={26}
         height={26}
