@@ -56,7 +56,16 @@ export default function ContactForm({ background }: ContactFormProps) {
     }
   }
 
+  var recaptchaChecked = false;
   const enableRecaptcha = () => {
+    if (recaptchaChecked) {
+      return;
+    }
+    recaptchaChecked = true;
+    if (!process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) {
+      alert('No recaptcha key found');
+      return;
+    }
     setRecaptchaNeeded(true);
   };
 
