@@ -6,8 +6,8 @@ import AngiesListIcon from './icons/angies-list';
 export default function Footer() {
   return (
     <footer className='text-white'>
-      <div className='h-full w-full bg-kuhn-dark-green lg:h-24'>
-        <div className='mx-auto flex h-full w-full max-w-[90%] flex-col py-5 lg:max-w-7xl lg:flex-row'>
+      <div className='h-full w-full bg-kuhn-dark-green'>
+        <div className='mx-auto flex h-full w-full max-w-[90%] flex-col py-5 lg:w-[90%] lg:max-w-7xl lg:flex-row lg:flex-wrap'>
           <ul className='flex flex-col items-center justify-center md:flex-row md:justify-between lg:h-full lg:min-w-[900px]'>
             <li>
               <ActiveLink href='/' activeClassName='text-kuhn-light-green'>
@@ -87,7 +87,7 @@ export default function Footer() {
               </IconContext.Provider>
             </li>
           </ul>
-          <div className='flex h-full items-center justify-center py-3 lg:w-full lg:justify-end lg:justify-self-end'>
+          <div className='flex h-full items-center justify-center py-3 lg:ml-auto lg:justify-end lg:justify-self-end'>
             <IconContext.Provider value={{ size: '30' }}>
               <a
                 href='https://www.facebook.com/kuhnstreeservices/'
@@ -100,7 +100,7 @@ export default function Footer() {
             </IconContext.Provider>
             <a
               href='https://www.angi.com/companylist/us/md/silver-spring/kuhn%27s-tree-service-inc-reviews-161480.htm'
-              className='mr-2 hover:text-kuhn-light-green'
+              className='hover:text-kuhn-light-green'
               title="Angie's List"
             >
               <AngiesListIcon />
@@ -109,7 +109,7 @@ export default function Footer() {
         </div>
       </div>
       <div className='w-full bg-kuhn-green md:h-24'>
-        <div className='mx-auto flex h-full max-w-[90%] flex-col items-center justify-center py-10 text-center md:flex-row md:justify-start md:py-5 md:text-left lg:max-w-7xl'>
+        <div className='mx-auto flex h-full max-w-[90%] flex-col items-center justify-center py-10 text-center md:flex-row md:justify-start md:py-5 md:text-left lg:w-[90%] lg:max-w-7xl'>
           <p className='text-base md:text-sm'>
             © 2022 Kuhn's Tree Service. All Rights Reserved.
           </p>

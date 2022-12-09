@@ -24,7 +24,7 @@ export default function Navbar() {
       {/* Top Bar with Phone Number */}
       <IconContext.Provider value={{ size: '16' }}>
         <div className='hidden w-full bg-kuhn-green py-0.5 md:block'>
-          <div className='m-auto flex max-w-6xl justify-between py-1 text-white'>
+          <div className='m-auto flex w-[90%] max-w-6xl justify-between py-1 text-white'>
             <p className='pl-7 text-sm'>Operating for Over 35 Years</p>
             <div className='md:pr-7 lg:pr-0'>
               <a
@@ -142,7 +142,7 @@ export default function Navbar() {
       ></div>
 
       {/* Navbar */}
-      <div className='m-auto flex h-fit max-w-[90%] flex-wrap items-center justify-between lg:max-w-6xl lg:py-5'>
+      <div className='m-auto flex h-fit w-[90%] max-w-[90%] flex-wrap items-center justify-between lg:max-w-6xl lg:py-5'>
         <div className='relative flex h-[75px] w-full items-center justify-center lg:w-64'>
           <Hamburger toggleMenu={toggleMenu} />
           <div className='grid h-full w-full place-items-center'>

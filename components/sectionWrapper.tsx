@@ -18,7 +18,7 @@ export default function SectionWrapper({
     if (typeof background === 'string') {
       return (
         <div className={`h-fit w-full ${background}`}>
-          <div className={`mx-auto max-w-[90%] py-10 ${className}`}>
+          <div className={`mx-auto w-[90%] max-w-[90%] py-10 ${className}`}>
             {children}
           </div>
         </div>
@@ -29,7 +29,7 @@ export default function SectionWrapper({
           className='h-fit w-full'
           style={{ backgroundImage: `url(${background.src})` }}
         >
-          <div className={`mx-auto max-w-[90%] py-10 ${className}`}>
+          <div className={`mx-auto w-[90%] max-w-[90%] py-10 ${className}`}>
             {children}
           </div>
         </div>
@@ -37,7 +37,9 @@ export default function SectionWrapper({
     }
   } else {
     return (
-      <div className={`mx-auto max-w-[90%] py-10 ${className}`}>{children}</div>
+      <div className={`mx-auto w-[90%] max-w-[90%] py-10 ${className}`}>
+        {children}
+      </div>
     );
   }
 }

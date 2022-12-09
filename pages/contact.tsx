@@ -1,5 +1,4 @@
 import { NextSeo } from 'next-seo';
-import Head from 'next/head';
 import ContactForm from '../components/contactForm';
 import Hero from '../components/hero';
 import SectionWrapper from '../components/sectionWrapper';
