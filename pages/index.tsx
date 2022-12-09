@@ -39,7 +39,7 @@ const Home: NextPage = () => {
             placeholder='blur'
             priority
           />
-          <div className='relative z-10 mx-auto grid h-full max-w-[90%] place-items-center md:bottom-10 lg:bottom-20 lg:max-w-7xl'>
+          <div className='relative z-10 mx-auto grid h-full w-[90%] max-w-[90%] place-items-center md:bottom-10 lg:bottom-20 lg:max-w-7xl'>
             <h1>Call today for a free estimate</h1>
           </div>
         </div>
@@ -55,7 +55,7 @@ const Home: NextPage = () => {
             objectFit='cover'
             priority
           />
-          <div className='relative z-10 mx-auto flex max-w-[90%] flex-col items-center gap-y-10 py-9 md:flex-row lg:max-w-6xl'>
+          <div className='relative z-10 mx-auto flex w-[90%] max-w-[90%] flex-col items-center gap-y-10 py-9 md:flex-row lg:max-w-6xl'>
             <p className='flex-grow text-xl font-bold uppercase text-white md:text-left'>
               Tree services delivered with the earth in mind
             </p>

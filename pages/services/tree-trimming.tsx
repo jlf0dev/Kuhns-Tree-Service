@@ -15,10 +15,7 @@ export default function TreeTrimming() {
         description="When you work with Kuhn's Tree Service, you can expect high-quality tree trimming services and professionalism unparalleled in the industry. Kuhn's Tree Service is fully licensed and insured."
       />
 
-      <Hero
-        backgroundImage={heroBg}
-        text='Tree Trimming in Silver Springs, Maryland'
-      />
+      <Hero backgroundImage={heroBg} text='Tree Trimming' />
 
       <SectionWrapper className='lg:max-w-3xl'>
         <div className='flex flex-col'>

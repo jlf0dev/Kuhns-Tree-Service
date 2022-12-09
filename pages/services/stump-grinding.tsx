@@ -15,10 +15,7 @@ export default function StumpGrinding() {
         description="Kuhn's team is in your corner to help protect you by bringing affordable stump grinding services to your area. Give us a call today for a free estimate."
       />
 
-      <Hero
-        backgroundImage={heroBg}
-        text='Stump Grinding in Silver Springs, Maryland'
-      />
+      <Hero backgroundImage={heroBg} text='Stump Grinding' />
 
       <SectionWrapper className='lg:max-w-3xl'>
         <div className='flex flex-col'>

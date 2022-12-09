@@ -20,7 +20,7 @@ export default function Hero({ backgroundImage, text }: HeroProps) {
             placeholder='blur'
             priority
           />
-          <div className='z-10 grid h-full place-items-center'>
+          <div className='z-10 mx-auto grid h-full w-[90%] place-items-center'>
             <h1 className='text-white'>{text}</h1>
           </div>
         </div>

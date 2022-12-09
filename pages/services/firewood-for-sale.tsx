@@ -13,10 +13,7 @@ export default function FirewoodForSale() {
         description="Mixed hardwood is now available for purchase in cord and half cord volumes. A “cord” is a unit of measure for dry volume to measure firewood. Kuhn's Tree Service is fully licensed and insured."
       />
 
-      <Hero
-        backgroundImage={heroBg}
-        text='Firewood For Sale in Silver Springs, Maryland'
-      />
+      <Hero backgroundImage={heroBg} text='Firewood For Sale' />
 
       <SectionWrapper className='lg:max-w-3xl'>
         <div className='pb-5'>

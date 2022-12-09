@@ -15,10 +15,7 @@ export default function TreeRemoval() {
         description="Kuhn's Tree Service has been the team to call when you need tree removal services at your home or surrounding your office. Kuhn's Tree Service is fully licensed and insured."
       />
 
-      <Hero
-        backgroundImage={heroBg}
-        text='Tree Removal in Silver Springs, Maryland'
-      />
+      <Hero backgroundImage={heroBg} text='Tree Removal' />
 
       <SectionWrapper className='lg:max-w-3xl'>
         <div className='flex flex-col'>
