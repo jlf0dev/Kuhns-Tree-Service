@@ -45,6 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel='manifest' href='/site.webmanifest' />
       </Head>
+      {/* Google Tag Manager */}
       <Script
         id='google-tag-manager'
         strategy='afterInteractive'
