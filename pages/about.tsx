@@ -11,7 +11,7 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title='About Us | Professional Tree Services in Silver Springs, Maryland'
+        title='About Us | Professional Tree Services in Silver Spring, Maryland'
         description="Kuhn's Tree Service is your friend in the industry to help with all the necessary tree services you need to protect your landscaping and home from potential danger."
       />
 
