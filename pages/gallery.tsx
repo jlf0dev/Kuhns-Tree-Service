@@ -10,8 +10,8 @@ export default function Gallery() {
   return (
     <>
       <NextSeo
-        title='Tree Services Gallery | Professional Tree Services in Silver Springs, Maryland'
-        description="Check out our gallery of previous jobs we've completed throughout the Silver Springs Maryland area. Each customer is 100 percent satisfied with the tree services received. Kuhn's Tree Service is fully licensed and insured."
+        title='Tree Services Gallery | Professional Tree Services in Silver Spring, Maryland'
+        description="Check out our gallery of previous jobs we've completed throughout the Silver Spring Maryland area. Each customer is 100 percent satisfied with the tree services received. Kuhn's Tree Service is fully licensed and insured."
       />
 
       <Hero backgroundImage={heroBg} text='Gallery' />

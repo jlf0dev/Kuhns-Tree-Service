@@ -10,10 +10,13 @@ export default function FirewoodForSale() {
     <>
       <NextSeo
         title='Firewood For Sale'
-        description="Mixed hardwood is now available for purchase in cord and half cord volumes. A “cord” is a unit of measure for dry volume to measure firewood. Kuhn's Tree Service is fully licensed and insured."
+        description="Mixed hardwood is now available for purchase in cord and half cord volumes. A cordť is a unit of measure for dry volume to measure firewood. Kuhn's Tree Service is fully licensed and insured."
       />
 
-      <Hero backgroundImage={heroBg} text='Firewood For Sale' />
+      <Hero
+        backgroundImage={heroBg}
+        text='Firewood For Sale in Silver Spring, Maryland'
+      />
 
       <SectionWrapper className='lg:max-w-3xl'>
         <div className='pb-5'>

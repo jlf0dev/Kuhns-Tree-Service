@@ -11,7 +11,7 @@ export default function Discounts() {
   return (
     <>
       <NextSeo
-        title='Discounts Available for Maryland Customers | Affordable Tree Services in Maryland'
+        title='Discounts Available for Maryland Customers | Affordable Tree Services in Silver Spring, Maryland'
         description="Kuhn's Tree Service does what we can to help the community look it's best, whether it takes shape as tree trimming, removal, stump grinding, snow removal, and so much more."
       />
 

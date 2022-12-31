@@ -14,7 +14,7 @@ export default function Services() {
   return (
     <>
       <NextSeo
-        title='Comprehensive Tree Services in Silver Springs, Maryland | Snow Plowing and Firewood Services'
+        title='Comprehensive Tree Services in Silver Spring, Maryland | Snow Plowing and Firewood Services'
         description='Our tree services extend well beyond your average neighborhood landscaping. We help businesses maintain their property to draw in more customers and potential clients.'
       />
 
