@@ -4,15 +4,16 @@ import Image from 'next/image';
 interface HeroProps {
   backgroundImage: StaticImageData;
   text: string;
+  alt?: string;
 }
-export default function Hero({ backgroundImage, text }: HeroProps) {
+export default function Hero({ backgroundImage, text, alt = '' }: HeroProps) {
   return (
     <>
       <div className='h-72 w-full bg-[#0000008a]'>
         <div className='relative h-72'>
           <Image
             src={backgroundImage}
-            alt='Picture of Trees'
+            alt={alt || 'Picture of Trees'}
             className='-z-10'
             layout='fill'
             objectFit='cover'
