@@ -7,6 +7,7 @@ import saw from '../../public/kuhn-saw-tree.jpg';
 import ContactForm from '../../components/contactForm';
 import KuhnButton from '../../components/kuhnButton';
 import { NextSeo } from 'next-seo';
+import Link from 'next/link';
 
 export default function Services() {
   const [showMore, setShowMore] = useState(false);
@@ -15,10 +16,14 @@ export default function Services() {
     <>
       <NextSeo
         title='Comprehensive Tree Services in Silver Spring, Maryland | Snow Plowing and Firewood Services'
-        description='Our tree services extend well beyond your average neighborhood landscaping. We help businesses maintain their property to draw in more customers and potential clients.'
+        description='We offer commercial and residential tree service to Silver Spring Maryland and surrounding cities. Services include tree removal and tree trimming.'
       />
 
-      <Hero backgroundImage={heroBg} text='Services' />
+      <Hero
+        backgroundImage={heroBg}
+        text='Residential & Commercial Tree Services'
+        alt='Residential and commercial tree services in silver spring, Maryland'
+      />
 
       <SectionWrapper className='lg:max-w-3xl'>
         <div className='flex flex-col'>
@@ -112,7 +117,9 @@ export default function Services() {
                 circumstances, Kuhn’s Tree Service provides the highest quality
                 tree removal and tree trimming service in Maryland.
               </p>
-              <h4 className='py-2'>Tree Removal</h4>
+              <h4 className='py-2'>
+                <Link href='/services/tree-removal'>Tree Removal</Link>
+              </h4>
               <p>
                 Tree removal in Maryland isn’t as simple as it may seem. Before
                 removing a tree, the tree itself and the area needs to be
@@ -146,7 +153,9 @@ export default function Services() {
                 to many properties to do cleanup when a DIY tree removal did not
                 go as planned.
               </p>
-              <h4 className='py-2'>Tree Trimming</h4>
+              <h4 className='py-2'>
+                <Link href='/services/tree-trimming'>Tree Trimming</Link>
+              </h4>
               <p>
                 If you can’t remember the last time you trimmed your trees, that
                 probably means you are overdue. While trees are generally
