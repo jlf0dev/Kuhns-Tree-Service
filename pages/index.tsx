@@ -18,6 +18,7 @@ import SectionWrapper from '../components/sectionWrapper';
 import KuhnButton from '../components/kuhnButton';
 import { ImageFrame } from './gallery';
 import { NextSeo } from 'next-seo';
+import TreeAnimation from '../components/treeAnimation';
 
 const Home: NextPage = () => {
   const [showMore, setShowMore] = useState(false);
@@ -79,6 +80,7 @@ const Home: NextPage = () => {
           <h2 className='pt-5 pb-10'>
             More Than 35 Years of Serving Your Community
           </h2>
+          <TreeAnimation />
           <p className='pb-5'>
             When you need tree services in Maryland, there is only one team to
             call. Kuhn's Tree Service has been helping residents for more than
