@@ -18,9 +18,33 @@ import SectionWrapper from '../components/sectionWrapper';
 import KuhnButton from '../components/kuhnButton';
 import { ImageFrame } from './gallery';
 import { NextSeo } from 'next-seo';
+import Script from 'next/script';
 
 const Home: NextPage = () => {
   const [showMore, setShowMore] = useState(false);
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Kuhn's Tree Service",
+    "image": "https://www.kuhnstreeservice.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FKuhnsTreeService_logo.88f64daf.png&w=1920&q=75",
+    "@id": "",
+    "url": "https://www.kuhnstreeservice.com/",
+    "telephone": "301-384-4724",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "PO BOX 4178",
+      "addressLocality": "Silver Spring",
+      "addressRegion": "MD",
+      "postalCode": "20914",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.08,
+      "longitude": -77
+    },
+    "sameAs": "https://www.facebook.com/kuhnstreeservices/"
+  };
 
   return (
     <>
@@ -28,6 +52,15 @@ const Home: NextPage = () => {
       <NextSeo
         title='Professional Tree Services in Silver Spring, Maryland | 24-Hour Emergency Tree Services'
         description="When you need professional tree services at your home in the Silver Spring area, call on Kuhn's Tree Service. We have the experience and tools for the job! Kuhn's Tree Service is fully licensed and insured."
+      />
+
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
       />
 
       {/* Hero */}
