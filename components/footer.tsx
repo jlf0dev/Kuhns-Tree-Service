@@ -113,18 +113,34 @@ export default function Footer() {
           <p className='text-base md:text-sm'>
             © 2022 Kuhn's Tree Service. All Rights Reserved.
           </p>
-          <div className='md:px-10'>
+          <div className='md:px-10 flex'>
             <ActiveLink
               href='/privacy-policy'
               activeClassName='text-kuhn-light-green'
             >
-              <a className='inline-block h-full w-full py-3 hover:text-kuhn-light-green'>
+              <a className='inline-block h-full py-3 hover:text-kuhn-light-green px-5'>
                 <p className='text-base md:text-sm'>Privacy Policy</p>
+              </a>
+            </ActiveLink>
+            <ActiveLink
+              href='/sitemap'
+              activeClassName='text-kuhn-light-green'
+            >
+              <a className='inline-block h-full py-3 hover:text-kuhn-light-green px-5'>
+                <p className='text-base md:text-sm'>Sitemap</p>
+              </a>
+            </ActiveLink>
+            <ActiveLink
+              href='/sitemap.xml'
+              activeClassName='text-kuhn-light-green'
+            >
+              <a className='inline-block h-full py-3 hover:text-kuhn-light-green px-5'>
+                <p className='text-base md:text-sm'>XML Sitemap</p>
               </a>
             </ActiveLink>
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 }

@@ -15,14 +15,14 @@ export default function Services() {
   return (
     <>
       <NextSeo
-        title='Comprehensive Tree Services in Silver Spring, Maryland | Snow Plowing and Firewood Services'
-        description='We offer commercial and residential tree service to Silver Spring Maryland and surrounding cities. Services include tree removal and tree trimming.'
+        title='Commercial & Residential Tree Care Service | Silver Spring, Maryland'
+        description='We offer commercial and residential tree care service to Silver Spring Maryland and surrounding cities. Services include tree removal and tree trimming.'
       />
 
       <Hero
         backgroundImage={heroBg}
         text='Residential & Commercial Tree Services'
-        alt='Residential and commercial tree services in silver spring, Maryland'
+        alt='Commercial and residential tree service'
       />
 
       <SectionWrapper className='lg:max-w-3xl'>
