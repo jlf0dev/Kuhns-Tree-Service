@@ -11,8 +11,8 @@ export default function TreeTrimming() {
   return (
     <>
       <NextSeo
-        title='Tree Trimming Services in Siliver Spring, Maryland | Emergency Tree Trimming Services'
-        description="When you work with Kuhn's Tree Service, you can expect high-quality tree trimming services and professionalism unparalleled in the industry. Kuhn's Tree Service is fully licensed and insured."
+        title='Residential & Commercial Tree Trimming Service'
+        description="We provide residential and commercial tree trimming services in Silver Spring, Maryland. Keep your trees looking great and healthy with Kuhn's Tree Service. Call us today!"
       />
 
       <Hero
