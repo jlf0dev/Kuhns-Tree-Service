@@ -50,7 +50,7 @@ const Home: NextPage = () => {
     <>
       {/* Page specific SEO, shared tags are set in _app.tsx */}
       <NextSeo
-        title='Professional Tree Services in Silver Spring, Maryland | 24-Hour Emergency Tree Services'
+        title='Professional Tree Services in Silver Spring, MD | 24-Hour Emergency Tree Services'
         description="When you need professional tree services at your home in the Silver Spring area, call on Kuhn's Tree Service. We have the experience and tools for the job! Kuhn's Tree Service is fully licensed and insured."
       />
 
