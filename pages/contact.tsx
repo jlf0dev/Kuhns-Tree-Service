@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 import ContactForm from '../components/contactForm';
+import GoogleMap from '../components/googleMap';
 import Hero from '../components/hero';
 import SectionWrapper from '../components/sectionWrapper';
 import heroBg from '../public/kuhn-contact-hero.jpg';
@@ -61,7 +62,9 @@ export default function Contact() {
         </div>
       </SectionWrapper>
 
-      <ContactForm background='bg-[#f7f7f7]' />
+      <GoogleMap background='bg-[#f7f7f7]' />
+
+      <ContactForm background='bg-[#fff]' />
     </>
   );
 }

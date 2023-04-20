@@ -15,7 +15,7 @@ export default function Services() {
   return (
     <>
       <NextSeo
-        title='Commercial & Residential Tree Care Service | Silver Spring, Maryland'
+        title='Residential & Commercial Tree Service in Silver Spring, MD'
         description='We offer commercial and residential tree care service to Silver Spring Maryland and surrounding cities. Services include tree removal and tree trimming.'
       />
 
