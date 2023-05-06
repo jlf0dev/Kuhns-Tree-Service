@@ -27,7 +27,7 @@ export default function TreeTrimming() {
         <div className='flex flex-col'>
           <h2 className='pt-5 pb-10'>Tree Trimming from Kuhn's Tree Service</h2>
           <p className='pb-5'>
-            When you work with Kuhn's Tree Service, you can expect high-quality residential and commercial tree trimming services and professionalism unparalleled in the industry.For more than 25 years, we've been helping residents and
+            When you work with Kuhn's Tree Service, you can expect high-quality residential and commercial tree trimming services and professionalism unparalleled in the industry. For more than 25 years, we've been helping residents and
             businesses in Maryland take care of their trees and keep them
             looking their best. What is tree trimming exactly? Tree trimming is
             when we systematically removed certain branches for aesthetic or

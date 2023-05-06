@@ -14,7 +14,7 @@ export default function TreeRemoval() {
     <>
       <NextSeo
         title='Commercial & Residential Tree Removal Service in Silver Spring, MD'
-        description="We offer commercial & residential tree removal services to the communities of Maryland and surrounding cities. Request an estimate today!"
+        description="We offer commercial & residential tree removal services to the communities of Silver Spring and surrounding cities. Request an estimate today!"
       />
 
       <Hero
