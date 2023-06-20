@@ -13,22 +13,21 @@ export default function TreeTrimming() {
   return (
     <>
       <NextSeo
-        title='Residential & Commercial Tree Trimming Service'
+        title='Residential & Commercial Tree Trimming Service in Silver Spring, MD'
         description="We provide residential and commercial tree trimming services in Silver Spring, Maryland. Keep your trees looking great and healthy with Kuhn's Tree Service. Call us today!"
       />
 
       <Hero
         backgroundImage={heroBg}
-        text='Tree Trimming in Silver Spring, Maryland'
+        text='Residential & Commercial Tree Trimming Services'
+        alt='Person cutting a tree branch with a chainsaw.'
       />
 
       <SectionWrapper className='lg:max-w-3xl'>
         <div className='flex flex-col'>
           <h2 className='pt-5 pb-10'>Tree Trimming from Kuhn's Tree Service</h2>
           <p className='pb-5'>
-            When you work with Kuhn's Tree Service, you can expect high-quality
-            tree trimming services and professionalism unparalleled in the
-            industry. For more than 25 years, we've been helping residents and
+            When you work with Kuhn's Tree Service, you can expect high-quality residential and commercial tree trimming services and professionalism unparalleled in the industry. For more than 25 years, we've been helping residents and
             businesses in Maryland take care of their trees and keep them
             looking their best. What is tree trimming exactly? Tree trimming is
             when we systematically removed certain branches for aesthetic or
@@ -52,7 +51,7 @@ export default function TreeTrimming() {
             <Image src={saw} alt='Picture of chainsaw cutting tree' />
           </div>
           <div className='order-last flex flex-col justify-center gap-4 text-left md:-order-none md:pt-5'>
-            <h3>Tree Trimming at Homes and Businesses</h3>
+            <h2>Tree trimming Service for Homes and Businesses</h2>
             <p>
               Our team has not only the knowledge, but the proper tools to
               ensure we deliver the best tree trimming services in Maryland. We

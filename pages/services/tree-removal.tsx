@@ -13,13 +13,14 @@ export default function TreeRemoval() {
   return (
     <>
       <NextSeo
-        title='Professional Tree Removal in Silver Spring, Maryland'
-        description="Kuhn's Tree Service has been the team to call when you need tree removal services at your home or surrounding your office. Kuhn's Tree Service is fully licensed and insured."
+        title='Commercial & Residential Tree Removal Service in Silver Spring, MD'
+        description="We offer commercial & residential tree removal services to the communities of Silver Spring and surrounding cities. Request an estimate today!"
       />
 
       <Hero
         backgroundImage={heroBg}
-        text='Tree Removal in Silver Spring, Maryland'
+        text='Residential & Commercial Tree Removal Services'
+        alt='Man using a chainsaw to removal big tree limbs'
       />
 
       <SectionWrapper className='lg:max-w-3xl'>
