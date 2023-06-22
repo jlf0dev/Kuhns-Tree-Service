@@ -76,7 +76,7 @@ const Home: NextPage = () => {
             priority
           />
           <div className='relative z-10 mx-auto grid h-full w-[90%] max-w-[90%] place-items-center md:bottom-10 lg:bottom-20 lg:max-w-7xl'>
-            <h1>Call today for a free estimate</h1>
+            <h1>Call Today for a Free Tree Service Estimate</h1>
           </div>
         </div>
       </div>
