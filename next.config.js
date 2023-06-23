@@ -5,4 +5,7 @@ module.exports = {
     locales: ['en-US'],
     defaultLocale: 'en-US',
   },
+  experimental: {
+    nextScriptWorkers: true,
+  },
 };
