@@ -1,13 +1,13 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fetch from 'node-fetch';
-import sendgrid from '@sendgrid/mail';
+import SMTP2GOApi from 'smtp2go-nodejs';
 
 interface FormResponse {
   status: string;
 }
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY ?? '');
+const api = SMTP2GOApi(process.env.SMTP2GO_API_KEY ?? '');
 
 export default async function handler(
   req: NextApiRequest,
@@ -46,19 +46,19 @@ export default async function handler(
        */
       if (captchaValidation.success) {
         try {
-          await sendgrid.send({
-            to: process.env.CONTACT_FORM_SUBMIT_TO,
-            from: 'kuhnstreeservice@gmail.com',
-            subject: 'New Website Submission',
-            html: `
+          const mailService = api
+            .mail()
+            .to({ email: process.env.CONTACT_FORM_SUBMIT_TO ?? '' })
+            .from({ email: 'hi@kuhnstreeservice.com' })
+            .subject('New Website Submission').html(`
             <p>${data.firstName} ${data.lastName}</p>
             <p>${data.phone}</p>
             <p>${data.email}</p>
             <p>${data.address}</p> 
             <p>${data.city}, ${data.state} ${data.zip}</p>
             <p>${data.serviceType}</p>
-            <p>${data.details}</p>`,
-          });
+            <p>${data.details}</p>`);
+          await api.client().consume(mailService);
         } catch (error: any) {
           return res
             .status(error.statusCode || 500)
