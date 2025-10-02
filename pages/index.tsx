@@ -22,6 +22,7 @@ import Script from 'next/script';
 
 const Home: NextPage = () => {
   const [showMore, setShowMore] = useState(false);
+  // prettier-ignore
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -32,17 +33,19 @@ const Home: NextPage = () => {
     "telephone": "301-384-4724",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "PO BOX 4178",
+      "streetAddress": "1206 Briggs Chaney Rd.",
       "addressLocality": "Silver Spring",
       "addressRegion": "MD",
-      "postalCode": "20914",
+      "postalCode": "20905",
       "addressCountry": "US"
     },
+    // prettier-ignore
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": 39.08,
       "longitude": -77
     },
+    // prettier-ignore
     "sameAs": "https://www.facebook.com/kuhnstreeservices/"
   };
 
@@ -55,11 +58,11 @@ const Home: NextPage = () => {
       />
 
       <Script
-        id="structured-data"
-        type="application/ld+json"
+        id='structured-data'
+        type='application/ld+json'
         strategy='afterInteractive'
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
+          __html: JSON.stringify(structuredData),
         }}
       />
 
