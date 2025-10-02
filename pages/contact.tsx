@@ -29,8 +29,8 @@ export default function Contact() {
           </div>
           <div className='pb-5'>
             <p className='font-bold'>Send Checks or Correspondence To</p>
-            <p>PO BOX 4178</p>
-            <p>Silver Spring, MD 20914</p>
+            <p>1206 Briggs Chaney Rd.</p>
+            <p>Silver Spring, MD 20905</p>
           </div>
           <div className='pb-5'>
             <p className='font-bold'>Phone</p>

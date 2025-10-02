@@ -35,8 +35,8 @@ export default function FirewoodForSale() {
         <div className='pb-5'>
           <p className='font-bold'>Firewood Pricing</p>
           <ul>
-            <li>1 cord: $275</li>
-            <li>1/2 cord: $175</li>
+            <li>1 cord: $295</li>
+            <li>1/2 cord: $195</li>
             <li>Delivery fee: $70</li>
             <li>Stacking 1 cord: $75</li>
             <li>Stacking 1/2 cord: $50</li>
